@@ -106,7 +106,7 @@ button.dsw.nat{background:repeating-linear-gradient(45deg,#6a5a4a 0 3px,#3a2e26 
 }
 </style></head><body>
 <div id="app"><div id="hud"></div><div id="stage"><canvas id="cv" width="1280" height="720"></canvas><div id="quote"></div></div><div id="panel"></div></div>
-<script>
+<script src="cloud-config.js"></script><script src="save-engine.js"></script><script src="vendor/supabase-2.119.0.js"></script><script src="cloud-save.js"></script><script>
 // ================= core helpers =================
 const W=320,H=180,FREEDOM=6000,KEY='sand_freedom_v1';
 const cv=document.getElementById('cv');let ctx=cv.getContext('2d');
@@ -195,9 +195,9 @@ const CLASSES=['Murmillo','Thraex','Retiarius','Secutor','Hoplomachus','Dimachae
 // ================= state =================
 let S=null,screen='create',view='main',arenaTier=0,C=null,fx=[],floats=[],trainAnim=null,abandonArm=false;
 let tmp={name:'Marcus',bg:0,look:{skin:2,hs:0,hair:0,beard:0,tunic:0,mark:0}};
-function save(){try{localStorage.setItem(KEY,JSON.stringify(S));}catch(e){}}
-function load(){try{const s=localStorage.getItem(KEY);return s?JSON.parse(s):null;}catch(e){return null;}}
-function wipe(){try{localStorage.removeItem(KEY);}catch(e){}}
+function save(){try{sfStorage.setItem(KEY,JSON.stringify(S));}catch(e){}}
+function load(){try{const s=sfStorage.getItem(KEY);return s?JSON.parse(s):null;}catch(e){return null;}}
+function wipe(){try{sfStorage.removeItem(KEY);}catch(e){}}
 const maxHP=()=>15+S.stats.end*5;
 const trainCost=v=>Math.round(6*Math.pow(v,1.35));
 
@@ -775,7 +775,7 @@ const SART={appia:'ending_appia',barracks:'barracks',roof:'roof',armory:'armory'
 const sArt=id=>BGI[SART[id]]||null;
 // ================= sound: everything synthesized with WebAudio, no files =================
 const SND={ac:null,master:null,sfx:null,mus:null,amb:null,crowd:null,crowdF:null,noiseB:null,on:true,music:true,musT:0,musStep:0,lastTick:0};
-try{const p=JSON.parse(localStorage.getItem('sf_audio')||'{}');if(p.on===false)SND.on=false;if(p.music===false)SND.music=false;}catch(e){}
+try{const p=JSON.parse(sfStorage.getItem('sf_audio')||'{}');if(p.on===false)SND.on=false;if(p.music===false)SND.music=false;}catch(e){}
 function audioInit(){if(SND.ac)return;const AC=window.AudioContext||window.webkitAudioContext;if(!AC)return;
  const ac=SND.ac=new AC(),m=SND.master=ac.createGain();m.gain.value=SND.on?.8:0;
  const comp=ac.createDynamicsCompressor();comp.threshold.value=-14;comp.ratio.value=4;m.connect(comp);comp.connect(ac.destination);
@@ -786,7 +786,7 @@ function audioInit(){if(SND.ac)return;const AC=window.AudioContext||window.webki
  // crowd bed: looping noise through a voice-band filter, volume follows favor
  const src=ac.createBufferSource();src.buffer=b;src.loop=true;const f=SND.crowdF=ac.createBiquadFilter();f.type='bandpass';f.frequency.value=700;f.Q.value=.6;
  const g=SND.crowd=ac.createGain();g.gain.value=0;src.connect(f);f.connect(g);g.connect(SND.amb);src.start();}
-function audioSave(){try{localStorage.setItem('sf_audio',JSON.stringify({on:SND.on,music:SND.music}));}catch(e){}}
+function audioSave(){try{sfStorage.setItem('sf_audio',JSON.stringify({on:SND.on,music:SND.music}));}catch(e){}}
 function toggleSnd(){audioInit();SND.on=!SND.on;if(SND.master)SND.master.gain.setTargetAtTime(SND.on?.8:0,SND.ac.currentTime,.05);audioSave();renderHUD();}
 function toggleMus(){audioInit();SND.music=!SND.music;if(SND.mus)SND.mus.gain.setTargetAtTime(SND.music?.32:0,SND.ac.currentTime,.1);audioSave();renderHUD();}
 document.addEventListener('pointerdown',()=>{audioInit();if(SND.ac&&SND.ac.state==='suspended')SND.ac.resume();},{capture:true});
@@ -1261,9 +1261,9 @@ const TIPS={
  market:`Better arms win fights — but gold spent here is gold not saved for freedom. Every weapon and shield has a <b>trait</b>; read them. Old gear sells back for a quarter.`,
  ledger:`Your ledger. <b>Contracts</b> pay well if you finish them before the deadline — and cost you if you don't. The <b>calendar</b> shows coming festivals. Your four <b>reputations</b> shape who helps you, who hunts you, and how your story ends.`,
  event:`The nights are long in a ludus. Choices made here matter more than you think. A choice marked with 🎲 is a dice check against one of your stats or reputations.`};
-function tipBox(k){let off=0;try{off=localStorage.getItem('sf_tips_off')==='1'}catch(e){}if(off||!S||!TIPS[k]||(S.tut&&(S.tut[k]||S.tut.off)))return '';
+function tipBox(k){let off=0;try{off=sfStorage.getItem('sf_tips_off')==='1'}catch(e){}if(off||!S||!TIPS[k]||(S.tut&&(S.tut[k]||S.tut.off)))return '';
  return `<div class="tip"><b>🗣 The Doctore</b><div>${TIPS[k]}</div><button class="tiny" onclick="tipDone('${k}')">Got it</button><button class="tiny" onclick="tipDone('off')">Skip all tips</button></div>`;}
-function tipDone(k){S.tut=S.tut||{};S.tut[k]=1;if(k==='off')try{localStorage.setItem('sf_tips_off','1')}catch(e){}save();renderPanel();}
+function tipDone(k){S.tut=S.tut||{};S.tut[k]=1;if(k==='off')try{sfStorage.setItem('sf_tips_off','1')}catch(e){}save();renderPanel();}
 function renderPanel(){
  const p=$('panel');
  if((screen==='dead'||screen==='free')&&S)recordRun();
@@ -2197,8 +2197,8 @@ const ACH=[
  ['freedman','🎖','Freedman','Buy your freedom'],['two_swords','💞','Two Wooden Swords','Buy freedom for you and your lover'],
  ['rudis','👑','Freed by Caesar','Receive the rudis from the emperor'],['spartacus','🔥','Heir of Spartacus','Lead the breakout'],
  ['into_night','🌙','Into the Night','Escape with your lover'],['flamma','🗡','Flamma\'s Heir','Find the lost Sword of Flamma'],['gilded','🏛','A Gilded Freedom','Be freed by a noble lover']];
-function legacy(){try{return JSON.parse(localStorage.getItem('sf_legacy')||'{"runs":[],"ach":{}}');}catch(e){return {runs:[],ach:{}};}}
-function saveLegacy(L){try{localStorage.setItem('sf_legacy',JSON.stringify(L));}catch(e){}}
+function legacy(){try{return JSON.parse(sfStorage.getItem('sf_legacy')||'{"runs":[],"ach":{}}');}catch(e){return {runs:[],ach:{}};}}
+function saveLegacy(L){try{sfStorage.setItem('sf_legacy',JSON.stringify(L));}catch(e){}}
 function ach(id){const L=legacy();if(L.ach[id])return;L.ach[id]=Date.now();saveLegacy(L);const a=ACH.find(x=>x[0]===id);if(!a)return;
  sfx.horn([[523,0,.15],[659,.15,.15],[784,.3,.4]]);const el=document.createElement('div');el.className='achpop';el.innerHTML=`<span>${a[1]}</span><div><small>Achievement unlocked</small><b>${a[2]}</b></div>`;
  const n=document.querySelectorAll('.achpop').length;el.style.top=(12+n*64)+'px';($('stage')||document.body).appendChild(el);setTimeout(()=>el.classList.add('on'),30);setTimeout(()=>{el.classList.remove('on');setTimeout(()=>el.remove(),600);},3800);}
@@ -2247,4 +2247,7 @@ function scheduleFlamma(){const F=S.flamma;
 S=load();
 if(S&&S.stats){screen='hub';if(S.hp==null)S.hp=maxHP();ensureStory();ensureLife();}else S=null;
 buildYard();renderPanel();requestAnimationFrame(frame);
+window.sfCanSwitch=()=>!C;
+window.sfReloadGame=()=>{S=load();C=null;fx=[];floats=[];view='main';hofOpen=false;screen='create';if(S&&S.stats){screen='hub';if(S.hp==null)S.hp=maxHP();ensureStory();ensureLife();}else S=null;buildYard();renderPanel();};
+sfCloudBoot();
 </script></body></html>
