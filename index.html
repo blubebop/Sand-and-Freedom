@@ -28,6 +28,17 @@ button small{display:block;font-weight:400;font-size:11px;opacity:.85}
 .cols{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 @media(max-width:660px){.cols{grid-template-columns:1fr}}
 .card{background:var(--panel2);border:2px solid #4a3020;padding:10px}
+.acts{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;align-content:start}.acts>h3{grid-column:1/-1}.acts>br{display:none}.acts button{margin:0;width:100%}
+.chips{display:grid;grid-template-columns:repeat(4,1fr);gap:5px;margin:6px 0}.chips>span{background:#120c09;padding:5px 4px;text-align:center;font-size:11px;color:var(--mut)}.chips>span b{display:block;font-size:16px;color:var(--txt)}.chips.c2>span b{font-size:13px}
+.kit{display:grid;grid-template-columns:repeat(4,1fr);gap:5px;margin:6px 0}.kit>div{text-align:center;font-size:11px;color:var(--mut);line-height:1.2}.kit .icn{display:block;width:100%;height:44px;margin:0 0 2px;object-fit:contain}.kit .none{display:block;height:44px;line-height:44px;background:#120c09;border:1px solid #3a2618;border-radius:3px;margin-bottom:2px;opacity:.5}
+details.more{margin-top:8px;border-top:1px dashed #4a3020;padding-top:6px}details.more>summary{cursor:pointer;color:var(--mut);font-size:12px;list-style:none;user-select:none}details.more>summary::-webkit-details-marker{display:none}details.more>summary::before{content:'▸ '}details.more[open]>summary::before{content:'▾ '}details.more>summary:hover{color:var(--txt)}
+.intent{background:#120c09;border-left:4px solid #c8a0f0;padding:6px 10px;margin-bottom:6px;font-size:13px}
+.brk{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:8px 0;align-items:center}.brk h4{margin:0 0 4px;font-size:11px;color:var(--mut);font-weight:400;text-transform:uppercase;letter-spacing:.05em}.brk>div{display:flex;flex-direction:column;gap:6px;justify-content:space-around;align-self:stretch}
+.bm{background:#120c09;border:1px solid #4a3020;border-left:3px solid #4a3020;padding:4px 7px;font-size:12px;display:flex;flex-direction:column;gap:2px;min-width:0}.bm span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.bm.live{border-color:var(--gold)}.bm .w{color:var(--grn)}.bm .w::after{content:' ✓'}.bm .l{opacity:.4;text-decoration:line-through}
+.igrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(104px,1fr));gap:6px;margin:4px 0 8px}.itile{background:var(--panel2);border:2px solid #4a3020;padding:5px;display:flex;flex-direction:column;align-items:center;gap:3px;text-align:center;font-size:11px;line-height:1.2}.itile.on{border-color:var(--gold)}.itile .icn{margin:0;width:100%;height:44px;object-fit:contain}.itile .none{display:block;width:100%;height:44px;line-height:44px;background:#120c09;opacity:.5}.itile button{margin:0}.ih{margin:8px 0 2px;font-size:12px;color:var(--gold);font-weight:700}
+.tabs{display:flex;flex-wrap:wrap;gap:4px;margin:0 0 8px}.tabs button{margin:0;padding:7px 12px}.tabs button.sel{background:#9a3a22;box-shadow:inset -3px -3px 0 #5a1e10,inset 3px 3px 0 #c8603e}
+.item .tr{display:block;font-size:12px;color:var(--mut);font-style:italic}
+.schools{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:6px 0}.schools button{margin:0;width:100%}
 .opt{display:flex;align-items:center;gap:6px;margin:4px 0}
 .opt .lab{width:92px;color:var(--mut)}
 .opt .val{min-width:120px;text-align:center;display:flex;align-items:center;justify-content:center;gap:6px}
@@ -81,7 +92,7 @@ button.dsw.nat{background:repeating-linear-gradient(45deg,#6a5a4a 0 3px,#3a2e26 
 @media(max-width:660px){
  #app{padding:4px}#panel{padding:10px 8px}
  input{font-size:16px;max-width:100%}
- .acts{display:grid;grid-template-columns:1fr 1fr;gap:6px;align-content:start}.acts>h3,.acts>br{grid-column:1/-1}.acts>br{display:none}.acts button{margin:0;width:100%;padding:10px 6px}
+ .acts{grid-template-columns:1fr 1fr}.acts button{padding:10px 6px}.schools{grid-template-columns:1fr}.tabs button{flex:1 1 30%;padding:9px 4px}
  .opp{grid-template-columns:62px 1fr;gap:8px}.opp>button{grid-column:1/-1;margin:2px 0 0;padding:10px}
  .item{grid-template-columns:1fr auto;column-gap:8px;row-gap:2px;padding:6px 0}.item>span:first-child{grid-row:span 2}.item>span:nth-child(2){text-align:right;align-self:end}.item>button{align-self:start;padding:8px 10px}
  .icn{width:56px;height:44px;margin-right:6px}
@@ -98,7 +109,7 @@ button.dsw.nat{background:repeating-linear-gradient(45deg,#6a5a4a 0 3px,#3a2e26 
  #stage{align-self:start}canvas#cv{border-top:0}
  #panel{border-top:0;border-left:0;overflow-y:auto;min-height:0;padding:8px}
  .cols{grid-template-columns:1fr}.cal{grid-template-columns:repeat(3,1fr)}
- .acts{display:grid;grid-template-columns:1fr 1fr;gap:5px}.acts>h3{grid-column:1/-1}.acts>br{display:none}.acts button{margin:0;width:100%;padding:7px 4px}
+ .acts{grid-template-columns:1fr 1fr;gap:5px}.acts button{padding:7px 4px}.schools{grid-template-columns:1fr}
  .mstat{display:flex;justify-content:space-between;gap:6px;font-size:12px;font-weight:700;background:#120c09;padding:4px 6px;margin-bottom:5px}
  .log{min-height:0;font-size:12px}.log div:nth-last-child(n+4){display:none}
  .opp{grid-template-columns:52px 1fr}.opp>button{grid-column:1/-1}.item{grid-template-columns:1fr auto}.item>span:first-child{grid-row:span 2}.icn{width:56px;height:44px}
@@ -109,7 +120,7 @@ button.dsw.nat{background:repeating-linear-gradient(45deg,#6a5a4a 0 3px,#3a2e26 
 <script>
 // ================= core helpers =================
 const W=320,H=180,FREEDOM=6000,KEY='sand_freedom_v1';
-const cv=document.getElementById('cv');let ctx=cv.getContext('2d');
+const cv=document.getElementById('cv');let ctx=cv.getContext('2d');const MAINCTX=ctx;
 const $=id=>document.getElementById(id);
 const R=(x,y,w,h,c)=>{ctx.fillStyle=c;ctx.fillRect(Math.round(x),Math.round(y),w,h);};
 const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
@@ -143,10 +154,17 @@ const TUNIC_N=['Crimson','Blue','Undyed','Green','Purple','Ochre'];
 const BEARDS=['Stubble','Mustache','Goatee','Short beard','Full beard'];
 const MARKS=['None','Cheek scar','Brow scar','War paint','Shoulder tattoo'];
 const BGS=[
- {n:'Blacksmith',s:'str',d:'Forge-hardened arms. +2 Strength'},
- {n:'Thief',s:'agi',d:'Quick hands, quicker feet. +2 Agility'},
- {n:'Farmhand',s:'end',d:'Years of hard labor. +2 Endurance'},
- {n:'Street Performer',s:'show',d:'Born to work a crowd. +2 Showmanship'}];
+ {n:'Blacksmith',i:'🔨',st:{str:2},d:'Forge-hardened arms. +2 Strength',a:'Forge-wise: arms and armor cost 15% less, and every weapon you carry is kept keen (+1 damage)',k:'Starts with a Pugio Dagger'},
+ {n:'Thief',i:'🗝',st:{agi:2},d:'Quick hands, quicker feet. +2 Agility',a:'Light fingers: you lift a purse in the stands after every win, and the crowd\'s gifts find you more often',k:'Starts with 80 gold and a Lucky Bulla'},
+ {n:'Farmhand',i:'🌾',st:{end:2},d:'Years of hard labor. +2 Endurance',a:'Ox-strong: a night\'s rest heals more, and injuries mend a day sooner',k:'Starts with Leather Straps and 2 tonics'},
+ {n:'Street Performer',i:'🎭',st:{show:2},d:'Born to work a crowd. +2 Showmanship',a:'Crowd-worker: +10 crowd favor at the start of every fight, and signature moves cost 30 favor instead of 40',k:'Starts with 10 fame and a Lady\'s Ribbon'},
+ {n:'Captured Soldier',i:'🦅',st:{str:1,end:1},lock:1,d:'A legionary taken in a lost battle. +1 Strength, +1 Endurance',a:'Shield discipline: +1 defense DC, and guarding restores 5 more stamina',k:'Starts with a Gladius, a Wicker Buckler and 10 honor'},
+ {n:'Disgraced Noble',i:'🏛',st:{agi:1,show:1},lock:1,d:'A patrician sold to pay a family\'s debts. +1 Agility, +1 Showmanship',a:'A name that opens doors: merchants treat you as 20 fame higher, and Fame, Honor and Trust checks get +2',k:'Starts with 150 gold and a Garnet Ring — but Quintus distrusts you'}];
+const bgIs=i=>!!(S&&S.bg===i);
+function livesUnlocked(){return legacy().runs.some(r=>r.path==='bought'||r.path==='bought2');}
+function lifeKit(){ensureInv();const g=(sl,i)=>{S.gear[sl]=i;if(!S.owned[sl].includes(i))S.owned[sl].push(i);};
+ if(S.bg===0)g('weapon',1);if(S.bg===1){S.gold=80;S.trk.bulla=1;S.charm='bulla';}if(S.bg===2){g('armor',1);S.potions=2;}if(S.bg===3){S.rep.fame+=10;S.trk.ribbon=1;}
+ if(S.bg===4){g('weapon',2);g('shield',1);S.rep.honor+=10;}if(S.bg===5){S.gold=150;S.trk.garnet=1;S.rep.trust=Math.max(0,S.rep.trust-10);}}
 const STATS=[
  {k:'str',n:'Strength',d:'Added to every damage roll'},
  {k:'agi',n:'Agility',d:'Attack bonus & defense (½ AGI); crit range at 10 / 18'},
@@ -154,18 +172,18 @@ const STATS=[
  {k:'show',n:'Showmanship',d:'Showboat rolls, purse bonus, mercy rolls'}];
 const WEAPONS=[
  {n:'Wooden Rudis',tr:'none',dn:1,ds:4,agi:0,p:0,t:'sword',len:9,c:'#a8743e',g:'#6b4523'},
- {n:'Pugio Dagger',tr:'quick',dn:1,ds:6,agi:2,p:45,t:'sword',len:5,c:'#c8ccd4',g:'#6b4523'},
+ {n:'Pugio Dagger',tr:'quick',dn:1,ds:4,agi:1,p:45,t:'sword',len:5,c:'#c8ccd4',g:'#6b4523'},
  {n:'Gladius',tr:'balanced',dn:2,ds:4,agi:1,p:150,t:'sword',len:9,c:'#d4d8e0',g:'#b08a3a'},
- {n:'Hasta Spear',tr:'reach',dn:2,ds:6,agi:0,p:400,t:'spear',c:'#c8ccd4'},
+ {n:'Hasta Spear',tr:'reach',dn:2,ds:6,agi:0,p:320,t:'spear',c:'#c8ccd4'},
  {n:'Trident',tr:'net',dn:2,ds:8,agi:1,p:800,t:'trident',c:'#d4d8e0'},
- {n:'Cavalry Spatha',tr:'long',dn:3,ds:6,agi:0,p:1350,t:'sword',len:12,c:'#e4e8f0',g:'#b08a3a'},
+ {n:'Cavalry Spatha',tr:'long',dn:3,ds:6,agi:1,p:1350,t:'sword',len:12,c:'#e4e8f0',g:'#b08a3a'},
  {n:'Golden Gladius',tr:'darling',dn:3,ds:8,agi:2,p:2400,t:'sword',len:10,c:'#f2c14e',g:'#8a5a10'},
- {n:'Thracian Sica',tr:'hook',dn:2,ds:6,agi:2,p:650,t:'sword'},
- {n:'Iron-shod Clava',tr:'stun',dn:2,ds:8,agi:-1,p:540,t:'sword'},
+ {n:'Thracian Sica',tr:'hook',dn:2,ds:6,agi:2,p:600,t:'sword'},
+ {n:'Iron-shod Clava',tr:'stun',dn:2,ds:8,agi:0,p:480,t:'sword'},
  {n:'Sword of Flamma',tr:'legend',dn:3,ds:8,agi:3,p:0,t:'sword',secret:1}];
-const ARMORS=[{n:'Bare Chest',d:0,p:0},{n:'Leather Straps',d:2,p:50},{n:'Padded Linen',d:4,p:180},{n:'Bronze Scale',d:7,p:500},{n:'Lorica Segmentata',d:11,p:1250},{n:'Thracian Bronze',d:6,p:420,dcb:1,note:'light and quick: +1 defense DC'},{n:'Gilded Lorica',d:13,p:2800,fame:1,note:'+5 crowd favor at the start of every fight'}];
-const HELMS=[{n:'No Helmet',d:0,p:0},{n:'Leather Cap',d:1,p:35},{n:'Bronze Galea',d:3,p:200},{n:'Murmillo Helm',d:5,p:580},{n:'Champion Helm',d:8,p:1500},{n:'Thraex Griffin Helm',d:4,p:380,atkb:1,note:'wide view: +1 attack'},{n:'Secutor Helm',d:6,p:720,dcb:1,note:'smooth and round: +1 defense DC'}];
-const SHIELDS=[{n:'No Shield',d:0,b:0,p:0},{n:'Wicker Buckler',d:1,b:1,p:30},{n:'Round Parma',d:2,b:2,p:170,tr:'deflect'},{n:'Scutum',d:4,b:3,p:560,tr:'bash'},{n:'Gilded Scutum',d:5,b:3,p:1400,tr:'bash2'}];
+const ARMORS=[{n:'Bare Chest',d:0,p:0},{n:'Leather Straps',d:2,p:50},{n:'Padded Linen',d:4,p:120},{n:'Bronze Scale',d:8,p:380},{n:'Lorica Segmentata',d:13,p:1000},{n:'Thracian Bronze',d:6,p:600,dcb:1,note:'light and quick: +1 defense DC'},{n:'Gilded Lorica',d:15,p:2800,fame:1,note:'+5 crowd favor at the start of every fight'}];
+const HELMS=[{n:'No Helmet',d:0,p:0},{n:'Leather Cap',d:1,p:35},{n:'Bronze Galea',d:3,p:200},{n:'Murmillo Helm',d:6,p:420},{n:'Champion Helm',d:8,p:1500,atkb:1,dcb:1,note:'a champion\'s bearing: +1 attack, +1 defense DC'},{n:'Thraex Griffin Helm',d:4,p:520,atkb:1,note:'wide view: +1 attack'},{n:'Secutor Helm',d:6,p:720,dcb:1,note:'smooth and round: +1 defense DC'}];
+const SHIELDS=[{n:'No Shield',d:0,b:0,p:0},{n:'Wicker Buckler',d:1,b:1,p:30},{n:'Round Parma',d:2,b:2,p:170,tr:'deflect'},{n:'Scutum',d:4,b:3,p:750,tr:'bash'},{n:'Gilded Scutum',d:5,b:4,p:1400,tr:'bash2'}];
 const TONIC_P=30;
 const PERSONAS={brute:{n:'Brute',c:'#e07a4a',d:'Swings heavy and often, rarely guards'},turtle:{n:'Turtle',c:'#7fc4f0',d:'Hides behind the shield and waits for openings'},
  showman:{n:'Showman',c:'#f2c14e',d:'Plays to the crowd and steals your favor'},coward:{n:'Coward',c:'#a8a090',d:'Careful — and begs for mercy when hurt'},
@@ -221,7 +239,7 @@ setTimeout(function loadBodies(){const GK=Object.keys(GEAR);let left=BODIES.leng
  for(const B of BODIES){const c=document.createElement('canvas');c.width=B.im.width;c.height=B.im.height;const g=c.getContext('2d');g.drawImage(B.im,0,0);B.w=c.width;B.h=c.height;B.pix=g.getImageData(0,0,B.w,B.h).data;
   g.clearRect(0,0,B.w,B.h);g.drawImage(B.cm,0,0);const cd=g.getImageData(0,0,B.w,B.h).data;B.cla=new Uint8Array(B.w*B.h);for(let i=0;i<B.cla.length;i++)B.cla[i]=cd[i*4];
   g.clearRect(0,0,B.w,B.h);g.drawImage(B.im2,0,0);B.pix2=g.getImageData(0,0,B.w,B.h).data;g.clearRect(0,0,B.w,B.h);g.drawImage(B.cm2,0,0);const cd2=g.getImageData(0,0,B.w,B.h).data;B.cla2=new Uint8Array(B.w*B.h);for(let i=0;i<B.cla2.length;i++)B.cla2[i]=cd2[i*4];}
- GIMG=true;if(screen==='hub'&&view==='arena')drawPortraits();if(screen==='hub'&&view==='market')renderPanel();};
+ GIMG=true;if(screen==='hub'&&(view==='arena'||S&&S.tour))drawPortraits();if(screen==='hub'&&view==='market')renderPanel();};
  for(const B of BODIES){B.im=new Image();B.cm=new Image();B.im.onload=done;B.cm.onload=done;B.im.src=B.src;B.cm.src=B.cls;B.im2=new Image();B.cm2=new Image();B.im2.onload=done;B.cm2.onload=done;B.im2.src=NOSW[B.id][0];B.cm2.src=NOSW[B.id][1];}},0);
 const hexRGB=h=>{const n=parseInt(h.slice(1),16);return [n>>16,n>>8&255,n&255];};
 const lumOf=(r,g,b)=>(r*3+g*6+b)/10;
@@ -454,7 +472,7 @@ function recolored(L,G){
  return {data:out,W:FW,H:FH};}
 function posed(base,pose,fr){
  const GW=base.W,GH=base.H,src=base.data,W=GW+PADX*2,H=GH+PADY*2,dst=new Uint8ClampedArray(W*H*4);
- const P={idle:{s:0,dx:0,crouch:0},windup:{s:-.085,dx:-2,crouch:0},attack:{s:.13,dx:2,crouch:2},guard:{s:.05,dx:0,crouch:6},hurt:{s:-.12,dx:-3,crouch:0}}[pose]||{s:0,dx:0,crouch:0};
+ const P={idle:{s:0,dx:0,crouch:0},windup:{s:-.085,dx:-2,crouch:0},attack:{s:.13,dx:2,crouch:2},guard:{s:.05,dx:0,crouch:6},hurt:{s:-.12,dx:-3,crouch:0},dodge:{s:-.16,dx:-4,crouch:3},kneel:{s:.07,dx:0,crouch:15},thrust:{s:.19,dx:4,crouch:5},smash:{s:.2,dx:3,crouch:9},coil:{s:-.05,dx:-1,crouch:9},cheer:{s:-.04,dx:0,crouch:0}}[pose]||{s:0,dx:0,crouch:0};
  const hip=78+MT,knee0=106+MT,knee1=138+MT,rows=[],drop=P.crouch?Math.floor((knee1-knee0)/P.crouch):0;
  for(let y=0;y<GH;y++){if(drop&&y>knee0&&y<knee1&&(y-knee0)%drop===0)continue;rows.push(y);}
  const off=GH-rows.length;
@@ -466,12 +484,53 @@ function posed(base,pose,fr){
 function getSprite(L,G,pose,fr){
  G=G||{};const g={weapon:G.weapon||0,armor:G.armor||0,helm:G.helm||0,shield:G.shield||0};
  const look=[L.sex||0,L.build||0,L.skin,L.hair,L.tunic,L.hs||0,L.sex?0:(L.beard||0),L.mark||0,g.weapon,g.armor,g.helm,g.shield,L.dye?JSON.stringify(L.dye):''].join('|'),k=look+'|'+pose+'|'+fr;
- let s=SPC.get(k);if(s)return s;if(SPC.size>500)SPC.clear();
+ let s=SPC.get(k);if(s)return s;if(SPC.size>140)SPC.clear();
  let base=SPC.get('c|'+look);if(!base){base=recolored(L,g);SPC.set('c|'+look,base);}
  const p=posed(base,pose,fr),mk=(data)=>{const c=document.createElement('canvas');c.width=p.W;c.height=p.H;c.getContext('2d').putImageData(new ImageData(data,p.W,p.H),0,0);return c;};
  const wd=new Uint8ClampedArray(p.data);for(let i=0;i<wd.length;i+=4)if(wd[i+3]){wd[i]=wd[i+1]=wd[i+2]=255;wd[i+3]=235;}
  s={c:mk(p.data),w:mk(wd)};SPC.set(k,s);return s;}
 const SCALE={1.5:.5,1:.375,2:.75};
+
+// ================= depth: camera, parallax, rim light, cast shadows =================
+let LIT=null;const RM=typeof matchMedia!=='undefined'&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+const CAM={x:0,z:1,tz:1,fx:160,fy:120,until:0,sx:0,sy:0};
+function camPunch(F,z,ms){if(RM)return;CAM.tz=z;CAM.fx=clamp(fighterX(F),70,250);CAM.fy=128;CAM.until=performance.now()+ms;}
+function camStep(t){const now=performance.now();if(now>CAM.until)CAM.tz=1;CAM.z+=(CAM.tz-CAM.z)*(CAM.tz>CAM.z?.2:.07);if(Math.abs(CAM.z-1)<.002&&CAM.tz===1)CAM.z=1;
+ let tx=0;if(!RM&&C&&C.p&&C.e)tx=Math.sin(t/2600)*2.2+Math.sin(t/1700)*.8+clamp((C.p.off+C.e.off)*.11,-5,5);CAM.x+=(tx-CAM.x)*.08;}
+function camSet(par){const z=CAM.z;ctx.setTransform(4*z,0,0,4*z,Math.round(4*(CAM.sx+CAM.fx*(1-z)-CAM.x*par*z)),Math.round(4*(CAM.sy+CAM.fy*(1-z))));}
+function camOff(){ctx.setTransform(4,0,0,4,Math.round(CAM.sx*4),Math.round(CAM.sy*4));}
+const SUN={c:'255,240,205',a:.3,d:-1,sy:-.15,sa:.2},MOON={c:'150,180,255',a:.3,d:1,sy:-.18,sa:.2},TORCH={c:'255,165,75',a:.42,d:0,fl:1,sy:-.12,sa:.2};
+const VLIT={pit:{c:'255,175,85',a:.72,out:1,fl:1,sy:-.24,sa:.26,hz:117,glow:[[14,44],[306,44]]},gate:{c:'255,160,70',a:.5,out:1,fl:1,sy:-.22,sa:.28,hz:135,glow:[[98,62],[222,62]]},
+ village:{...SUN,hz:125},capua:{...SUN,hz:113},colosseum:{...SUN,hz:147,glow:[[22,106],[300,106]]},pompeii:{c:'255,170,110',a:.42,d:1,sy:-.2,sa:.24,hz:130,glow:[[10,106],[310,106]]}};
+const SLIT={barracks:TORCH,armory:TORCH,tunnel:TORCH,alley:TORCH,cell:TORCH,tablinum:TORCH,banquet:TORCH,city:TORCH,gate:TORCH,yardnight:MOON,roof:MOON,shrine:{...SUN,c:'255,180,120',d:1},appia:{...SUN,c:'255,180,120'},yardday:SUN,courtyard:SUN,market:SUN,infirmary:SUN};
+const FXC=new WeakMap();
+function fxOf(img){let f=FXC.get(img);if(f)return f;const w=img.width,h=img.height;f={w,h,m:{}};FXC.set(img,f);
+ try{const c=document.createElement('canvas');c.width=w;c.height=h;const g=c.getContext('2d');g.drawImage(img,0,0);const d=g.getImageData(0,0,w,h).data,a=new Uint8Array(w*h);for(let i=0;i<w*h;i++)a[i]=d[i*4+3]>40?1:0;f.a=a;}catch(e){f.bad=1;}return f;}
+function fxLayer(img,kind,col){const f=fxOf(img);if(f.bad)return null;const key=kind+(col||'');if(f.m[key])return f.m[key];
+ const {w,h,a}=f,o=new Uint8ClampedArray(w*h*4),A=(x,y)=>x>=0&&x<w&&y>=0&&y<h&&a[y*w+x],rgb=(col||'0,0,0').split(',').map(Number),side=kind[1]==='l'?-1:1;
+ for(let y=0;y<h;y++)for(let x=0;x<w;x++){if(!a[y*w+x])continue;let al=0;
+  if(kind==='sh')al=255;
+  else if(kind[0]==='r'){if(!A(x+side,y)||!A(x+side*2,y))al=255;else if(!A(x+side*3,y)||!A(x+side*4,y))al=110;else if(!A(x,y-1)||!A(x,y-2))al=120;}
+  else{if(!A(x+side,y)||!A(x+side*2,y)||!A(x+side*3,y))al=255;else if(!A(x+side*5,y))al=120;}
+  if(al){const i=(y*w+x)*4;o[i]=rgb[0];o[i+1]=rgb[1];o[i+2]=rgb[2];o[i+3]=al;}}
+ const c=document.createElement('canvas');c.width=w;c.height=h;c.getContext('2d').putImageData(new ImageData(o,w,h),0,0);return f.m[key]=c;}
+function litDir(scrX){const L=LIT;return L.out?(scrX<160?-1:1):(L.d||0);}
+// both run inside the sprite's own transform (origin at the feet, possibly mirrored)
+function litShadow(img,x,y,w,h,flip,scrX){const L=LIT;if(!L||!L.sy||ctx!==MAINCTX)return;const sh=fxLayer(img,'sh');if(!sh)return;const d=litDir(scrX),wob=L.fl?Math.sin(performance.now()/130+scrX)*.03:0;
+ ctx.save();ctx.transform(1,0,(flip?-1:1)*(d*.5+wob),L.sy,0,0);ctx.globalAlpha=L.sa;ctx.drawImage(sh,x,y,w,h);ctx.restore();}
+function litRim(img,x,y,w,h,flip,scrX){const L=LIT;if(!L||ctx!==MAINCTX)return;const d=litDir(scrX),n=performance.now(),fl=L.fl?.72+.2*Math.sin(n/95+scrX)+.08*Math.sin(n/31):1;
+ const sides=d?[d]:[-1,1];ctx.save();
+ if(d){const dk=fxLayer(img,(flip?d:-d)<0?'dl':'dr');if(dk){ctx.globalAlpha=.2;ctx.drawImage(dk,x,y,w,h);}}
+ ctx.globalCompositeOperation='lighter';ctx.globalAlpha=L.a*fl*(d?1:.7);
+ for(const sd of sides){const r=fxLayer(img,(flip?-sd:sd)<0?'rl':'rr',L.c);if(r)ctx.drawImage(r,x,y,w,h);}ctx.restore();}
+function glows(L,t){if(!L||!L.glow)return;ctx.save();ctx.globalCompositeOperation='lighter';for(const [gx,gy] of L.glow){const fl=.75+.18*Math.sin(t/90+gx)+.07*Math.sin(t/33+gx),r=46;
+  const g=ctx.createRadialGradient(gx,gy,1,gx,gy,r);g.addColorStop(0,`rgba(${L.c},${.3*fl})`);g.addColorStop(1,`rgba(${L.c},0)`);ctx.fillStyle=g;ctx.fillRect(gx-r,gy-r,r*2,r*2);
+  const g2=ctx.createRadialGradient(gx,168,2,gx,168,70);g2.addColorStop(0,`rgba(${L.c},${.13*fl})`);g2.addColorStop(1,`rgba(${L.c},0)`);ctx.save();ctx.translate(0,168);ctx.scale(1,.28);ctx.translate(0,-168);ctx.fillStyle=g2;ctx.fillRect(gx-70,98,140,140);ctx.restore();}ctx.restore();}
+let VIG=null;function vignette(){if(!VIG){VIG=document.createElement('canvas');VIG.width=W;VIG.height=H;const g=VIG.getContext('2d'),gr=g.createRadialGradient(160,100,90,160,100,215);gr.addColorStop(0,'rgba(10,4,0,0)');gr.addColorStop(1,'rgba(10,4,0,.42)');g.fillStyle=gr;g.fillRect(0,0,W,H);}ctx.drawImage(VIG,0,0);}
+function drawVenuePar(t){const v=venueOf(),art=BGI['v_'+v],hz=(VLIT[v]||{}).hz||118;
+ if(!art){camSet(.35);drawVenue(t);return;}
+ camSet(.35);ctx.drawImage(art,0,0,W,hz,-5,0,W+10,hz);ctx.drawImage(art,0,0,W,hz,0,0,W,hz);
+ for(let y=hz;y<H;y+=2){camSet(.35+.65*(y-hz)/(166-hz));ctx.drawImage(art,0,y,W,2,-7,y,W+14,2.4);}}
 function drawGlad(x,y,s,L,G,o={}){
  if(!GIMG)return;
  const k=SCALE[s]??s/3,fx=Math.round(x+24*s),fy=Math.round(y+62*s);
@@ -479,8 +538,12 @@ function drawGlad(x,y,s,L,G,o={}){
  const sp=getSprite(L,G,pose,fr),img=o.flash>0&&Math.floor(o.flash/2)%2===0?sp.w:sp.c;
  ctx.save();ctx.imageSmoothingEnabled=false;ctx.translate(fx,fy);
  if(o.flip)ctx.scale(-1,1);
+ const dx=-(AX+MX+PADX)*k,dy=-(AY+MT+PADY)*k,lit=LIT&&!o.dead&&!o.nolit;
+ if(lit)litShadow(sp.c,dx,dy,img.width*k,img.height*k,!!o.flip,fx);
+ if(o.oy)ctx.translate(0,o.oy);if(o.rot)ctx.rotate(o.rot);
  if(o.dead){const f=o.fall??1,e=1-(1-f)*(1-f);ctx.translate(0,-18*k*e);ctx.rotate(-Math.PI/2*e);}
- ctx.drawImage(img,-(AX+MX+PADX)*k,-(AY+MT+PADY)*k,img.width*k,img.height*k);
+ ctx.drawImage(img,dx,dy,img.width*k,img.height*k);
+ if(lit&&img===sp.c)litRim(sp.c,dx,dy,img.width*k,img.height*k,!!o.flip,fx);
  ctx.restore();
 }
 function withCtx(c,fn){const o=ctx;ctx=c;fn();ctx=o;}
@@ -586,6 +649,12 @@ const QUOTES=[
 let restFx=null;
 const STARS=Array.from({length:70},()=>[rnd(0,W),rnd(0,66),Math.random()*6]);
 const RT={dusk:1800,night:5200,dawn:2000};
+// the yard darkens through the day as your energy is spent: 100 = morning, 0 = night
+let DN=0;
+function dayNight(){if(!S)return 0;const tg=clamp(1-S.energy/100,0,1);DN+=(tg-DN)*.035;if(Math.abs(tg-DN)<.003)DN=tg;return DN;}
+function yardPhase(t){const ph=restPhase(t);if(!restFx){const n=dayNight();return {n,warm:Math.sin(n*Math.PI)*.7,e:0};}
+ if(ph.phase==='dusk'){const n0=restFx.n0||0;DN=0;return {...ph,n:n0+(1-n0)*ph.p,warm:Math.max(ph.warm*(1-n0),Math.sin((n0+(1-n0)*ph.p)*Math.PI)*.7)};}
+ DN=0;return ph;}
 function restPhase(t){
  if(!restFx)return {n:0,warm:0,e:0};
  const e=t-restFx.t0,d=RT.dusk,nt=d+RT.night,end=nt+RT.dawn;
@@ -697,7 +766,7 @@ let birds=[];
 function drawLudusArt(t,ph){const n=ph.n;
  ctx.drawImage(BGI.yard_day,0,0);
  if(n>0&&BGI.yard_night){ctx.globalAlpha=n;ctx.drawImage(BGI.yard_night,0,0);ctx.globalAlpha=1;}
- drawStatues();if(n>0)R(0,0,W,H,`rgba(10,14,46,${n*.35})`);
+ drawStatues();if(n>0)R(0,0,W,H,`rgba(10,14,46,${n*.35})`);LIT=n>.5?MOON:SUN;
  if(ph.warm>0)R(0,0,W,H,`rgba(255,110,40,${ph.warm*.22})`);
  drawYardLife(t,n);
  let x=60,pose='idle',show=true;
@@ -712,7 +781,7 @@ function drawLudusArt(t,ph){const n=ph.n;
  if(ph.phase==='night'){const z=(t/700)%3;for(let i=0;i<3;i++){const zz=(z+i)%3;ctx.globalAlpha=Math.min(1,(3-zz)/1.5)*n;ptxt('z',44+zz*5,44-zz*8,'#f3e6d0','left',1+(zz>1.5?1:0),true);}ctx.globalAlpha=1;}
  if(ph.phase==='dawn'&&ph.p>.3){ctx.globalAlpha=Math.min(1,(ph.p-.3)/.25)*(ph.p>.85?(1-ph.p)/.15:1);ptxt('DAY '+S.day,160,36,'#f2c14e','center',3,true);ctx.globalAlpha=1;}}
 function drawLudus(t){
- const ph=restPhase(t),n=ph.n;
+ const ph=yardPhase(t),n=ph.n;
  if(BGI.yard_day)return drawLudusArt(t,ph);
  ctx.drawImage(SKYL,0,0);
  let sunY=14;if(ph.phase==='dusk')sunY=14+ph.p*70;else if(ph.phase==='night')sunY=99;else if(ph.phase==='dawn')sunY=84-ph.p*70;
@@ -753,10 +822,10 @@ function drawLudus(t){
 }
 function rest(){
  if(restFx)return;
- const h=Math.ceil(maxHP()*[.3,.45,.6][S.quarters||0]),q=QUOTES[(S.qi||0)%QUOTES.length],up=upkeep();S.qi=(S.qi||0)+1;
+ const h=Math.ceil(maxHP()*([.3,.45,.6][S.quarters||0]+(bgIs(2)?.15:0))),q=QUOTES[(S.qi||0)%QUOTES.length],up=upkeep();S.qi=(S.qi||0)+1;
  S.day++;S.energy=100;S.hp=Math.min(maxHP(),S.hp+h);genOpps();const paid=Math.min(S.gold,up);S.gold-=paid;const notes=newDay();
  S.log=`Day ${S.day}. You wake ${['on straw','in your private cell','clean from the baths'][S.quarters||0]} to the clang of the training yard. (+${h} HP, energy restored, new opponents posted · board &amp; upkeep −${paid}g) ${notes}`;save();
- restFx={t0:performance.now(),q,timers:[]};
+ restFx={t0:performance.now(),q,timers:[],n0:DN};
  const qe=$('quote');qe.innerHTML=`<div class="qq">“${esc(q.q)}”</div><div class="qa">— ${esc(q.a)}</div>`;
  restFx.timers.push(setTimeout(()=>qe.classList.add('on'),RT.dusk+300));
  restFx.timers.push(setTimeout(()=>qe.classList.remove('on'),RT.dusk+RT.night-500));
@@ -874,6 +943,12 @@ function sandPuff(x,y=166,n=10){for(let i=0;i<n;i++)HFX.parts.push({k:'sand',x:x
 function drawHFX(){const P=HFX.parts;for(let i=P.length-1;i>=0;i--){const p=P[i];p.x+=p.vx;p.y+=p.vy;p.l--;
   if(p.k==='spark'){p.vy+=.12;R(p.x,p.y,1,1,p.c);R(p.x-p.vx*.6,p.y-p.vy*.6,1,1,p.c);}
   else if(p.k==='drop'){p.vy+=.18;if(p.y>166){p.y=166;p.vx=0;p.vy=0;}R(p.x,p.y,2,1,p.c);}
+  else if(p.k==='arc'){const pr=1-p.l/p.L,head=Math.min(1,pr*1.9),tail=Math.max(0,pr*1.9-.9),n=Math.ceil(p.r*.9);for(let j=0;j<=n;j++){const f=j/n;if(f>head||f<tail)continue;const a=p.a0+(p.a1-p.a0)*f,w=f>head-.25?3:2;ctx.globalAlpha=Math.min(1,.35+(f-tail)/(head-tail+.01));R(p.x+Math.cos(a)*p.r*p.d-1,p.y+Math.sin(a)*p.r*(p.sq||1),w,w,f>head-.2?'#ffffff':p.c);}ctx.globalAlpha=1;}
+  else if(p.k==='streak'){const pr=1-p.l/p.L,x0=p.x+(p.tx-p.x)*Math.max(0,pr*1.6-.6),x1=p.x+(p.tx-p.x)*Math.min(1,pr*1.6);ctx.globalAlpha=.9;R(Math.min(x0,x1),p.y,Math.abs(x1-x0),1,p.c);ctx.globalAlpha=.5;R(Math.min(x0,x1),p.y-1,Math.abs(x1-x0)*.6,1,'#ffffff');R(Math.min(x0,x1),p.y+1,Math.abs(x1-x0)*.6,1,p.c);ctx.globalAlpha=1;}
+  else if(p.k==='ring'){const pr=1-p.l/p.L,rr=p.r0+(p.r1-p.r0)*pr;ctx.globalAlpha=(1-pr)*.8;for(let a=0;a<Math.PI*2;a+=Math.PI/Math.max(8,rr))R(p.x+Math.cos(a)*rr,p.y+Math.sin(a)*rr*(p.sq||1),1,1,p.c);ctx.globalAlpha=1;}
+  else if(p.k==='glint'){const pr=1-p.l/p.L,n=Math.round(1+3*Math.sin(pr*Math.PI));R(p.x-n,p.y,n*2+1,1,p.c);R(p.x,p.y-n,1,n*2+1,p.c);R(p.x,p.y,1,1,'#fff');}
+  else if(p.k==='mote'){p.vy+=p.g||0;ctx.globalAlpha=Math.min(1,p.l/12);R(p.x,p.y,p.w||1,p.w||1,p.c);ctx.globalAlpha=1;}
+  else if(p.k==='net'){p.vy+=.2;const pr=1-p.l/p.L,sz=Math.round(3+9*pr);ctx.globalAlpha=.9;for(let j=0;j<=sz;j+=3){R(p.x-sz/2,p.y-sz/2+j,sz,1,'#d8c8a0');R(p.x-sz/2+j,p.y-sz/2,1,sz,'#d8c8a0');}ctx.globalAlpha=1;}
   else{p.vx*=.96;p.r+=.08;ctx.globalAlpha=Math.max(0,p.l/50)*.55;R(p.x-p.r,p.y-p.r,p.r*2,p.r*2,'#e8d4a4');ctx.globalAlpha=1;}
   if(p.l<=0)P.splice(i,1);}
  if(HFX.flash>0){ctx.globalAlpha=HFX.flash/10*.55;R(0,0,W,H,'#fff');ctx.globalAlpha=1;HFX.flash--;}}
@@ -1008,7 +1083,7 @@ const NPCSRC={caesar:'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAF0AAACeCAYA
 const NPCI={};for(const k in NPCSRC){const im=new Image();im.onload=()=>{NPCI[k]=im;};im.src=NPCSRC[k];}
 // draw a story character with feet at (cx,feet); same scale rules as gladiators (s=1.5 -> half size)
 function npc(k,cx,feet,s,o={}){const im=NPCI[k];if(!im)return false;const kk=s/3,w=im.width*kk,h=im.height*kk;
- ctx.save();ctx.imageSmoothingEnabled=false;ctx.translate(Math.round(cx),Math.round(feet));if(o.flip)ctx.scale(-1,1);ctx.drawImage(im,Math.round(-w/2),Math.round(-h),Math.round(w),Math.round(h));ctx.restore();return true;}
+ ctx.save();ctx.imageSmoothingEnabled=false;ctx.translate(Math.round(cx),Math.round(feet));if(o.flip)ctx.scale(-1,1);const nx=Math.round(-w/2),ny=Math.round(-h),nw=Math.round(w),nh=Math.round(h);if(LIT&&!o.nolit)litShadow(im,nx,ny,nw,nh,!!o.flip,cx);ctx.drawImage(im,nx,ny,nw,nh);if(LIT&&!o.nolit)litRim(im,nx,ny,nw,nh,!!o.flip,cx);ctx.restore();return true;}
 const SCENE_OF={flamma1:'barracks',flamma2:'appia',recruit_train:'yardnight',recruit_fight:'barracks',recruit_thanks:'barracks',mate_dies:'barracks',noble_meet:'banquet',noble_visit:'banquet',noble_tryst:'banquet',noble_offer:'banquet',noble_gift:'courtyard',noble_jealous:'barracks',noble_scandal:'tablinum',wine:'barracks',dice:'barracks',recruit:'barracks',thief:'barracks',fever:'barracks',letterHome:'barracks',plot1:'barracks',plot3:'barracks',grateful:'barracks',
  doctore:'yardnight',love_spar:'yardnight',love_roof:'roof',meet:'yardday',love_tryst:'armory',plot2:'armory',love_wounds:'infirmary',injury:'infirmary',love_after:'infirmary',
  banquet:'banquet',saturnalia:'city',shrine:'shrine',patron:'courtyard',patron_favor:'courtyard',emperor:'courtyard',lanista_offer:'tablinum',love_exposed:'tablinum',conspiracy:'tablinum',
@@ -1106,7 +1181,7 @@ function drawScene(t,q){
  else if(id==='yardday'||id==='yardnight'){ctx.drawImage(SKYL,0,0);ctx.drawImage(SCN,0,0);}
  else if(id==='gate'){ctx.drawImage(BGI.v_gate||VBG.gate||buildVenue('gate'),0,0);}
  else ctx.drawImage(bg,0,0);
- const lit=[];
+ LIT=SLIT[id]||SUN;const lit=[];
  if(['noble_meet','noble_visit','noble_tryst','noble_offer','noble_gift','noble_jealous'].includes(ev)){const nobleG={...G,helm:0,shield:0};
   if(ev==='noble_meet'){gl(150,172,1.5,me,nobleG);npc('calpurnia',236,172,1.5,{flip:true});npc('herald',70,172,1.5);}
   else if(ev==='noble_jealous'){gl(130,166,1.5,me,cas);if(L)gl(210,166,1.5,lov,CASUAL(L.gear||{weapon:0}),{flip:true});}
@@ -1187,17 +1262,22 @@ function drawScene(t,q){
 }
 
 function drawArena(t){
- if(C&&C.celebrate&&BGI.victory)ctx.drawImage(BGI.victory,0,0);else drawVenue(t);if(C&&C.cheer>0)C.cheer--;
- if(!C)return;
+ camStep(t);const cel=C&&C.celebrate&&BGI.victory;
+ if(cel){camSet(0);ctx.drawImage(BGI.victory,0,0);}else drawVenuePar(t);if(C&&C.cheer>0)C.cheer--;
+ if(!C){camOff();return;}
+ LIT=cel?TORCH:(VLIT[venueOf()]||SUN);camSet(1);
  const P=C.p,E=C.e;
  for(const F of [P,E]){if(F.flash>0)F.flash--;}
  const sh=F=>F.flash>0?(Math.random()*4-2):0;
  const px=58+P.off+sh(P),ex2=190+E.off+sh(E);
- R(px+14,166,46,5,'rgba(0,0,0,.25)');R(ex2+12,166,46,5,'rgba(0,0,0,.25)');
+ for(const sx0 of [px+14,ex2+12]){R(sx0+5,165,36,1,'rgba(0,0,0,.16)');R(sx0,166,46,3,'rgba(0,0,0,.2)');R(sx0+5,169,36,1,'rgba(0,0,0,.16)');}
  const bob=Math.sin(t/380)>0?0:1;
  const fall=F=>{if(!F.dead)return 1;if(!F.deadT)F.deadT=t;const f=Math.min(1,(t-F.deadT)/520);if(f>=1&&!F.landed){F.landed=1;sfx.thud();shake(4);sandPuff(fighterX(F)+(F.isP?-20:20),166,16);}return f;};
- drawGlad(ex2,72,1.5,E.look,E.gear,{flip:true,pose:E.flash>0&&!E.dead?'hurt':E.pose,flash:E.flash,dead:E.dead,fall:fall(E),seed:.5});
- drawGlad(px,72,1.5,P.look,P.gear,{pose:P.flash>0&&!P.dead?'hurt':P.pose,flash:P.flash,dead:P.dead,fall:fall(P)});
+ drawGlad(ex2,72,1.5,E.look,E.gear,{flip:!E.spin,pose:E.flash>0&&!E.dead&&E.pose!=='kneel'?'hurt':E.pose,flash:E.flash,dead:E.dead,fall:fall(E),seed:.5,oy:E.oy,rot:E.dead?0:E.rot});
+ drawGlad(px,72,1.5,P.look,P.gear,{flip:!!P.spin,pose:P.flash>0&&!P.dead&&P.pose!=='kneel'?'hurt':P.pose,flash:P.flash,dead:P.dead,fall:fall(P),oy:P.oy,rot:P.dead?0:P.rot});
+ if(P.guard)txt('GUARD',60+P.off,64,'#7fc4f0');if(E.guard)txt('GUARD',250,64,'#7fc4f0');
+ if(!cel)glows(LIT,t);if(screen==='fight')drawHFX();
+ camOff();vignette();LIT=null;
  // HUD boxes
  const box=(x,F,right)=>{R(x,3,96,24,'rgba(20,12,8,.86)');R(x,3,96,1,'#6b4528');
   txt(F.short.slice(0,12),x+3,5,'#f3e6d0');txt(`${F.hp}/${F.maxhp}`,x+93,5,'#f3e6d0','right');
@@ -1206,7 +1286,6 @@ function drawArena(t){
  box(3,P);box(221,E);
  R(122,3,76,17,'rgba(20,12,8,.86)');txt('CROWD',160,5,'#f2c14e','center',7);
  R(126,12,68,5,'#221');R(126,12,Math.round(68*C.favor/100),5,'#f2c14e');
- if(P.guard)txt('GUARD',60+P.off,64,'#7fc4f0');if(E.guard)txt('GUARD',250,64,'#7fc4f0');
 }
 function drawFree(t){
  const EA={bought:'ending_road',bought2:'ending_road',rudis:'ending_rudis',escape:'ending_escape',lovers:'ending_appia',noble:'banquet'}[(S.ending||{}).path||'bought'];
@@ -1228,18 +1307,18 @@ function drawFree(t){
 }
 function frame(t){
  audioTick(t);let sx=0,sy=0;if(HFX.shake>.2&&screen==='fight'){sx=(Math.random()-.5)*HFX.shake;sy=(Math.random()-.5)*HFX.shake;}HFX.shake*=.85;
- ctx.setTransform(4,0,0,4,Math.round(sx*4),Math.round(sy*4));ctx.imageSmoothingEnabled=false;ctx.clearRect(0,0,W,H);
- if(screen==='create')drawCell(t);
- else if(screen==='hub'&&view==='dye')drawCell(t);
- else if(screen==='hub'&&view==='lovelook'&&S.love)drawLoveCell(t);
- else if(screen==='hub'&&view==='market'&&BGI.market&&!restFx){ctx.drawImage(BGI.market,0,0);gl(150,170,1.5,S.look,S.gear);}
+ CAM.sx=sx;CAM.sy=sy;LIT=null;ctx.setTransform(4,0,0,4,Math.round(sx*4),Math.round(sy*4));ctx.imageSmoothingEnabled=false;ctx.clearRect(0,0,W,H);
+ if(screen==='create'){LIT=TORCH;drawCell(t);}
+ else if(screen==='hub'&&view==='dye'){LIT=TORCH;drawCell(t);}
+ else if(screen==='hub'&&view==='lovelook'&&S.love){LIT=TORCH;drawLoveCell(t);}
+ else if(screen==='hub'&&view==='market'&&BGI.market&&!restFx){const dn=dayNight();LIT=dn>.6?MOON:SUN;ctx.drawImage(BGI.market,0,0);gl(150,170,1.5,S.look,S.gear);if(dn>0){R(0,0,W,H,`rgba(255,110,40,${Math.sin(dn*Math.PI)*.16})`);R(0,0,W,H,`rgba(10,14,46,${dn*.5})`);}}
  else if(screen==='hub'&&S&&!restFx&&curEv()&&GIMG)drawScene(t,curEv());
  else if(screen==='hub')drawLudus(t);
  else if(screen==='dead'&&BGI.ending_death){ctx.drawImage(BGI.ending_death,0,0);R(0,0,W,H,'rgba(30,0,0,.25)');txt('FALLEN',160,30,'#e0553f','center',16);}
  else if(screen==='fight'||screen==='dead'){drawArena(t);if(screen==='dead'){R(0,0,W,H,'rgba(40,0,0,.45)');txt('FALLEN',160,80,'#e0553f','center',16);}}
  else if(screen==='free')drawFree(t);
- if(screen==='fight'){drawHFX();if(C&&C.p&&!C.result&&C.p.hp<=C.p.maxhp*.3){const a=.18+.12*Math.sin(t/180);const g=ctx.createRadialGradient(160,90,70,160,90,200);g.addColorStop(0,'rgba(160,0,0,0)');g.addColorStop(1,`rgba(160,0,0,${a})`);ctx.fillStyle=g;ctx.fillRect(0,0,W,H);}}
- ctx.setTransform(4,0,0,4,0,0);drawFloats();drawFx(t);
+ if(screen==='fight'){if(C&&C.p&&!C.result&&C.p.hp<=C.p.maxhp*.3){const a=.18+.12*Math.sin(t/180);const g=ctx.createRadialGradient(160,90,70,160,90,200);g.addColorStop(0,'rgba(160,0,0,0)');g.addColorStop(1,`rgba(160,0,0,${a})`);ctx.fillStyle=g;ctx.fillRect(0,0,W,H);}}
+ LIT=null;if(screen==='fight'){CAM.sx=CAM.sy=0;camSet(1);drawFloats();}ctx.setTransform(4,0,0,4,0,0);if(screen!=='fight')drawFloats();drawFx(t);
  requestAnimationFrame(frame);
 }
 
@@ -1265,18 +1344,18 @@ function tipBox(k){let off=0;try{off=localStorage.getItem('sf_tips_off')==='1'}c
  return `<div class="tip"><b>🗣 The Doctore</b><div>${TIPS[k]}</div><button class="tiny" onclick="tipDone('${k}')">Got it</button><button class="tiny" onclick="tipDone('off')">Skip all tips</button></div>`;}
 function tipDone(k){S.tut=S.tut||{};S.tut[k]=1;if(k==='off')try{localStorage.setItem('sf_tips_off','1')}catch(e){}save();renderPanel();}
 function renderPanel(){
- const p=$('panel');
+ const p=$('panel');ensureInv();
  if((screen==='dead'||screen==='free')&&S)recordRun();
  if(hofOpen){p.innerHTML=pHof();drawHofPortraits();renderHUD();return;}
  if(screen==='create')p.innerHTML=pCreate();
- else if(screen==='hub')p.innerHTML=view==='train'?pTrain():view==='market'?pMarket():view==='arena'?pArena():view==='dye'?pDye():view==='lovelook'&&S.love?pLoveLook():view==='ledger'?pLedger():pHub();
+ else if(screen==='hub')p.innerHTML=view==='train'?pTrain():view==='market'?pMarket():view==='arena'?pArena():view==='dye'?pDye():view==='lovelook'&&S.love?pLoveLook():view==='ledger'?pLedger():view==='inv'?pInv():pHub();
  else if(screen==='fight')p.innerHTML=pFight();
  else if(screen==='dead')p.innerHTML=pDead();
  else if(screen==='free')p.innerHTML=pEnding();
  let tk=null;if(screen==='hub'&&!restFx){tk=curEv()?'event':view==='main'?'hub':view==='arena'?'arena':view==='train'?'train':view==='market'?'market':view==='ledger'?'ledger':null;}
  else if(screen==='fight'&&C){tk=C.result?(C.result.includes('finishWin')?'win':null):'fight';}
  if(tk){const tb=tipBox(tk);if(tb)p.insertAdjacentHTML('afterbegin',tb);}
- if(screen==='hub'&&view==='arena')drawPortraits();
+ if(screen==='hub'&&(view==='arena'||S&&S.tour))drawPortraits();
  renderHUD();
 }
 
@@ -1336,21 +1415,23 @@ function pCreate(){
   ${row('Loincloth','tunic',sw(TUNICS[L.tunic])+TUNIC_N[L.tunic])}
 
  </div><div class="card"><div class="mut" style="margin-bottom:4px">Former life</div>
-  ${BGS.map((b,i)=>`<button class="bgb ${tmp.bg===i?'sel':''}" onclick="tmp.bg=${i};renderPanel()">${b.n}<small>${b.d}</small></button>`).join('')}
+  ${BGS.map((b,i)=>{const lk=b.lock&&!livesUnlocked();return `<button class="bgb ${tmp.bg===i?'sel':''}" onclick="tmp.bg=${i};renderPanel()" ${lk?'disabled':''}>${lk?'🔒':b.i} ${b.n}<small>${lk?'Unlocked once one of your gladiators buys their freedom':b.d}</small>${lk?'':`<small>★ ${b.a}</small><small>🎒 ${b.k}</small>`}</button>`;}).join('')}
  </div></div>
+ <div class="card" style="margin-top:10px">${hardUnlocked()?`<label style="cursor:pointer;display:flex;gap:8px;align-items:flex-start"><input type="checkbox" style="width:18px;height:18px;margin-top:2px" ${tmp.hard?'checked':''} onchange="tmp.hard=this.checked"><span><b style="color:var(--red)">🔥 Iron Road</b> <span class="mut">— for those who have already walked free. Every opponent is tougher (+1 attack, +15% health), seasoned fighters appear a tier earlier and carry an extra perk, and freedom costs 15% more. Marked in the Hall of Fame.</span></span></label>`:'<span class="mut">🔒 <b>Iron Road</b> — a harder road, unlocked once one of your gladiators walks free.</span>'}</div>
  <div style="margin-top:10px"><button onclick="randomize()">🎲 Randomize</button><button onclick="hofOpen=true;renderPanel()">🏛 Hall of Fame</button><button onclick="dyeOpen=true;dyeKit=4;renderPanel()">🎨 Colours &amp; Dyes</button><button class="pri" onclick="begin()">Enter the Ludus ▶</button></div>`;
 }
 const LOOKN={sex:2,build:3,skin:SKINS.length,hs:HAIRS.length,hair:HAIRC.length,beard:BEARDS.length,tunic:TUNICS.length,mark:MARKS.length};
 function cyc(k,d){const L=tmp.look,n=k==='hs'&&L.sex?HAIRS_F.length:LOOKN[k];L[k]=((L[k]||0)+d+n)%n;if(L.dye&&L.dye[k]){delete L.dye[k];}
  if(k==='sex'){if(L.sex&&(L.hs||0)>=HAIRS_F.length)L.hs=0;const other=L.sex?NAMES:NAMES_F;if(!tmp.name||tmp.name==='Marcus'||other.includes(tmp.name))tmp.name=pick(L.sex?NAMES_F:NAMES);}
  renderPanel();}
-function randomize(){for(const k in LOOKN)tmp.look[k]=rnd(0,LOOKN[k]-1);if(tmp.look.sex)tmp.look.hs=rnd(0,HAIRS_F.length-1);tmp.bg=rnd(0,3);tmp.name=pick(tmp.look.sex?NAMES_F:NAMES);renderPanel();}
+function randomize(){for(const k in LOOKN)tmp.look[k]=rnd(0,LOOKN[k]-1);if(tmp.look.sex)tmp.look.hs=rnd(0,HAIRS_F.length-1);tmp.bg=rnd(0,livesUnlocked()?5:3);tmp.name=pick(tmp.look.sex?NAMES_F:NAMES);renderPanel();}
+function hardUnlocked(){return legacy().runs.some(r=>r.path!=='dead');}
 function begin(){
- const stats={str:2,agi:2,end:2,show:2};stats[BGS[tmp.bg].s]+=2;
- S={name:(tmp.name||'Nameless').trim().slice(0,14)||'Nameless',look:{...tmp.look,...(tmp.look.dye?{dye:{...tmp.look.dye}}:{})},bg:tmp.bg,stats,gold:30,day:1,energy:100,
+ if(BGS[tmp.bg].lock&&!livesUnlocked())tmp.bg=0;const stats={str:2,agi:2,end:2,show:2};for(const k in BGS[tmp.bg].st)stats[k]+=BGS[tmp.bg].st[k];
+ S={name:(tmp.name||'Nameless').trim().slice(0,14)||'Nameless',look:{...tmp.look,...(tmp.look.dye?{dye:{...tmp.look.dye}}:{})},bg:tmp.bg,stats,hard:tmp.hard&&hardUnlocked()?1:0,gold:30,day:1,energy:100,
   gear:{weapon:0,armor:0,helm:0,shield:0},potions:1,wins:0,spared:0,tierWins:[0,0,0,0,0],maxTier:0,opps:[],
   log:'The gate slams shut behind you. Lanista Quintus grunts: "Fight well and you may one day buy back your life. Fight poorly and the sand drinks you." <span class="mut">Check the 📜 Ledger for contracts and the festival calendar. Every night may bring a choice.</span>'};
- ensureStory();ensureLife();S.offers=[mkQuest(),mkQuest()];S.nextOffer=S.day+5;hist(`Sold to the ludus of Quintus as a ${BGS[S.bg].n.toLowerCase()}.`);
+ ensureStory();ensureLife();lifeKit();S.offers=[mkQuest(),mkQuest()];S.nextOffer=S.day+5;hist(`Sold to the ludus of Quintus — once a ${BGS[S.bg].n.toLowerCase()}.`);
  S.hp=maxHP();genOpps();screen='hub';view='main';save();renderPanel();
 }
 
@@ -1359,33 +1440,38 @@ function rankName(){return RANKS[Math.min(4,S.maxTier+(S.tierWins[4]>=3?1:0))];}
 function medCost(){return Math.ceil((maxHP()-S.hp)*0.6);}
 function pHub(){
  if(restFx)return `<div class="msg">🌙 Night falls over the ludus. The gladiators sleep, and the day's wounds begin to close…</div><button onclick="skipRest()">Skip to morning ▶</button>`;
+ if(S.perkPick&&S.perkPick.length)return pPerk();
+ if(S.tour)return pTour();
  if(curEv())return pEvent();
  const st=S.stats,G=S.gear,Wp=WEAPONS[G.weapon],def=ARMORS[G.armor].d+HELMS[G.helm].d+SHIELDS[G.shield].d;
  const mc=medCost(),f=fest(),fp=freePrice(),two=S.love&&S.love.stage==='bonded';
  return `<div class="msg">${f?`<div class="festb">${f.i} Today is ${f.n} — ${f.d}.</div>`:''}${S.log}</div>
  <div class="cols"><div class="card">
-  <h3>${esc(S.name)} <small>· ${rankName()} · ${BGS[S.bg].n}${S.style?' · '+S.style:''}</small></h3>
-  <div><span title="Strength: added to every damage roll">STR <b>${st.str}</b></span> · <span title="Agility: attack bonus and defense (½ AGI); crits at 10 / 18">AGI <b>${st.agi}</b></span> · <span title="Endurance: +5 max health per point">END <b>${st.end}</b></span> · <span title="Showmanship: crowd favor, purses and mercy rolls">SHOW <b>${st.show}</b></span></div>
-  <div class="mut" style="margin:6px 0">Attack <b>${sgn(Math.floor(st.agi/2)+Wp.agi)}</b> · Defense DC <b>${8+Math.floor(st.agi/2)+SHIELDS[G.shield].b}</b> · Damage <b>${Wp.dn}d${Wp.ds}+${st.str}</b> · Armor <b>${Math.round(def/(def+20)*100)}%</b></div>
-  <div>🗡 ${Wp.n}<br>🥋 ${ARMORS[G.armor].n}<br>⛑ ${HELMS[G.helm].n}<br>🛡 ${SHIELDS[G.shield].n}<br>🧪 Tonics: ${S.potions}</div>
-  <div class="mut" style="margin-top:6px">Victories: ${S.wins} · Spared by the crowd: ${S.spared} · Killed: ${S.kills} · Shown mercy: ${S.mercies}</div>
+  <h3>${esc(S.name)} <small>· ${rankName()} · ${BGS[S.bg].n}${S.style?' · '+S.style:''}${S.hard?' · <span style="color:var(--red)">🔥 Iron Road</span>':''}</small></h3>
+  <div class="chips"><span title="Strength: added to every damage roll">STR<b>${st.str}</b></span><span title="Agility: attack bonus and defense (½ AGI); crits at 10 / 18">AGI<b>${st.agi}</b></span><span title="Endurance: +5 max health per point">END<b>${st.end}</b></span><span title="Showmanship: crowd favor, purses and mercy rolls">SHOW<b>${st.show}</b></span></div>
+  <div class="chips c2"><span>Attack<b>${sgn(Math.floor(st.agi/2)+Wp.agi)}</b></span><span>Defense<b>DC ${8+Math.floor(st.agi/2)+SHIELDS[G.shield].b}</b></span><span>Damage<b>${Wp.dn}d${Wp.ds}+${st.str}</b></span><span>Armor<b>${Math.round(def/(def+20)*100)}%</b></span></div>
+  <div class="kit">${[['weapon',Wp.n],['armor',ARMORS[G.armor].n],['helm',HELMS[G.helm].n],['shield',SHIELDS[G.shield].n]].map(([sl,nm])=>{const ic=(G[sl]||sl==='weapon')?itemIcon(sl,G[sl]):'';return `<div>${ic?`<img class="icn" src="${ic}" alt="">`:'<span class="none">—</span>'}${nm}</div>`;}).join('')}</div>
   ${S.inj.length?`<div style="color:#f09040;margin-top:4px">🩸 ${S.inj.map(j=>`${INJ[j.k].n} (${INJ[j.k].d}, ${j.days}d)`).join(' · ')}</div>`:''}
   ${S.buff?`<div style="color:#9ad0ff">✨ Blessed for your next fight</div>`:''}
-  <div style="margin-top:8px">${repBars()}</div>
+  <details class="more" ${UIO.pk?'open':''} ontoggle="UIO.pk=this.open"><summary>⭐ Perks (${(S.perks||[]).length}) · next in ${PERK_EVERY-S.wins%PERK_EVERY} win${PERK_EVERY-S.wins%PERK_EVERY>1?'s':''}</summary>${(S.perks||[]).length?(S.perks||[]).map(k=>`<div style="font-size:12px;margin:3px 0">${PERKS[k].i} <b>${PERKS[k].n}</b> <span class="mut">${PERKS[k].d}</span></div>`).join(''):'<div class="mut" style="font-size:12px;margin:3px 0">Every fifth victory teaches you a perk — you choose one of three.</div>'}<div style="font-size:12px;margin:3px 0">${BGS[S.bg].i} <b>${BGS[S.bg].n}</b> <span class="mut">${BGS[S.bg].a}</span></div></details>
+  <details class="more" ${UIO.rec?'open':''} ontoggle="UIO.rec=this.open"><summary>Record &amp; reputation · ${S.wins} wins · 🧪 ${S.potions}</summary>
+   <div class="mut" style="margin:6px 0">Victories: ${S.wins} · Spared by the crowd: ${S.spared} · Killed: ${S.kills} · Shown mercy: ${S.mercies} · Tonics: ${S.potions}</div>${repBars()}</details>
  </div><div class="card acts"><h3>The Ludus</h3>
   <button class="pri" onclick="go('arena')">⚔ Arena<small>40 energy</small></button>
   <button onclick="go('train')">🏋 Training Yard<small>25 energy</small></button>
+  <button onclick="rest()">🌙 Rest<small>end day · +${[30,45,60][S.quarters||0]}% HP · upkeep ${upkeep()}g</small></button>
   <button onclick="go('market')">🛒 Market<small>arms &amp; tonics</small></button>
   <button onclick="dyeKit=0;go('dye')">🎨 Colours<small>dye body &amp; kit</small></button>
-  ${S.plot===3?`<button class="pri" onclick="beginBreakout()">⛓ Begin the Breakout<small>tonight — no turning back</small></button>`:''}
   <button onclick="go('ledger')">📜 Ledger<small>${S.quests.length} contracts · ${S.offers.length} offered${S.debt&&!S.debt.ally?' · debt '+S.debt.owed+'g':''}</small></button>
+  <button onclick="go('inv')">🎒 Inventory<small>${Object.values(S.owned||{}).reduce((a,b)=>a+b.length,0)} arms · ${Object.values(S.trk||{}).reduce((a,b)=>a+b,0)} trinkets</small></button>
   <button onclick="medicus()" ${(mc<=0&&!S.inj.length)||S.gold<mc+S.inj.length*45?'disabled':''}>✚ Medicus<small>${mc>0||S.inj.length?`heal${S.inj.length?' & treat injuries':''} · ${mc+S.inj.length*45}g`:'you are healthy'}</small></button>
-  <button onclick="rest()">🌙 Rest<small>end day · +${[30,45,60][S.quarters||0]}% HP · upkeep ${upkeep()}g</small></button>
+  ${S.plot===3?`<button class="pri" onclick="beginBreakout()">⛓ Begin the Breakout<small>tonight — no turning back</small></button>`:''}
   <button class="gold" onclick="buyFreedomStory(false)" ${S.gold<fp?'disabled':''}>🕊 Buy Freedom<small>${fp} gold${fameSurcharge()?` (incl. +${fameSurcharge()} fame)`:''}${S.debt&&!S.debt.ally&&S.debt.owed?` (+${S.debt.owed} debt)`:''}${S.discount?` (−${S.discount} reward)`:''}</small></button>
   ${two?`<button class="gold" onclick="buyFreedomStory(true)" ${S.gold<fp+2500?'disabled':''}>♥ Freedom for Two<small>${fp+2500} gold · you and ${esc(S.love.name)}</small></button>`:''}
  </div></div>
  <div class="foot"><button class="tiny" onclick="abandon()">${abandonArm?'Click again to erase this gladiator':'Start over'}</button></div>`;
 }
+const UIO={};let mktTab='weapon';
 function go(v){view=v;abandonArm=false;renderPanel();if(innerWidth<=660)scrollTo(0,0);const pn=document.getElementById('panel');if(pn)pn.scrollTop=0;}
 function setLog(m){S.log=m;save();renderPanel();}
 function medicus(){const c=medCost()+S.inj.length*45;if(S.gold<c)return;S.gold-=c;S.hp=maxHP();const n=S.inj.length;S.inj=[];setLog(`The medicus stitches your wounds${n?' and sets your injuries':''} and grumbles about his fee. (−${c}g, fully healed)`);}
@@ -1396,12 +1482,14 @@ function buyFreedom(){if(S.gold<FREEDOM)return;S.gold-=FREEDOM;screen='free';wip
 function pTrain(){
  const busy=trainAnim&&performance.now()<trainAnim.until;
  return `<div class="msg">${S.log}</div><h3>Training Yard <small>· the doctore is watching</small></h3>
- <p class="rules">Each session costs 25 energy and the doctore's fee. Roll a d20: <b>1</b> = strained muscle (no gain, −5 HP) · <b>2–16</b> = +1 · <b>17–20</b> = breakthrough, +2.</p>
+ <p class="rules">25 energy + the doctore's fee per session · roll a d20 to improve.</p>
  ${STATS.map(s=>{const v=S.stats[s.k],c=trainCost(v),max=v>=20;
   return `<div class="stat"><b>${s.n}</b><span class="big">${v}</span><span class="mut">${s.d}</span><button onclick="train('${s.k}')" ${busy||max||S.gold<c||S.energy<25?'disabled':''}>${max?'MAX':'🎲 Train · '+c+'g'}</button></div>`;}).join('')}
  <h3 style="margin-top:10px">Fighting School <small>· ${S.style?'changing costs 50g':'your first choice is free'}</small></h3>
- <div class="schools">${Object.entries(STYLES).map(([k,v])=>`<button class="${S.style===k?'pri':''}" onclick="chooseStyle('${k}')" ${S.style===k||(S.style&&S.gold<50)?'disabled':''}>${k}<small>${v.d} · beats ${v.beats.join(', ')}</small></button>`).join('')}</div>
- <button onclick="go('main')">◀ Back</button>`;
+ <div class="schools">${Object.entries(STYLES).map(([k,v])=>`<button class="${S.style===k?'pri':''}" onclick="chooseStyle('${k}')" ${S.style===k||(S.style&&S.gold<50)?'disabled':''}>${k}<small>${v.d} · beats ${v.beats.join(', ')}</small><small>⭐ ${SIGS[k].n}: ${SIGS[k].d}</small></button>`).join('')}</div>
+ <p class="rules">${S.style?'':`No school yet — your signature move is <b>${SIGS.none.n}</b>: ${SIGS.none.d}. `}Signature moves cost ${sigCost()} crowd favor in a fight. Favor you spend is favor that no longer fattens the purse.</p>
+ <details class="more"><summary>How training works</summary><p class="rules">Roll a d20: <b>1</b> = strained muscle (no gain, −5 HP) · <b>2–16</b> = +1 · <b>17–20</b> = breakthrough, +2. A fighting school gives a small bonus and an edge over two rival schools.</p></details>
+ <button style="margin-top:8px" onclick="go('main')">◀ Back</button>`;
 }
 async function train(k){
  const v=S.stats[k],c=trainCost(v);if(S.gold<c||S.energy<25||v>=20)return;
@@ -1436,24 +1524,32 @@ function itemIcon(slot,i){if(!GIMG)return '';const k=slot+i+(slot==='armor'?JSON
  else{const fit=Math.min((BW-pad*2)/w,(BH-pad*2)/h),f=fit>=2?Math.floor(fit):fit;const dw=Math.round(w*f),dh=Math.round(h*f);x.drawImage(t,Math.round((BW-dw)/2),Math.round((BH-dh)/2),dw,dh);}
  const u=c.toDataURL();ICN.set(k,u);return u;}
 function pMarket(){
- const sec=(title,list,slot,fmt)=>`<h3 style="margin-top:10px">${title}</h3>`+list.map((it,i)=>[it,i]).filter(([it,i])=>i>0&&(!it.secret||owns(slot,i))).sort((a,b)=>a[0].p-b[0].p).map(([it,i])=>{const cur=S.gear[slot],mine=it.secret&&owns(slot,i);
-  const lbl=i===cur?'Equipped':mine?'Equip':cur&&list[cur].p>it.p?'Swap':'Buy';
-  const ic=itemIcon(slot,i);return `<div class="item"><span style="display:flex;align-items:center">${ic?`<img class="icn" src="${ic}" alt="">`:''}<span>${mine?'★ ':''}${it.n} <span class="mut">${fmt(it,i)}${it.note?' · <i>'+it.note+'</i>':''}</span></span></span><span style="color:var(--gold)">${mine?'yours':price(it.p)+'g'}${!mine&&price(it.p)<it.p?` <s class="mut">${it.p}</s>`:''}</span><button class="tiny" onclick="buy('${slot}',${i})" ${i===cur||(!mine&&S.gold<price(it.p))?'disabled':''}>${lbl}</button></div>`;}).join('');
- return `<div class="msg">${isFest('Nundinae')?'<div class="festb">🛒 Nundinae — everything 25% off today!</div>':''}${S.log}</div><div class="cols"><div>
-  ${sec('Weapons',WEAPONS,'weapon',(w,i)=>`${w.dn}d${w.ds} dmg${w.agi?', '+sgn(w.agi)+' attack':''} · <i>${WTR(i).n}: ${WTR(i).d}</i>`)}
-  ${sec('Shields',SHIELDS,'shield',(s,i)=>`+${s.b} DC, ${s.d} armor${STR_(i)?` · <i>${STR_(i).n}: ${STR_(i).d}</i>`:''}`)}
- </div><div>
-  ${sec('Body Armor',ARMORS,'armor',a=>`${a.d} armor`)}
-  ${sec('Helmets',HELMS,'helm',h=>`${h.d} armor`)}
-  <h3 style="margin-top:10px">Comforts of the Ludus</h3>${QUARTERS.map((q,i)=>i===0?'':`<div class="item"><span>${q.n} <span class="mut">${q.d}</span></span><span style="color:var(--gold)">${q.p}g</span><button class="tiny" onclick="buyQuarters(${i})" ${(S.quarters||0)>=i||S.gold<q.p?'disabled':''}>${(S.quarters||0)>=i?'Owned':'Buy'}</button></div>`).join('')}
-  <div class="item"><span>Liniment <span class="mut">heals one injury (you have ${S.inj.length})</span></span><span style="color:var(--gold)">35g</span><button class="tiny" onclick="buyLiniment()" ${!S.inj.length||S.gold<35?'disabled':''}>Buy &amp; use</button></div>
-  <h3 style="margin-top:10px">Tonics</h3><div class="item"><span>Posca Tonic <span class="mut">heals 2d8 + 25% HP in battle (max 3)</span></span><span style="color:var(--gold)">${TONIC_P}g</span><button class="tiny" onclick="buyTonic()" ${S.gold<TONIC_P||S.potions>=3?'disabled':''}>Buy (${S.potions}/3)</button></div>
- </div></div><p class="rules" style="margin-top:8px">Your old gear is sold back for 25% of its price — you can also swap to cheaper gear with different traits. Armor reduces damage by armor÷(armor+20).</p><button onclick="go('main')">◀ Back</button>`;
+ const sec=(list,slot,fmt)=>list.map((it,i)=>[it,i]).filter(([it,i])=>i>0&&(!it.secret||owns(slot,i))).sort((a,b)=>a[0].p-b[0].p).map(([it,i])=>{const cur=S.gear[slot],mine=owns(slot,i),[st,tr]=fmt(it,i),nf=needFame(it),lock=!mine&&mFame()<nf;
+  const lbl=i===cur?'Equipped':mine?'Equip':lock?'🔒':'Buy';
+  const ic=itemIcon(slot,i);return `<div class="item"><span style="display:flex;align-items:center">${ic?`<img class="icn" src="${ic}" alt="">`:''}<span>${it.secret?'★ ':''}<b>${it.n}</b> <span class="mut">${st}</span>${tr||it.note?`<span class="tr">${[tr,it.note].filter(Boolean).join(' · ')}</span>`:''}${lock?`<span class="tr" style="color:var(--red)">The merchant keeps this for known names — needs ${nf} fame (you have ${mFame()})</span>`:''}</span></span><span style="color:var(--gold)">${mine?'owned':price(it.p)+'g'}${!mine&&price(it.p)<it.p?` <s class="mut">${it.p}</s>`:''}</span><button class="tiny" onclick="buy('${slot}',${i})" ${i===cur||lock||(!mine&&S.gold<price(it.p))?'disabled':''}>${lbl}</button></div>`;}).join('');
+ const T=[['weapon','Weapons'],['shield','Shields'],['armor','Armor'],['helm','Helmets'],['misc','Comforts & tonics'],['sell','💰 Sell']];ensureInv();const tm=terms();
+ const sellRows=()=>{const g=[];for(const sl of ['weapon','shield','armor','helm'])for(const i of S.owned[sl]){const it=SLOTS[sl]()[i];if(!i||it.secret)continue;const cur=S.gear[sl]===i,ic=itemIcon(sl,i);g.push(`<div class="item"><span style="display:flex;align-items:center">${ic?`<img class="icn" src="${ic}" alt="">`:''}<span><b>${it.n}</b>${cur?' <span class="mut">equipped</span>':''}</span></span><span style="color:var(--gold)">${sellGearPrice(sl,i)}g</span><button class="tiny" onclick="sellGear('${sl}',${i})" ${cur?'disabled':''}>Sell</button></div>`);}
+  const t=Object.keys(S.trk).sort((a,b)=>TRK[b].v-TRK[a].v).map(k=>{const X=TRK[k],worn=S.charm===k,can=S.trk[k]-(worn?1:0)>0;return `<div class="item"><span><span style="font-size:18px">${X.i}</span> <b>${X.n}</b>${S.trk[k]>1?` ×${S.trk[k]}`:''} <span class="mut">${X.d}</span>${X.e?`<span class="tr">Charm: ${X.e}${worn?' — worn':''}</span>`:''}</span><span style="color:var(--gold)">${trkPrice(k)}g</span><button class="tiny" onclick="sellTrinket('${k}')" ${can?'':'disabled'}>Sell</button></div>`;});
+  return `<h4 class="ih">Arms &amp; armor <small class="mut">· merchants pay ${Math.round(tm.gear*100)}% of the price</small></h4>${g.join('')||'<p class="mut">Nothing spare in your chest.</p>'}<h4 class="ih">Trinkets &amp; jewels <small class="mut">· the jeweller pays ${Math.round(tm.trk*100)}% of their worth</small></h4>${t.join('')||'<p class="mut">No trinkets yet.</p>'}`;};
+ const body=mktTab==='weapon'?sec(WEAPONS,'weapon',(w,i)=>[`${w.dn}d${w.ds} dmg${w.agi?', '+sgn(w.agi)+' attack':''}`,`${WTR(i).n}: ${WTR(i).d}`])
+  :mktTab==='shield'?sec(SHIELDS,'shield',(s,i)=>[`+${s.b} DC, ${s.d} armor`,STR_(i)?`${STR_(i).n}: ${STR_(i).d}`:''])
+  :mktTab==='armor'?sec(ARMORS,'armor',a=>[`${a.d} armor`,''])
+  :mktTab==='helm'?sec(HELMS,'helm',h=>[`${h.d} armor`,''])
+  :mktTab==='sell'?sellRows()
+  :`${QUARTERS.map((q,i)=>i===0?'':`<div class="item"><span><b>${q.n}</b> <span class="mut">${q.d}</span></span><span style="color:var(--gold)">${q.p}g</span><button class="tiny" onclick="buyQuarters(${i})" ${(S.quarters||0)>=i||S.gold<q.p?'disabled':''}>${(S.quarters||0)>=i?'Owned':'Buy'}</button></div>`).join('')}
+  <div class="item"><span><b>Liniment</b> <span class="mut">heals one injury (you have ${S.inj.length})</span></span><span style="color:var(--gold)">35g</span><button class="tiny" onclick="buyLiniment()" ${!S.inj.length||S.gold<35?'disabled':''}>Buy &amp; use</button></div>
+  <div class="item"><span><b>Posca Tonic</b> <span class="mut">heals 2d8 + 25% HP in battle (max 3)</span></span><span style="color:var(--gold)">${TONIC_P}g</span><button class="tiny" onclick="buyTonic()" ${S.gold<TONIC_P||S.potions>=3?'disabled':''}>Buy (${S.potions}/3)</button></div>`;
+ return `<div class="msg">${isFest('Nundinae')?'<div class="festb">🛒 Nundinae — everything 25% off today!</div>':''}${S.log}</div>
+ <div class="tabs">${T.map(([k,n])=>`<button class="${mktTab===k?'sel':''}" onclick="mktTab='${k}';renderPanel()">${n}</button>`).join('')}</div>
+ <div>${body}</div>
+ <p class="rules" style="margin-top:8px">Your standing here: <b>${tm.buy>0?'−'+Math.round(tm.buy*100)+'%':'no discount'}</b> on arms · gear sells for <b>${Math.round(tm.gear*100)}%</b> · trinkets for <b>${Math.round(tm.trk*100)}%</b>.</p>
+ <details class="more"><summary>How the market works</summary><p class="rules">Merchants give better terms to a gladiator the city talks about: <b>Fame</b> and <b>Showmanship</b> lower prices and raise what you are paid, and the finest arms are only shown to known names. Gear you replace stays in your chest (🎒 Inventory) until you choose to sell it. Armor reduces damage by armor÷(armor+20).</p></details>
+ <button style="margin-top:8px" onclick="go('main')">◀ Back</button>`;
 }
-function buy(slot,i){const T={weapon:WEAPONS,armor:ARMORS,helm:HELMS,shield:SHIELDS}[slot],it=T[i],old=T[S.gear[slot]];
- if(i===S.gear[slot])return;if(it.secret){if(!owns(slot,i))return;S.gear[slot]=i;setLog(`You take up the ${it.n} again.${old.secret?'':` Your ${old.n} goes back on the rack.`}`);return;}
- if(S.gold<price(it.p))return;const back=old.secret?0:Math.floor(old.p*.25);S.gold+=back-price(it.p);S.gear[slot]=i;
- setLog(`You buy the ${it.n}${back?` and sell your ${old.n} for ${back}g`:''}${old.secret?` — the ${old.n} stays safe in your chest`:''}.`);}
+function buy(slot,i){ensureInv();const T=SLOTS[slot](),it=T[i],old=T[S.gear[slot]];
+ if(i===S.gear[slot])return;if(owns(slot,i)){equip(slot,i);return;}if(it.secret)return;
+ if(S.gold<price(it.p)||mFame()<needFame(it))return;S.gold-=price(it.p);S.owned[slot].push(i);S.gear[slot]=i;sfx.coins&&sfx.coins(6);
+ setLog(`You buy the ${it.n}.${S.gear[slot]&&old&&old.p?` Your ${old.n} goes into your chest — sell it here, or keep it for another day.`:''}`);}
 function owns(slot,i){return !!(S.owned&&S.owned[slot]&&S.owned[slot].includes(i));}
 const QUARTERS=[{n:'Straw pallet',d:'',p:0},{n:'Private cell',d:'rest heals 45% · +6g upkeep',p:300},{n:'Bath privileges',d:'rest heals 60% · +12g upkeep',p:800}];
 function buyQuarters(i){const q=QUARTERS[i];if((S.quarters||0)>=i||S.gold<q.p)return;S.gold-=q.p;S.quarters=i;hist(`Bought ${q.n.toLowerCase()}.`);setLog(`Quintus pockets ${q.p}g. You now have ${q.n.toLowerCase()}.`);}
@@ -1480,7 +1576,7 @@ function mkFighter(d,isP){
   hp:isP?S.hp:maxhp,maxhp,sta:100,dn:Wp.dn,ds:Wp.ds,atk:Math.floor(st.agi/2)+Wp.agi,dc:8+Math.floor(st.agi/2)+SHIELDS[G.shield].b,
   def:ARMORS[G.armor].d+HELMS[G.helm].d+SHIELDS[G.shield].d,crit:st.agi>=18?18:st.agi>=10?19:20,
   off:0,pose:'idle',flash:0,guard:false,exposed:false,dead:false,dmgB:0,regen:0};}
-function mkFighterX(d,isP){const F=mkFighter(d,isP);F.wpn=d.gear.weapon;F.shd=d.gear.shield;const tr=WEAPONS[F.wpn].tr;F.tr=tr;F.st=(SHIELDS[F.shd]||{}).tr;F.heavyPen=tr==='long'?-1:-3;if(tr==='balanced'||tr==='darling')F.crit=Math.max(16,F.crit-1);if(tr==='legend')F.crit=Math.max(15,F.crit-3);
+function mkFighterX(d,isP){const F=mkFighter(d,isP);F.wpn=d.gear.weapon;F.shd=d.gear.shield;const tr=WEAPONS[F.wpn].tr;F.tr=tr;F.st=(SHIELDS[F.shd]||{}).tr;F.heavyPen=tr==='long'?-1:-3;F.hc=30;if(tr==='balanced'||tr==='darling')F.crit=Math.max(16,F.crit-1);if(tr==='legend')F.crit=Math.max(15,F.crit-3);
  const AR=ARMORS[d.gear.armor]||{},HE=HELMS[d.gear.helm]||{};F.dc+=(AR.dcb||0)+(HE.dcb||0);F.atk+=(HE.atkb||0);F.gild=!!AR.fame;F.persona=isP?null:(d.persona||null);if(isP){applyStyle(F,S.style,true);if(hasInj('ribs'))F.sta=60;if(hasInj('arm'))F.atk-=2;if(hasInj('knee'))F.dc-=2;}else applyStyle(F,d.cls,false);return F;}
 const power=f=>f.str+f.dn*(f.ds+1)/2+f.atk*2.5+f.dc*1.5+f.maxhp/4+f.def*.8;
 function threat(e){const r=power(mkFighter(e,false))/power(mkFighter({name:S.name,look:S.look,gear:S.gear,stats:S.stats},true));
@@ -1489,13 +1585,14 @@ function pArena(){
  const tabs=TIERS.map((T,i)=>i<=S.maxTier?`<button class="${i===arenaTier?'sel':''}" onclick="arenaTier=${i};renderPanel()">${T.n}</button>`:`<button disabled title="Locked">🔒 ${T.n}</button>`).join('');
  const next=S.maxTier<4?`Win ${Math.max(0,UNLOCK[S.maxTier]-S.tierWins[S.maxTier])} more in the ${TIERS[S.maxTier].n} to unlock the ${TIERS[S.maxTier+1].n}.`:'You have reached the Colosseum itself.';
  const list=S.opps.filter(o=>o.tier===arenaTier&&!['lover','breakout','emperor'].includes(o.id)&&!o.tour);
- const L=S.love,spec=(L&&L.stage==='exposed'?`<div class="opp special"><div style="font-size:34px;text-align:center">💔</div><div><b>The Lovers' Duel — ${esc(L.name)}</b><br><span class="mut">Quintus' spectacle. Must be fought by day ${L.fightDay}. Fight, stage it, or lay down your sword.</span></div><button class="pri" onclick="startSpecial('lover')">⚔ Face ${PRON(L.sex).o}</button></div>`:'')+(tourAvailable()?`<div class="opp special"><div style="font-size:34px;text-align:center">🏆</div><div><b>Ludi Romani Tournament</b><br><span class="mut">Three bouts in the ${TIERS[S.maxTier].n}, back to back — your wounds carry over. Prize: <b style="color:var(--gold)">${tourPrize()}g</b> + fame.</span></div><button class="pri" onclick="startTour()" ${S.energy<40?'disabled':''}>🏆 Enter<small>40 energy</small></button></div>`:'');
+ const L=S.love,spec=(L&&L.stage==='exposed'?`<div class="opp special"><div style="font-size:34px;text-align:center">💔</div><div><b>The Lovers' Duel — ${esc(L.name)}</b><br><span class="mut">Quintus' spectacle. Must be fought by day ${L.fightDay}. Fight, stage it, or lay down your sword.</span></div><button class="pri" onclick="startSpecial('lover')">⚔ Face ${PRON(L.sex).o}</button></div>`:'')+(tourAvailable()?`<div class="opp special"><div style="font-size:34px;text-align:center">🏆</div><div><b>Ludi Romani Tournament</b><br><span class="mut">Eight fighters, one bracket: quarterfinal, semifinal and final in the ${TIERS[S.maxTier].n}. Your wounds carry over — a hired doctor can patch you between bouts. Prize: <b style="color:var(--gold)">${tourPrize()}g</b> + fame.</span></div><button class="pri" onclick="enterTour()" ${S.energy<40?'disabled':''}>🏆 Enter<small>40 energy</small></button></div>`:'');
  return `<h3>The Arena <small>· ${next}</small></h3><div class="tabs">${tabs}</div>
  ${S.hp<maxHP()*.5?`<div class="msg" style="border-color:var(--red)">⚠ You are badly wounded (${S.hp}/${maxHP()} HP). Fighting now is a gamble with your life.</div>`:''}
  ${spec}${list.length?list.map(o=>{const f=mkFighter(o,false),[tn,tc]=threat(o),Wp=WEAPONS[o.gear.weapon];
   const mu=matchup(S.style,o.cls);
-  return `<div class="opp"><canvas width="112" height="140" data-id="${o.id}"></canvas><div><b>${esc(o.name)}</b> <span class="mut">· ${o.cls}</span><span class="tag" style="color:${tc};border-color:${tc}">${tn}</span>${o.rival?'<span class="tag" style="color:#ff7aa0;border-color:#ff7aa0">⚔ Rival</span>':''}${o.legend?'<span class="tag" style="color:#f2c14e;border-color:#f2c14e" title="A gladiator from one of your past lives, back on the sand as a free volunteer">★ Legend</span>':''}${PERSONAS[o.persona]?`<span class="tag" title="${PERSONAS[o.persona].d}" style="color:${PERSONAS[o.persona].c};border-color:${PERSONAS[o.persona].c}">${PERSONAS[o.persona].n}</span>`:''}${mu?`<span class="tag" style="color:${mu>0?'#7ccf6a':'#e0553f'};border-color:${mu>0?'#7ccf6a':'#e0553f'}">${mu>0?'Your style counters':'Counters your style'}</span>`:''}<br>
-  <span class="mut">STR ${o.stats.str} · AGI ${o.stats.agi} · END ${o.stats.end} · HP ${f.maxhp} · ${Wp.n} (${Wp.dn}d${Wp.ds}, ${WTR(o.gear.weapon).n})${PERSONAS[o.persona]?` · ${PERSONAS[o.persona].d.toLowerCase()}`:''}</span><br>Purse: <b style="color:var(--gold)">~${o.pay}g</b> <span class="mut">+ crowd bonus</span></div>
+  return `<div class="opp"><canvas width="112" height="140" data-id="${o.id}"></canvas><div><b>${esc(o.name)}</b> <span class="mut">· ${o.cls}</span><span class="tag" style="color:${tc};border-color:${tc}">${tn}</span>${o.rival?'<span class="tag" style="color:#ff7aa0;border-color:#ff7aa0">⚔ Rival</span>':''}${o.legend?'<span class="tag" style="color:#f2c14e;border-color:#f2c14e" title="A gladiator from one of your past lives, back on the sand as a free volunteer">★ Legend</span>':''}${edgeText(o).length?'<span class="tag" style="color:#f2c14e;border-color:#f2c14e">⭐ Seasoned</span>':''}${PERSONAS[o.persona]?`<span class="tag" title="${PERSONAS[o.persona].d}" style="color:${PERSONAS[o.persona].c};border-color:${PERSONAS[o.persona].c}">${PERSONAS[o.persona].n}</span>`:''}${mu?`<span class="tag" style="color:${mu>0?'#7ccf6a':'#e0553f'};border-color:${mu>0?'#7ccf6a':'#e0553f'}">${mu>0?'Your style counters':'Counters your style'}</span>`:''}<br>
+  <span class="mut">♥ ${f.maxhp} HP · ${Wp.n} · purse</span> <b style="color:var(--gold)">~${Math.round(o.pay*payFactor(o))}g</b> <span class="mut">· you win about</span> <b>${Math.round(winChance(o)*100)}%</b> <span class="mut">· risk of death about</span> <b style="color:${deathRisk(o)>.12?'var(--red)':deathRisk(o)>.05?'#f09040':'var(--grn)'}">${Math.round(deathRisk(o)*100)}%</b>
+  <details class="more" style="margin-top:4px;border:0;padding:0"><summary>Scouting report</summary><span class="mut">STR ${o.stats.str} · AGI ${o.stats.agi} · END ${o.stats.end} · ${Wp.n}: ${Wp.dn}d${Wp.ds}, ${WTR(o.gear.weapon).n}${PERSONAS[o.persona]?` · ${PERSONAS[o.persona].n}: ${PERSONAS[o.persona].d.toLowerCase()}`:''} · easier opponents pay less, dangerous ones more; the purse also grows with the crowd's favor · death risk assumes you fight to the end — yielding early is safer</span>${edgeText(o).map(x=>`<div class="mut" style="font-size:12px">${x}</div>`).join('')}</details></div>
   <button class="pri" onclick="startFight('${o.id}')" ${S.energy<40?'disabled':''}>⚔ Fight<small>${S.energy<40?'too tired':'40 energy'}</small></button></div>`;}).join(''):'<p class="mut">No one left to fight in this arena today. Rest to see new opponents.</p>'}
  <button onclick="go('main')">◀ Back</button>`;
 }
@@ -1507,12 +1604,15 @@ function addFavor(n){C.favor=clamp(Math.round(C.favor+n),0,100);}
 function startFight(id){if(innerWidth<=660)scrollTo(0,0);
  const o=S.opps.find(x=>x.id===id);if(!o||S.energy<40)return;
  S.energy-=40;save();
- C={opp:o,p:mkFighterX({name:S.name,look:S.look,gear:S.gear,stats:S.stats},true),e:mkFighterX(o,false),favor:clamp(15+S.stats.show*2+Math.floor(S.rep.fame/5),0,70),log:[],busy:false,cheer:40,result:null,eDmg:0,critTaken:false,fake:0,sus:0};
+ C={opp:o,p:mkFighterX({name:S.name,look:S.look,gear:S.gear,stats:S.stats},true),e:mkFighterX(o,false),favor:startFavor(),pm:payFactor(o),log:[],busy:false,cheer:40,result:null,eDmg:0,critTaken:false,fake:0,sus:0};
  const P=C.p,E=C.e,mu=matchup(S.style,o.cls);if(P.gild){C.favor=Math.min(100,C.favor+5);}
- clog(`<b>${o.special==='emperor'?'The Colosseum — before Caesar':o.special==='breakout'?'The ludus gate, by torchlight':o.special==='lover'?'The Lovers\' Duel':o.tour?`Ludi Romani — bout ${o.tour} of 3`:TIERS[o.tier].n}.</b> ${o.special==='breakout'?'Captain Sabinus blocks the gate with a drawn spatha.':`The editor raises his hand: <b>${esc(S.name)}</b> versus <b>${esc(o.name)}</b>, the ${o.cls}!`}`);
+ clog(`<b>${o.special==='emperor'?'The Colosseum — before Caesar':o.special==='breakout'?'The ludus gate, by torchlight':o.special==='lover'?'The Lovers\' Duel':o.tour?`Ludi Romani — ${TROUND[o.tour]}`:TIERS[o.tier].n}.</b> ${o.special==='breakout'?'Captain Sabinus blocks the gate with a drawn spatha.':`The editor raises his hand: <b>${esc(S.name)}</b> versus <b>${esc(o.name)}</b>, the ${o.cls}!`}`);
  if(mu>0){P.atk+=2;P.dc+=1;clog(`Your ${S.style} training counters a ${o.cls}: <b>+2 attack, +1 DC</b>.`);}else if(mu<0){E.atk+=2;E.dc+=1;clog(`A ${o.cls} counters your ${S.style} style: <b>they get +2 attack, +1 DC</b>.`);}
  if(S.buff){P.atk+=S.buff.atk||0;P.dc+=S.buff.dc||0;clog(`✨ Blessed: <b>+${S.buff.atk||0} attack, +${S.buff.dc||0} DC</b> this fight.`);S.buff=null;}
  if(S.flags.favor)clog(`<span class="mut">You promised Vettius: ${S.flags.favor==='throw'?'lose this fight (yield).':'kill the man you defeat.'}</span>`);
+ const ed=enemyEdge(o);E.pk=ed.pk;E.sig=ed.sig;applyPerks(E);if(S.hard){E.atk+=1;E.maxhp=E.hp=Math.round(E.maxhp*1.15);}
+ if(ed.sig||ed.pk.length)clog(`<span class="mut">${esc(E.short)} is seasoned: ${[ed.sig?SIGS[o.cls].n:null,...ed.pk.map(k=>PERKS[k].n)].filter(Boolean).join(', ')}.</span>`);
+ applyPerks(P);if(bgIs(0))P.dmgB=(P.dmgB||0)+1;if(bgIs(3))C.favor=Math.min(100,C.favor+10);if(bgIs(4))P.dc+=1;if(charm('fang'))P.atk+=1;if(charm('nemesis'))P.dc+=1;if(charm('torc'))C.favor=Math.min(100,C.favor+5);if(charm('knot')){P.maxhp+=5;P.hp+=5;}planEnemy();
  screen='fight';TRAY=FIGHT_TRAY;fx=[];floats=[];renderPanel();
 }
 function traitLine(){const P=C.p,E=C.e,pw=WTR(P.wpn),ew=WTR(E.wpn),pp=PERSONAS[E.persona],ps=STR_(P.shd);
@@ -1521,109 +1621,236 @@ function pFight(){
  if(C.result)return C.result;
  const P=C.p,b=C.busy;
  return `<div class="log">${C.log.slice(-5).map(l=>`<div>${l}</div>`).join('')}</div>
- <div class="mstat"><span style="color:var(--red)">You ♥${Math.max(0,P.hp)}/${P.maxhp} <span style="color:var(--blu)">⚡${P.sta}</span></span><span style="color:var(--gold)">Crowd ${Math.round(C.favor)}</span><span style="color:var(--red)">${esc(C.e.short||'Foe')} ♥${Math.max(0,C.e.hp)}/${C.e.maxhp}</span></div>
+ ${intentLine()}<div class="mstat"><span style="color:var(--red)">You ♥${Math.max(0,P.hp)}/${P.maxhp} <span style="color:var(--blu)">⚡${P.sta}</span></span><span style="color:var(--gold)">Crowd ${Math.round(C.favor)}${C.favor>=75?' 🔥':''}${P.mom?' · momentum':''}</span><span style="color:var(--red)">${esc(C.e.short||'Foe')} ♥${Math.max(0,C.e.hp)}/${C.e.maxhp}</span></div>
  <div class="acts fa">
   <button class="pri" onclick="act('strike')" ${b||P.sta<10?'disabled':''}>⚔ Strike<small>d20${sgn(P.atk)} · ${P.dn}d${P.ds}+${P.str} · 10 sta</small></button>
-  <button onclick="act('heavy')" ${b||P.sta<30?'disabled':''}>💥 Heavy Blow<small>d20${sgn(P.atk+(P.heavyPen??-3))} · ${P.dn*2}d${P.ds}+${P.str} · 30 sta</small></button>
+  <button onclick="act('heavy')" ${b||P.sta<P.hc?'disabled':''}>💥 Heavy Blow<small>d20${sgn(P.atk+(P.heavyPen??-3))} · ${P.dn*2}d${P.ds}+${P.str} · ${P.hc} sta</small></button>
   <button onclick="act('guard')" ${b?'disabled':''}>🛡 Guard<small>+${P.st==='deflect'?5:4} DC, half dmg${P.st==='bash'||P.st==='bash2'?', bash on miss':''} · +25 sta</small></button>
   ${P.tr==='net'?`<button onclick="act('net')" ${b||P.netUsed||P.sta<15?'disabled':''}>🕸 Cast Net<small>${P.netUsed?'already thrown':`d20${sgn(P.atk)} vs DC ${C.e.dc} · foe loses a turn · 15 sta`}</small></button>`:''}
   <button onclick="act('show')" ${b?'disabled':''}>🎭 Showboat<small>d20${sgn(Math.floor(P.show/2))} vs 10 · crowd</small></button>
+  ${C.opp.special==='lover'?'':`<button class="gold" onclick="act('sig')" ${b||C.favor<sigCost()?'disabled':''}>${sigOf().i} ${sigOf().n}<small>${sigOf().d} · ${C.favor<sigCost()?`needs ${sigCost()} favor`:`−${sigCost()} favor`}</small></button>`}
   <button onclick="act('potion')" ${b||S.potions<1||P.hp>=P.maxhp?'disabled':''}>🧪 Tonic (${S.potions})<small>2d8 + 25% HP</small></button>
   <button onclick="act('yield')" ${b||(P.hp>P.maxhp*.35&&S.flags.favor!=='throw')||['breakout'].includes(C.opp.special)?'disabled':''}>✋ Yield<small>${S.flags.favor==='throw'?'as Vettius demands · the editor is bribed':`mercy d20+${Math.floor(C.favor/10)+Math.floor(S.stats.show/3)+Math.floor(S.rep.fame/25)} vs 14`}</small></button>
   ${C.opp.special==='lover'?`<br><button onclick="act('feint')" ${b?'disabled':''}>🎭 Stage the fight<small>SHOW vs 12 · ${C.fake}/3 staged · fool the crowd</small></button><button onclick="act('lower')" ${b?'disabled':''}>🕊 Lower your sword<small>fame + favor vs 16 · beg for both</small></button>`:''}
- </div><p class="rules">${traitLine()}<br>Natural 20 = critical (double dice${P.crit<20?`, you crit on ${P.crit}+`:''}). Natural 1 = fumble. Showboating lowers your DC by 3 against the next attack.</p>`;
+ </div><details class="more" ${UIO.fr?'open':''} ontoggle="UIO.fr=this.open"><summary>Traits &amp; rules</summary><p class="rules">${traitLine()}<br><b>Guard</b> against a heavy blow and you take half damage and counter-strike for free. A successful <b>Showboat</b> gives momentum: +2 to hit and an extra damage die on your next attack. With the crowd at <b>75+</b> favor you fight at +1 attack and +1 damage.<br>Natural 20 = critical (double dice${P.crit<20?`, you crit on ${P.crit}+`:''}). Natural 1 = fumble. Showboating lowers your DC by 3 against the next attack.</p></details>`;
 }
-async function doAttack(A,D,heavy){
- const dir=A.isP?1:-1;A.pose='windup';
- await tween(170,p=>A.off=-dir*p*6);A.pose='attack';
- sfx.swing();await tween(130,p=>A.off=dir*(-6+p*44));
- let rb=0;if(A.tr==='reach'&&!A.reachUsed){A.reachUsed=1;rb=3;}if(heavy&&D.tr==='reach')rb-=2;
- const nat=rnd(1,20),atk=A.atk+(heavy?(A.heavyPen??-3):0)+rb,dc=D.dc+(D.guard?(A.tr==='hook'?1:D.st==='deflect'?5:4):0)-(D.exposed?3:0);D.exposed=false;
+
+// ================= perks (one of three every third win) & enemy intent =================
+const PERKS={
+ gambit:{n:'Opening Gambit',i:'🎯',d:'Your first attack in every fight gets +5 to hit'},
+ lungs:{n:'Iron Lungs',i:'🫁',d:'+4 stamina back every turn'},
+ entrance:{n:'Famous Entrance',i:'📣',d:'Start every fight with +15 crowd favor'},
+ hide:{n:'Thick Hide',i:'🐗',d:'+2 armor in every fight'},
+ exec:{n:'Executioner',i:'🪓',d:'+3 damage against foes below half health'},
+ riposte:{n:'Riposte',i:'↩️',d:'When a foe misses you while you guard, you cut back for 1d6'},
+ wind:{n:'Second Wind',i:'🌬',d:'Once per fight, dropping below 30% health heals you for 25%'},
+ hand:{n:'Heavy Hand',i:'🔨',d:'Heavy Blow costs 20 stamina instead of 30'},
+ eye:{n:'Keen Eye',i:'👁',d:'You always read what your opponent is about to do'},
+ tongue:{n:'Golden Tongue',i:'💰',d:'All purses are 8% larger'},
+ healer:{n:'Quick Healer',i:'🩹',d:'Every victory restores 15% of your health'},
+ instinct:{n:'Killer Instinct',i:'🗡',d:'You crit on one number lower'},
+ foot:{n:'Footwork',i:'👣',d:'+1 defense DC'},
+ drilled:{n:'Drilled',i:'⚔',d:'+1 attack'},
+ showman:{n:'Born Showman',i:'🎭',d:'Showboating no longer leaves you exposed'},
+ beloved:{n:'Beloved',i:'🌹',d:'+3 on mercy rolls when you fall or yield'},
+ medic:{n:'Field Medic',i:'🧪',d:'Tonics heal half again as much'},
+ tough:{n:'Scar Tissue',i:'🪨',d:'+10 health in the arena'},opp:{n:'Opportunist',i:'🦊',d:'+2 to hit exposed foes'},ironwill:{n:'Iron Will',i:'⛓',d:'Once per fight, a blow that would fell you leaves you at 1 health'},
+ cheer:{n:'Crowd Favorite',i:'👏',d:'+2 crowd favor for every hit you land'},haggler:{n:'Haggler',i:'⚖',d:'Arms and armor cost 5% less'}};
+const PERK_EVERY=5;
+function hasPerk(k){return !!(S&&S.perks&&S.perks.includes(k));}
+function offerPerk(){S.perks=S.perks||[];const pool=Object.keys(PERKS).filter(k=>!S.perks.includes(k));if(pool.length<1)return false;const o=[];while(o.length<3&&pool.length)o.push(pool.splice(Math.floor(Math.random()*pool.length),1)[0]);S.perkPick=o;return true;}
+function pickPerk(k){if(!S.perkPick||!S.perkPick.includes(k))return;S.perks=S.perks||[];S.perks.push(k);S.perkPick=null;hist(`Learned ${PERKS[k].n}.`);sfx.fanfare&&sfx.fanfare();setLog(`${PERKS[k].i} You have learned <b>${PERKS[k].n}</b>: ${PERKS[k].d.toLowerCase()}.`);}
+function pPerk(){return `<div class="evt"><h2>⭐ The sand has taught you something</h2><div class="msg">Five victories harden a fighter. Choose one lesson to keep for the rest of your career.</div><div class="evc">${S.perkPick.map(k=>`<button onclick="pickPerk('${k}')">${PERKS[k].i} ${PERKS[k].n}<small>${PERKS[k].d}</small></button>`).join('')}</div></div>`;}
+const fp=(F,k)=>!!(F&&F.pk&&F.pk.includes(k));
+function applyPerks(P){P.pk=(P.isP?S.perks:P.pk)||[];if(fp(P,'lungs'))P.regen=(P.regen||0)+4;if(fp(P,'hide'))P.def+=2;if(fp(P,'hand'))P.hc=20;if(fp(P,'instinct'))P.crit=Math.max(15,P.crit-1);if(fp(P,'foot'))P.dc+=1;if(fp(P,'drilled'))P.atk+=1;if(fp(P,'tough')){P.maxhp+=10;P.hp+=10;}if(P.isP&&fp(P,'entrance'))C.favor=Math.min(100,C.favor+15);}
+// seasoned opponents: a signature move from Capua up, perks from Pompeii up; rivals, legends and bosses always have an edge
+const EPERKS=['gambit','lungs','hide','exec','riposte','wind','instinct','foot','drilled','tough','opp'];
+function enemyEdge(o){if(o.edge)return o.edge;const t=o.tier||0,boss=o.special==='emperor'?3:o.special==='breakout'?1:0,hard=S&&S.hard?1:0;
+ let n=(t>=4?2:t>=3?1:0)+(o.rival||o.legend?1:0)+boss+(hard&&t>=2?1:0);if(o.special==='lover')n=0;
+ const pool=[...EPERKS],pk=[];while(pk.length<n&&pool.length)pk.push(pool.splice(Math.floor(Math.random()*pool.length),1)[0]);
+ return o.edge={sig:o.special!=='lover'&&(t>=2||!!o.rival||!!o.legend||boss>0||(hard&&t>=1))&&!!SIGS[o.cls],pk};}
+const EDESC={gambit:'their first attack gets +5 to hit',lungs:'+4 stamina back every turn',hide:'+2 armor',exec:'+3 damage once you are below half health',riposte:'if you miss while they guard, they cut back for 1d6',wind:'once per fight, dropping below 30% health heals them for 25%',instinct:'crits on one number lower',foot:'+1 defense DC',drilled:'+1 attack',tough:'+10 health',opp:'+2 to hit you when you are exposed'};
+const ESIG={Retiarius:'strike at +2; a hit pins you and they strike again',Provocator:'heals 25% health and refills stamina'};
+function edgeText(o){const e=enemyEdge(o),a=[];if(e.sig)a.push(`⭐ ${SIGS[o.cls].n} — ${ESIG[o.cls]||SIGS[o.cls].d} (used when the crowd is not with you)`);e.pk.forEach(k=>a.push(`${PERKS[k].i} ${PERKS[k].n} — ${EDESC[k]}`));return a;}
+async function enemySig(){const E=C.e,P=C.p,k=C.opp.cls,sg=SIGS[k];E.sigUsed=1;addFavor(-8);float(E,sg.n.toUpperCase(),'#e0553f');camPunch(E,1.1,600);sfx.boo&&sfx.boo();
+ clog(`⭐ <b>${esc(E.short)} unleashes ${sg.n}!</b> The crowd knows this one too.`);renderPanel();await sleep(350);const alive=()=>E.hp>0&&P.hp>0;
+ if(k==='Murmillo'){await doAttack(E,P,false,{b:4,anim:'charge'});if(alive()){E.guard=true;E.pose='guard';}}
+ else if(k==='Thraex')await doAttack(E,P,false,{pierce:1,anim:'hook'});
+ else if(k==='Retiarius'){const h0=P.hp;await doAttack(E,P,false,{b:2,anim:'trip'});if(alive()&&P.hp<h0){float(P,'PINNED','#e0553f');clog(`You are tripped and pinned — ${esc(E.short)} strikes again while you scramble up.`);renderPanel();await sleep(300);await doAttack(E,P,false);}}
+ else if(k==='Secutor'){await doAttack(E,P,false);if(alive()){await sleep(200);await doAttack(E,P,false);}}
+ else if(k==='Hoplomachus')await doAttack(E,P,false,{ac:1,anim:'lunge'});
+ else if(k==='Dimachaerus'){for(let i=0;i<3&&alive();i++){if(i)await sleep(150);await doAttack(E,P,false,{b:-2,anim:'spin'});}}
+ else{const hh=Math.round(E.maxhp*.25);E.hp=Math.min(E.maxhp,E.hp+hh);E.sta=100;E.pose='cheer';for(let i=0;i<3;i++)fxp({k:'ring',x:fighterX(E),y:112,r0:6+i*6,r1:40+i*14,sq:.8,c:'#e0553f',l:20+i*5});shake(3);hop(E,300,6).then(()=>{E.pose='idle';});float(E,'+'+hh,'#7ccf6a');clog(`${esc(E.short)} beats ${PRON(E.look.sex).p} shield and bellows: <b>+${hh} HP</b>, stamina restored.`);await sleep(400);}}
+function pickEnemyMove(){const E=C.e,P=C.p,pe=E.persona,r=Math.random();
+ const W={brute:[.45,.03,.04],turtle:[.12,.32,.03],showman:[.15,.08,.28],coward:[.08,.28,.05],berserker:[.35,0,.04],tactician:[.2,.12,.03]}[pe]||[.22,.08,.08];
+ if(E.sig&&!E.sigUsed&&C.turn>=2&&C.favor<(C.opp.tier>=3||C.opp.special?50:35)&&Math.random()<.4)return 'sig';
+ if(E.tr==='net'&&!E.netUsed&&E.sta>=15&&r<.18)return 'net';
+ if(E.sta<10)return 'guard';
+ if(E.sta>=30&&(r<W[0]||(P.hp<P.maxhp*.3&&r<W[0]+.25)))return 'heavy';
+ if(r>1-W[2])return 'show';
+ if(r>1-W[2]-W[1]&&(pe==='turtle'||pe==='coward'||E.hp<E.maxhp*.5))return 'guard';
+ return 'strike';}
+function planEnemy(){if(!C||!C.e||C.opp.special==='lover')return;C.turn=(C.turn||0)+1;C.e.next=pickEnemyMove();const ch=hasPerk('eye')?1:clamp(.55+S.stats.agi*.02-(C.e.persona==='tactician'?.25:0),.3,.95);C.read=Math.random()<ch;}
+function intentLine(){const E=C.e;if(!E||!E.next||C.result)return '';const nm=esc(E.short);
+ if(E.netted)return `<div class="intent">${E.stunMsg?'💫':'🕸'} ${nm} ${E.stunMsg||'is tangled in your net'} and will lose this turn.</div>`;
+ if(!C.read)return `<div class="intent mut">❔ You can't read ${nm}'s next move.</div>`;
+ const T={strike:['🗡',`${nm} is setting up a quick strike`,''],heavy:['💥',`${nm} is winding up a <b>heavy blow</b>`,'guard to halve it and counter-strike for free'],guard:['🛡',`${nm} is pulling the shield in to guard`,'a safe moment to showboat and build momentum'],show:['🎭',`${nm} is eyeing the crowd, about to showboat`,'they will be exposed'],net:['🕸',`${nm} is gathering the net`,''],sig:['⭐',`${nm} is about to unleash <b>${(SIGS[C.opp.cls]||{}).n}</b>`,`${ESIG[C.opp.cls]||(SIGS[C.opp.cls]||{}).d}`]}[E.next];
+ return `<div class="intent">${T[0]} ${T[1]}${T[2]?` <span class="mut">· ${T[2]}</span>`:''}${E.persona==='tactician'?' <span class="mut">· may change plans to punish you</span>':''}</div>`;}
+
+
+// ================= move animations: each weapon and action moves differently =================
+const fxp=o=>{o.L=o.l;o.vx=o.vx||0;o.vy=o.vy||0;HFX.parts.push(o);};
+function wClass(F){const w=F.wpn;return w===8?'smash':(w===1||w===3||w===4)?'thrust':'slash';}
+function wCol(F){return F.wpn===6?'#f2c14e':F.wpn===9?'#ff8a50':F.wpn===0?'#d8b070':'#e8f0ff';}
+function slashArc(A,o={}){const d=A.isP?1:-1;fxp({k:'arc',x:fighterX(A)+d*(o.dx??14),y:o.y??112,r:o.r??24,a0:o.a0??-1.9,a1:o.a1??1.0,d,sq:o.sq||1,c:o.c||wCol(A),l:o.l||13});}
+function hop(F,ms,h){return tween(ms,p=>{F.oy=-Math.sin(p*Math.PI)*h;}).then(()=>{F.oy=0;});}
+async function animIn(A,D,heavy,o){const dir=A.isP?1:-1,cls=o.anim||(heavy?'leap':wClass(A));
+ if(cls==='leap'||cls==='smash'){A.pose='coil';await tween(210,p=>A.off=-dir*p*5);A.pose='smash';sfx.swing();const h=cls==='leap'?20:11;
+  await tween(250,p=>{A.off=dir*(-5+p*49);A.oy=-Math.sin(p*Math.PI)*h;A.rot=p*.22;});A.oy=0;A.rot=0;slashArc(A,{a0:-2.6,a1:.9,r:30,dx:10,y:108,l:14});
+  fxp({k:'ring',x:fighterX(A)+dir*16,y:167,r0:4,r1:cls==='leap'?26:18,sq:.3,c:'#e8d4a4',l:16});sandPuff(fighterX(A)+dir*10,166,cls==='leap'?12:7);shake(cls==='leap'?2.5:1.5);}
+ else if(cls==='thrust'||cls==='lunge'){A.pose='windup';await tween(120,p=>A.off=-dir*p*8);A.pose='thrust';sfx.swing();const far=cls==='lunge'?60:52;
+  fxp({k:'streak',x:fighterX(A)+dir*18,tx:fighterX(D)-dir*6,y:113,c:cls==='lunge'?'#f2c14e':wCol(A),l:9});await tween(90,p=>A.off=dir*(-8+p*far));
+  if(A.wpn===1&&!o.anim){await tween(60,p=>A.off=dir*(far-8-p*12));fxp({k:'streak',x:fighterX(A)+dir*18,tx:fighterX(D)-dir*6,y:117,c:wCol(A),l:7});await tween(60,p=>A.off=dir*(far-20+p*12));}}
+ else if(cls==='charge'){A.pose='guard';await tween(140,p=>A.off=-dir*p*10);sfx.swing();await tween(170,p=>{A.off=dir*(-10+p*66);if(Math.random()<.5)sandPuff(fighterX(A)-dir*8,166,1);});fxp({k:'glint',x:fighterX(A)+dir*20,y:118,c:'#fff6c8',l:10});shake(2);}
+ else if(cls==='trip'){A.pose='coil';await tween(130,p=>A.off=-dir*p*4);A.pose='thrust';sfx.swing();await tween(120,p=>A.off=dir*(-4+p*50));slashArc(A,{a0:.2,a1:2.2,r:26,y:140,dx:8,sq:.5});sandPuff(fighterX(D),166,8);}
+ else if(cls==='spin'){A.pose='attack';sfx.swing();await tween(230,p=>{A.off=dir*p*44;A.spin=Math.floor(p*4)%2===1;A.oy=-Math.sin(p*Math.PI)*5;});A.spin=false;A.oy=0;fxp({k:'ring',x:fighterX(A)+dir*8,y:116,r0:10,r1:30,sq:.45,c:wCol(A),l:12});slashArc(A,{a0:-3,a1:1.4,r:26});}
+ else if(cls==='hook'){A.pose='windup';await tween(170,p=>A.off=-dir*p*6);A.pose='attack';sfx.swing();await tween(130,p=>A.off=dir*(-6+p*46));slashArc(A,{a0:2.4,a1:-1.4,r:28,dx:20,y:110,c:'#c8a0f0',l:15});}
+ else{A.pose='windup';await tween(170,p=>A.off=-dir*p*6);A.pose='attack';sfx.swing();await tween(130,p=>A.off=dir*(-6+p*44));slashArc(A);}
+ return A.off;}
+function animDodge(D){const dir=D.isP?-1:1;D.pose='dodge';tween(150,p=>{D.off=dir*Math.sin(p*Math.PI/2)*9;}).then(()=>tween(200,p=>{D.off=dir*9*(1-p);})).then(()=>{if(!D.dead&&D.pose==='dodge')D.pose='idle';});}
+function animBlock(D){const dir=D.isP?1:-1;fxp({k:'glint',x:fighterX(D)+dir*16,y:116,c:'#fff6c8',l:12});D.pose='guard';tween(220,p=>{D.off=-dir*4*Math.sin(p*Math.PI);});}
+function animStagger(D,big){tween(big?520:300,p=>{D.rot=-Math.sin(p*Math.PI)*(big?.3:.14);}).then(()=>{D.rot=0;});}
+async function animFumble(A){A.pose='thrust';await tween(260,p=>{A.rot=Math.sin(p*Math.PI)*.5;A.oy=Math.sin(p*Math.PI)*3;});A.rot=0;A.oy=0;}
+async function animShow(F){F.pose='cheer';for(let i=0;i<2;i++){await tween(210,p=>{F.oy=-Math.sin(p*Math.PI)*9;F.spin=i===1&&p>.25&&p<.75;});}F.oy=0;F.spin=false;
+ for(let i=0;i<12;i++)fxp({k:'mote',x:fighterX(F)+(Math.random()-.5)*60,y:60+Math.random()*20,vx:(Math.random()-.5)*.4,vy:.5+Math.random()*.6,c:pick(['#e0553f','#f2c14e','#f8d0d8']),w:1,l:50+Math.random()*20});}
+function animDrink(F){F.pose='dodge';setTimeout(()=>{if(F.pose==='dodge')F.pose='idle';},420);for(let i=0;i<10;i++)fxp({k:'mote',x:fighterX(F)+(Math.random()-.5)*22,y:150-Math.random()*40,vy:-.5-Math.random()*.5,c:'#7ccf6a',w:Math.random()<.4?2:1,l:26+Math.random()*14});}
+function animNet(A,D){const x=fighterX(A),tx=fighterX(D),n=18;fxp({k:'net',x,y:104,vx:(tx-x)/n,vy:-1.9,l:n});}
+async function animVictory(F){for(let i=0;i<3&&C&&C.p===F&&!F.dead;i++){F.pose='cheer';await hop(F,260,8);await tween(90,()=>{});}if(!F.dead)F.pose='idle';}
+function animFinisher(P,E){const d=P.isP?1:-1;P.pose='smash';tween(150,p=>{P.off=d*p*58;P.oy=-Math.sin(p*Math.PI)*12;}).then(()=>{P.oy=0;slashArc(P,{a0:-2.6,a1:1.1,r:32,c:'#ff5a40',l:16});HFX.flash=5;slowmo(600,.3);return tween(500,()=>{});}).then(()=>tween(240,p=>{P.off=d*58*(1-p);})).then(()=>{P.pose='idle';});}
+// ================= signature moves: spend the crowd's favor =================
+const SIG_COST=40,sigCost=()=>bgIs(3)?30:SIG_COST;
+const SIGS={
+ Murmillo:{n:'Shield Charge',i:'🛡',d:'strike at +4, then stay behind your guard'},
+ Thraex:{n:'Hooking Cut',i:'🪝',d:'a strike that ignores guard and armor'},
+ Retiarius:{n:'Trip and Pin',i:'🔱',d:'strike at +2; a hit costs the foe their next turn'},
+ Secutor:{n:'Relentless Pursuit',i:'⏩',d:'two strikes in a row'},
+ Hoplomachus:{n:'Driving Lunge',i:'🎯',d:'a strike that is a critical if it lands'},
+ Dimachaerus:{n:'Whirlwind',i:'🌪',d:'three strikes at −2 to hit'},
+ Provocator:{n:'Defiant Roar',i:'🦁',d:'heal 25% health and refill your stamina'},
+ none:{n:'Sand in the Eyes',i:'🏜',d:'blind the foe (they lose their next turn), then strike them while they are exposed'}};
+const sigOf=()=>SIGS[S.style]||SIGS.none;
+async function doSig(){const P=C.p,E=C.e,k=SIGS[S.style]?S.style:'none',sg=SIGS[k];addFavor(-sigCost());C.cheer=110;sfx.cheer(.9);float(P,sg.n.toUpperCase(),'#f2c14e');camPunch(P,1.1,600);
+ clog(`⭐ <b>${sg.n}!</b> The crowd knows this one — and roars for it.`);renderPanel();await sleep(350);
+ const alive=()=>E.hp>0&&P.hp>0;
+ if(k==='Murmillo'){await doAttack(P,E,false,{b:4,anim:'charge'});if(alive()){P.guard=true;P.pose='guard';}}
+ else if(k==='Thraex')await doAttack(P,E,false,{pierce:1,anim:'hook'});
+ else if(k==='Retiarius'){const h0=E.hp;await doAttack(P,E,false,{b:2,anim:'trip'});if(alive()&&E.hp<h0){E.netted=true;E.stunMsg='is pinned in the sand';float(E,'PINNED','#7ccf6a');clog(`${esc(E.short)} is tripped and pinned — they lose their next turn.`);}}
+ else if(k==='Secutor'){await doAttack(P,E,false);if(alive()){await sleep(200);await doAttack(P,E,false);}}
+ else if(k==='Hoplomachus')await doAttack(P,E,false,{ac:1,anim:'lunge'});
+ else if(k==='Dimachaerus'){for(let i=0;i<3&&alive();i++){if(i)await sleep(150);await doAttack(P,E,false,{b:-2,anim:'spin'});}}
+ else if(k==='Provocator'){const hh=Math.round(P.maxhp*.25);P.hp=Math.min(P.maxhp,P.hp+hh);P.sta=100;P.pose='cheer';for(let i=0;i<3;i++)fxp({k:'ring',x:fighterX(P),y:112,r0:6+i*6,r1:40+i*14,sq:.8,c:'#f2c14e',l:20+i*5});shake(3);hop(P,300,6).then(()=>{P.pose='idle';});float(P,'+'+hh,'#7ccf6a');clog(`You beat your shield and bellow at the stands: <b>+${hh} HP</b>, stamina restored.`);await sleep(400);}
+ else{P.pose='thrust';setTimeout(()=>{if(P.pose==='thrust')P.pose='idle';},380);for(let i=0;i<34;i++)fxp({k:'mote',x:fighterX(P)+14,y:160,vx:2.2+Math.random()*2.6,vy:-2.6-Math.random()*1.6,g:.11,c:pick(['#e8d4a4','#c8a870','#f4e4b8']),w:Math.random()<.3?2:1,l:34+Math.random()*10});sfx.miss&&sfx.miss();sandPuff(fighterX(E),120,14);E.netted=true;E.stunMsg='claws at the sand in their eyes';E.exposed=true;float(E,'BLINDED','#f2c14e');clog(`You kick a fistful of sand into ${esc(E.short)}'s face. No school taught you that. <span class="mut">(they lose a turn and are exposed)</span>`);renderPanel();await sleep(450);if(alive())await doAttack(P,E,false);}}
+async function doAttack(A,D,heavy,o={}){
+ const dir=A.isP?1:-1;const reach=await animIn(A,D,heavy,o);
+ let rb=0;if(A.tr==='reach'&&!A.reachUsed){A.reachUsed=1;rb=3;}if(!A.gamb&&fp(A,'gambit')){A.gamb=1;rb+=5;}if(heavy&&D.tr==='reach')rb-=2;
+ const mo=A.mom?1:0;A.mom=0;const cb=A.isP&&C.favor>=75?1:0,op=D.exposed&&fp(A,'opp')?2:0;let ctr=false;
+ const nat=rnd(1,20),atk=A.atk+(heavy?(A.heavyPen??-3):0)+rb+(o.b||0)+mo*2+cb+op,dc=D.dc+(D.guard&&!o.pierce?(A.tr==='hook'?1:D.st==='deflect'?5:4):0)-(D.exposed?3:0);D.exposed=false;
  const tot=nat+atk,isC=nat>=A.crit,hp_=nat!==1&&(isC||tot>=dc);
  await rollD20(nat,{top:A.isP?(heavy?'YOU: HEAVY BLOW':'YOU ATTACK'):(A.short+(heavy?' SMASHES':' ATTACKS')),res:`${nat}${sgn(atk)}=${tot} VS ${dc}`,ver:nat===1?'FUMBLE':isC?'CRIT!':hp_?'HIT!':'MISS',verC:nat===1?'#e0553f':isC?'#f2c14e':hp_?'#7ccf6a':'#c8b8a0',st:isC?'gold':nat===1?'red':''});
  const who=A.isP?'You':esc(A.short),tgt=D.isP?'you':esc(D.short),v=s=>A.isP?s:s+(s.endsWith('h')||s.endsWith('s')?'es':'s');
  let line=`<span class="dice">🎲 d20 ${nat}${sgn(atk)} = ${tot} vs DC ${dc}</span> — `;
- if(nat===1){sfx.fumble();sandPuff(fighterX(A),166,8);A.sta=Math.max(0,A.sta-15);float(A,'FUMBLE!','#e0553f');addFavor(A.isP?-6:4);line+=`${who} ${v('stumble')} and lose${A.isP?'':'s'} footing! Fumble.`;}
- else if(nat<A.crit&&tot<dc){if(D.guard){sfx.clang();sparks(D,6);}else{sfx.miss();sandPuff(fighterX(D),166,7);}D.pose='guard';setTimeout(()=>{if(!D.dead)D.pose=D.guard?'guard':'idle';},260);float(D,'MISS','#ffffff');if(A.isP)addFavor(-2);line+=`${who} ${v('miss')}.`;
+ if(nat===1){sfx.fumble();animFumble(A);sandPuff(fighterX(A),166,8);A.sta=Math.max(0,A.sta-15);float(A,'FUMBLE!','#e0553f');addFavor(A.isP?-6:4);line+=`${who} ${v('stumble')} and lose${A.isP?'':'s'} footing! Fumble.`;}
+ else if(nat<A.crit&&tot<dc){if(D.guard){sfx.clang();sparks(D,6);animBlock(D);}else{sfx.miss();sandPuff(fighterX(D),166,7);animDodge(D);}float(D,'MISS','#ffffff');if(A.isP)addFavor(-2);line+=`${who} ${v('miss')}.`;
+  if(D.guard&&heavy&&!o.ctr){A.exposed=true;ctr=true;float(A,'STAGGERED','#c8a0f0');if(D.isP)addFavor(6);line+=` The heavy blow glances off the guard — <b>${A.isP?'you stagger':esc(A.short)+' staggers'}</b>, and ${D.isP?'you answer':esc(D.short)+' answers'} with a free counter-strike.`;}
+  if(D.guard&&fp(D,'riposte')){const rd=Math.max(1,Math.round((rnd(1,6)+Math.floor(D.str/2))*(1-A.def/(A.def+20))));A.hp=Math.max(0,A.hp-rd);A.flash=8;float(A,'RIPOSTE -'+rd,D.isP?'#7ccf6a':'#e0553f');if(A.isP)C.eDmg+=rd;line+=` ${D.isP?'You riposte':esc(D.short)+' ripostes'} for <b>${rd}</b>.`;}
   if(D.guard&&(D.st==='bash'||D.st==='bash2')){const bd=Math.max(1,Math.round((rnd(1,D.st==='bash2'?10:6)+Math.floor(D.str/2))*(1-A.def/(A.def+20))));sfx.bash();shake(3);A.hp=Math.max(0,A.hp-bd);A.flash=8;float(A,'BASH -'+bd,'#ffb060');line+=` ${D.isP?'You':esc(D.short)} ${D.isP?'slam':'slams'} the scutum into ${A.isP?'you':esc(A.short)}: <b>${bd}</b> damage.`;if(A.isP)C.eDmg+=bd;}}
  else{
-  const crit=nat>=A.crit,n=A.dn*(heavy?2:1)*(crit?2:1),dice=rollDice(n,A.ds);
-  const qk=A.tr==='quick'?rnd(1,4):0,raw=sum(dice)+A.str+(A.dmgB||0)+qk;let dmg=raw*(1-D.def/(D.def+20));if(D.guard)dmg*=.5;if(!A.isP&&C.opp.special==='lover'&&S.love.aff>=60)dmg*=.5;dmg=Math.max(1,Math.round(dmg));if(D.isP){C.eDmg+=dmg;if(crit)C.critTaken=true;}
+  const crit=nat>=A.crit||!!o.ac,n=A.dn*(heavy?2:1)*(crit?2:1)+mo,dice=rollDice(n,A.ds);
+  const qk=A.tr==='quick'?rnd(1,4):0,ex=fp(A,'exec')&&D.hp<D.maxhp/2?3:0,raw=sum(dice)+A.str+(A.dmgB||0)+qk+ex+cb;let dmg=o.pierce?raw:raw*(1-D.def/(D.def+20));if(D.guard&&!o.pierce)dmg*=.5;if(!A.isP&&C.opp.special==='lover'&&S.love.aff>=60)dmg*=.5;dmg=Math.max(1,Math.round(dmg));if(D.isP){C.eDmg+=dmg;if(crit)C.critTaken=true;}
   await rollRow(A.ds,dice,{sum:`+${A.str} STR = ${dmg} DMG`,st:crit?'gold':''});await sleep(550);
-  if(crit){slowmo(700,.25);HFX.flash=6;}sfx.hit(crit,heavy);if(D.guard)sfx.clang();sparks(D,crit?22:heavy?14:9,crit);shake(crit?6:heavy?4:2.5);
-  const kb=(A.isP?1:-1)*(crit?10:6);D.off+=kb;tween(260,p=>{D.off=kb*(1-p);});
-  D.hp=Math.max(0,D.hp-dmg);D.flash=10;float(D,(crit?'CRIT ':'')+'-'+dmg,crit?'#f2c14e':'#ff6a50');
-  if(A.isP){addFavor(3+Math.floor(S.stats.show/3)+(crit?10:0)+(heavy?5:0)+(A.tr==='darling'?4:A.tr==='legend'?6:0));}else addFavor(crit?-5:-1);
+  if(crit){slowmo(700,.25);HFX.flash=6;camPunch(D,1.16,950);}else if(heavy)camPunch(D,1.06,380);sfx.hit(crit,heavy);if(D.guard)sfx.clang();sparks(D,crit?22:heavy?14:9,crit);shake(crit?6:heavy?4:2.5);
+  const kb=(A.isP?1:-1)*(crit?10:6);D.off+=kb;tween(260,p=>{D.off=kb*(1-p);});animStagger(D,crit||heavy);if(D.guard)fxp({k:'glint',x:fighterX(D)-(A.isP?1:-1)*16,y:116,c:'#fff6c8',l:10});
+  D.hp=Math.max(0,D.hp-dmg);if(D.hp<=0&&!D.iron&&fp(D,'ironwill')){D.iron=1;D.hp=1;float(D,'IRON WILL','#f2c14e');}D.flash=10;if(D.guard&&heavy&&!o.ctr&&!o.pierce&&D.hp>0){ctr=true;if(D.isP)addFavor(4);}float(D,(crit?'CRIT ':'')+'-'+dmg,crit?'#f2c14e':'#ff6a50');
+  if(A.isP){addFavor(3+Math.floor(S.stats.show/3)+(crit?10:0)+(heavy?5:0)+(A.tr==='darling'?4:A.tr==='legend'?6:0)+(fp(A,'cheer')?2:0));}else addFavor(crit?-5:-1);
   if(crit)C.cheer=90;
-  line+=`${crit?'<b>CRITICAL!</b> ':''}${who} ${v(heavy?'smash':'hit')} ${tgt}: <span class="dice">${n}d${A.ds} [${dice.join(', ')}] +${A.str}${qk?` +${qk} quick stab`:''}</span> = ${raw}${(D.def||D.guard)?` → ${dmg} after ${D.guard?'guard & ':''}armor`:''}.`;
+  line+=`${crit?'<b>CRITICAL!</b> ':''}${who} ${v(heavy?'smash':'hit')} ${tgt}: <span class="dice">${n}d${A.ds} [${dice.join(', ')}] +${A.str}${qk?` +${qk} quick stab`:''}</span> = ${raw}${o.pierce?' — straight through guard and armor':(D.def||D.guard)?` → ${dmg} after ${D.guard?'guard & ':''}armor`:''}.`;
+  if(!D.wind&&D.hp>0&&D.hp<D.maxhp*.3&&fp(D,'wind')){D.wind=1;const hh=Math.round(D.maxhp*.25);D.hp+=hh;float(D,'+'+hh,'#7ccf6a');line+=` <b>Second wind!</b> ${D.isP?'You shake':esc(D.short)+' shakes'} it off: +${hh} HP.`;}
   if(heavy&&A.tr==='stun'){D.sta=Math.max(0,D.sta-25);line+=` <b>Crushing!</b> ${D.isP?'Your':esc(D.short)+'\'s'} stamina drains away.`;}
  }
  clog(line);renderPanel();
- await tween(170,p=>A.off=dir*(1-p)*38);A.pose='idle';
+ await tween(170,p=>A.off=reach*(1-p));A.pose=A.guard?'guard':'idle';
+ if(ctr&&A.hp>0&&D.hp>0){await sleep(150);clog(`<b>${D.isP?'You counter':esc(D.short)+' counters'}</b> from behind the guard.`);await doAttack(D,A,false,{b:2,ctr:1});if(D.guard)D.pose='guard';}
 }
 async function act(a){
  if(!C||C.busy||C.result)return;const P=C.p,E=C.e;
- if(a==='strike'&&P.sta<10||a==='heavy'&&P.sta<30||a==='potion'&&S.potions<1)return;
+ if(a==='strike'&&P.sta<10||a==='heavy'&&P.sta<P.hc||a==='potion'&&S.potions<1||a==='sig'&&(C.favor<sigCost()||C.opp.special==='lover'))return;
  C.busy=true;P.guard=false;P.pose='idle';renderPanel();
  if(a==='yield')return mercy(true);
  if(a==='feint'||a==='lower')return loverAct(a);
- if(a==='net'){if(P.netUsed||P.sta<15){C.busy=false;renderPanel();return;}P.netUsed=1;P.sta-=15;const d=rnd(1,20),ok=d===20||(d!==1&&d+P.atk>=E.dc);P.pose='attack';
+ if(a==='net'){if(P.netUsed||P.sta<15){C.busy=false;renderPanel();return;}P.netUsed=1;P.sta-=15;const d=rnd(1,20),ok=d===20||(d!==1&&d+P.atk>=E.dc);P.pose='thrust';animNet(P,E);
   await rollD20(d,{top:'CAST THE NET',res:`${d}${sgn(P.atk)}=${d+P.atk} VS ${E.dc}`,ver:ok?'TANGLED!':'MISSED',verC:ok?'#7ccf6a':'#c8b8a0',st:d===20?'gold':d===1?'red':''});P.pose='idle';
   if(ok){sfx.net();E.netted=true;addFavor(6);float(E,'NETTED','#7ccf6a');clog(`<span class="dice">🎲 ${d}${sgn(P.atk)} vs ${E.dc}</span> — Your net drops over ${esc(E.short)}! They lose their next turn.`);}else clog(`<span class="dice">🎲 ${d}</span> — The net sails wide.`);}
  if(a==='net'){}
- else if(a==='strike'||a==='heavy'){P.sta-=a==='heavy'?30:10;await doAttack(P,E,a==='heavy');}
- else if(a==='guard'){sfx.guard();P.guard=true;P.pose='guard';P.sta=Math.min(100,P.sta+25);addFavor(-3);clog('You raise your guard and catch your breath. The crowd jeers at the caution.');await sleep(350);}
+ else if(a==='sig')await doSig();
+ else if(a==='strike'||a==='heavy'){P.sta-=a==='heavy'?P.hc:10;await doAttack(P,E,a==='heavy');}
+ else if(a==='guard'){sfx.guard();P.guard=true;P.pose='guard';P.sta=Math.min(100,P.sta+25+(bgIs(4)?5:0));addFavor(-3);clog('You raise your guard and catch your breath. The crowd jeers at the caution.');await sleep(350);}
  else if(a==='show'){
-  const r=rnd(1,20),mod=Math.floor(S.stats.show/2)-(hasInj('brow')?2:0),tot=r+mod;P.exposed=true;P.sta=Math.min(100,P.sta+10);P.pose='attack';
+  const r=rnd(1,20),mod=Math.floor(S.stats.show/2)-(hasInj('brow')?2:0),tot=r+mod;P.exposed=!hasPerk('showman');P.sta=Math.min(100,P.sta+10);await animShow(P);
   await rollD20(r,{top:'SHOWBOAT',res:`${r}${sgn(mod)}=${tot} VS 10`,ver:r===20?'ROARING!':r===1?'BOO!':tot>=10?'CHEERS!':'MEH',verC:r===1?'#e0553f':tot>=10?'#f2c14e':'#c8b8a0',st:r===20?'gold':r===1?'red':''});P.pose='idle';
   let m=`<span class="dice">🎲 d20 ${r}${sgn(mod)} = ${tot} vs 10</span> — `;
   if(r===20){addFavor(25);C.cheer=120;float(P,'+25 FAVOR','#f2c14e');m+='<b>Magnificent!</b> You spin your blade and salute the editor. The stands erupt!';}
   else if(r===1){addFavor(-8);float(P,'BOO','#e0553f');m+='You trip over your own flourish. Laughter rains down.';}
   else if(tot>=10){const g=8+S.stats.show;addFavor(g);C.cheer=60;float(P,'+'+g+' FAVOR','#f2c14e');m+='You roar at the crowd and they roar back.';}
+  if(r===20||(r!==1&&tot>=10)){P.mom=1;m+=' <b>Momentum:</b> your next attack gets +2 to hit and an extra damage die.';}
   else{m+='The crowd shrugs at your posturing.';}
-  clog(m+' <span class="mut">(you are exposed)</span>');}
+  clog(m+(P.exposed?' <span class="mut">(you are exposed)</span>':''));}
  else if(a==='potion'){
-  sfx.gulp();S.potions--;const d=rollDice(2,8),h=sum(d)+Math.floor(P.maxhp*.25);
+  sfx.gulp();animDrink(P);S.potions--;const d=rollDice(2,8),h=Math.round((sum(d)+Math.floor(P.maxhp*.25))*(hasPerk('medic')?1.5:1));
   await rollRow(8,d,{y:30,sum:`+${Math.floor(P.maxhp*.25)} = ${h} HP`,sumC:'#7ccf6a'});
   P.hp=Math.min(P.maxhp,P.hp+h);float(P,'+'+h,'#7ccf6a');clog(`You gulp a posca tonic: <span class="dice">2d8 [${d.join(', ')}] + ${Math.floor(P.maxhp*.25)}</span> = ${h} HP.`);await sleep(250);}
  renderPanel();
  if(E.hp<=0)return endFight(true);
  await sleep(350);if(P.hp<=0)return endFight(false);const et=await enemyTurn();if(et==='yield')return endFight(true);if(E.hp<=0)return endFight(true);
  if(P.hp<=0)return endFight(false);
- P.sta=Math.min(100,P.sta+8+(P.regen||0));E.sta=Math.min(100,E.sta+8+(E.regen||0));C.busy=false;renderPanel();
+ P.sta=Math.min(100,P.sta+8+(P.regen||0));E.sta=Math.min(100,E.sta+8+(E.regen||0));planEnemy();C.busy=false;renderPanel();
 }
 async function enemyTurn(){
- const E=C.e,P=C.p,pe=E.persona;E.guard=false;E.pose='idle';const r=Math.random();let a='strike';
- if(E.netted){E.netted=false;clog(`${esc(E.short)} thrashes in the net and loses the turn!`);renderPanel();await sleep(400);return;}
+ const E=C.e,P=C.p,pe=E.persona;E.guard=false;E.pose='idle';let a='strike';
+ if(E.netted){E.netted=false;clog(`${esc(E.short)} ${E.stunMsg||'thrashes in the net'} and loses the turn!`);E.stunMsg=null;renderPanel();await sleep(400);return;}
  if(pe==='coward'&&E.hp<E.maxhp*.35&&!C.begged&&!C.opp.special){C.begged=true;clog(`${esc(E.short)} throws down ${PRON(E.look.sex).p} weapon and begs for missio!`);renderPanel();await sleep(500);return 'yield';}
  if(pe==='berserker'&&!E.rage&&E.hp<E.maxhp*.5){E.rage=true;E.atk+=2;clog(`<b>${esc(E.short)} roars in fury!</b> <span class="mut">(+2 attack)</span>`);float(E,'RAGE','#e0553f');}
- const W={brute:[.45,.03,.04],turtle:[.12,.32,.03],showman:[.15,.08,.28],coward:[.08,.28,.05],berserker:[.35,0,.04],tactician:[.2,.12,.03]}[pe]||[.22,.08,.08];
- if(E.tr==='net'&&!E.netUsed&&E.sta>=15&&r<.18)a='net';
- else if(E.sta<10)a='guard';
- else if(pe==='tactician'&&P.guard&&E.sta>=30)a='heavy';
- else if(pe==='tactician'&&P.exposed)a=E.sta>=30?'heavy':'strike';
- else if(E.sta>=30&&(r<W[0]||(P.hp<P.maxhp*.3&&r<W[0]+.25)))a='heavy';
- else if(r>1-W[2])a='show';
- else if(r>1-W[2]-W[1]&&(pe==='turtle'||pe==='coward'||E.hp<E.maxhp*.5))a='guard';
- if(a==='net'){E.netUsed=1;E.sta-=15;const d=rnd(1,20),ok=d!==1&&d+E.atk>=P.dc;await rollD20(d,{top:E.short+' CASTS A NET',res:`${d}${sgn(E.atk)} VS ${P.dc}`,ver:ok?'TANGLED!':'DODGED',verC:ok?'#e0553f':'#7ccf6a'});
+ a=E.next||pickEnemyMove();E.next=null;
+ if(a==='sig'){await enemySig();return;}
+ if(a==='heavy'&&E.sta<30)a='strike';if((a==='strike'||a==='heavy')&&E.sta<10)a='guard';if(a==='net'&&(E.netUsed||E.sta<15))a='strike';
+ if(pe==='tactician'&&P.guard&&E.sta>=30&&a!=='net')a='heavy';else if(pe==='tactician'&&P.exposed&&a!=='net')a=E.sta>=30?'heavy':'strike';
+ if(a==='net'){E.netUsed=1;E.sta-=15;E.pose='thrust';animNet(E,P);setTimeout(()=>{if(E.pose==='thrust')E.pose='idle';},500);const d=rnd(1,20),ok=d!==1&&d+E.atk>=P.dc;await rollD20(d,{top:E.short+' CASTS A NET',res:`${d}${sgn(E.atk)} VS ${P.dc}`,ver:ok?'TANGLED!':'DODGED',verC:ok?'#e0553f':'#7ccf6a'});
   if(ok){sfx.net();clog(`<span class="dice">🎲 ${d}${sgn(E.atk)} vs ${P.dc}</span> — ${esc(E.short)}'s net tangles you! They strike while you thrash.`);float(P,'NETTED','#e0553f');renderPanel();await sleep(300);await doAttack(E,P,false);}
   else{clog(`<span class="dice">🎲 ${d}</span> — You sidestep ${esc(E.short)}'s net.`);renderPanel();}return;}
  if(a==='guard'){E.guard=true;E.pose='guard';E.sta=Math.min(100,E.sta+25);clog(`${esc(E.short)} raises a guard and circles warily.`);renderPanel();await sleep(500);}
- else if(a==='show'){const d=rnd(1,20),ok=d+Math.floor(E.show/2)>=10;E.exposed=true;await rollD20(d,{top:E.short+' SHOWBOATS',res:`${d}${sgn(Math.floor(E.show/2))} VS 10`,ver:ok?'CHEERS':'MEH',verC:ok?'#f2c14e':'#c8b8a0'});
+ else if(a==='show'){const d=rnd(1,20),ok=d+Math.floor(E.show/2)>=10;E.exposed=true;if(ok)E.mom=1;await animShow(E);E.pose='idle';await rollD20(d,{top:E.short+' SHOWBOATS',res:`${d}${sgn(Math.floor(E.show/2))} VS 10`,ver:ok?'CHEERS':'MEH',verC:ok?'#f2c14e':'#c8b8a0'});
   if(ok){addFavor(pe==='showman'?-11:-7);clog(`<span class="dice">🎲 ${d}</span> — ${esc(E.short)} plays to the crowd, stealing their favor!`);}else clog(`<span class="dice">🎲 ${d}</span> — ${esc(E.short)} poses. Nobody cares.`);renderPanel();await sleep(300);}
  else{E.sta-=a==='heavy'?30:10;await doAttack(E,P,a==='heavy');}
 }
+// mercy: harder crowds in bigger arenas, but a lanista does not let cheap novices die for nothing
+function mercyNums(o,yielded,favor){const t=clamp(o.tier||0,0,4),dc=15+Math.round(t*1.5)-(yielded?6:0),tb=o.special?0:[8,5,2,0,0][t];
+ const fm=Math.floor(favor/10),sm=Math.floor(S.stats.show/3),fb=Math.floor(S.rep.fame/25),lb=(o.special==='lover'?5:0)+(WEAPONS[S.gear.weapon].tr==='legend'?3:0)+(hasPerk('beloved')?3:0)+(charm('bulla')?2:0);
+ const bonus=fm+sm+fb+lb+tb,need=dc-bonus;return {dc,tb,fm,sm,fb,lb,bonus,p:need<=2?.95:need>20?.05:(21-need)/20};}
+const startFavor=()=>clamp(15+S.stats.show*2+Math.floor(S.rep.fame/5),0,70);
+const matchR=e=>power(mkFighter(e,false))/power(mkFighter({name:S.name,look:S.look,gear:S.gear,stats:S.stats},true));
+const winChance=e=>clamp(1/(1+Math.exp(9*(matchR(e)-1.07))),.03,.97);
+const deathRisk=e=>(1-winChance(e))*(1-mercyNums(e,false,startFavor()).p);
+const payFactor=e=>e.special||e.tour?1:clamp(Math.pow(matchR(e),1.5),.55,1.6);
 async function mercy(yielded){
- const P=C.p,o=C.opp;P.dead=!yielded;P.pose='idle';
+ const P=C.p,o=C.opp;P.dead=!yielded;P.pose=yielded?'kneel':'idle';
  if(o.special==='breakout'){clog('Sabinus\' blade finds you. The breakout dies with its leader.');P.dead=true;renderPanel();await sleep(1200);hist('Fell at the gate during the breakout.');screen='dead';C.deathLog=C.log.slice(-4);wipe();renderPanel();return;}
- const dc=yielded?14:17,fm=Math.floor(C.favor/10),sm=Math.floor(S.stats.show/3),lb=(o.special==='lover'?5:0)+(WEAPONS[S.gear.weapon].tr==='legend'?3:0),fb=Math.floor(S.rep.fame/25);
+ const MN=mercyNums(o,yielded,C.favor),dc=MN.dc,fm=MN.fm,sm=MN.sm,lb=MN.lb+MN.tb,fb=MN.fb;
  clog(yielded?'You drop to one knee and raise a finger — <i>ad digitum</i>. You beg for missio.':(o.special==='lover'?`You fall. ${esc(o.name)} turns to the stands and begs for your life.`:'You fall to the sand. The editor turns to the crowd…'));renderPanel();
  await sleep(900);
  const fixed=S.flags.favor==='throw'&&S.debt&&!o.special&&!o.tour;
  if(fixed){sfx.drumroll(1.5);clog('The editor\'s eyes drift to a ringed hand in the senators\' seats. Gaius Vettius gives the smallest nod. <b style="color:var(--grn)">MISSIO!</b> — the fix was in.');float(null,'MISSIO!','#7ccf6a');renderPanel();await sleep(1700);sfx.cheer(.8);}
  const r=fixed?20:rnd(1,20),tot=r+fm+sm+lb+fb,spared=fixed||r===20||(r!==1&&tot>=dc);if(!fixed)sfx.drumroll(1.5);
  if(!fixed)await rollD20(r,{roll:1500,hold:2400,top:'THE CROWD DECIDES',res:`${r}+${fm+sm+lb+fb}=${tot} VS ${dc}`,ver:spared?'MISSIO!':'IUGULA!',verC:spared?'#7ccf6a':'#e0553f',st:r===20?'gold':r===1?'red':''});
- if(!fixed)clog(`<span class="dice">🎲 Mercy: d20 ${r} + ${fm} favor + ${sm} show${fb?` + ${fb} fame`:''}${lb?` + ${lb} love`:''} = ${tot} vs ${dc}</span> — ${spared?'<b style="color:var(--grn)">MISSIO!</b> The crowd spares you.':'<b style="color:var(--red)">IUGULA!</b> Thumbs turn. The crowd wants blood.'}`);
+ if(!fixed)clog(`<span class="dice">🎲 Mercy: d20 ${r} + ${fm} favor + ${sm} show${fb?` + ${fb} fame`:''}${MN.lb?` + ${MN.lb} love`:''}${MN.tb?` + ${MN.tb} novice (the lanista protects his stock)`:''} = ${tot} vs ${dc}</span> — ${spared?'<b style="color:var(--grn)">MISSIO!</b> The crowd spares you.':'<b style="color:var(--red)">IUGULA!</b> Thumbs turn. The crowd wants blood.'}`);
  if(!fixed){float(null,spared?'MISSIO!':'IUGULA!',spared?'#7ccf6a':'#e0553f');if(spared)sfx.cheer(1);}else{sfx.gong();sfx.boo();}renderPanel();
  await sleep(1500);
  if(spared){S.spared++;S.hp=Math.max(1,yielded?P.hp:1);S.energy=0;S.opps=S.opps.filter(x=>x.id!==o.id);let extra='';
@@ -1631,19 +1858,19 @@ async function mercy(yielded){
   else extra+=' '+rep('fame',-3);
   if(o.special==='lover'){S.love.stage='bonded';qev('love_after');hist(`Lost the duel to ${S.love.name}, who begged the crowd for your life.`);}
   if(o.special==='emperor'){S.flags.emperorDone=1;hist('Lost to Verus before Caesar — but was spared.');}
-  if(S.tour){S.tour=null;extra+='<br>🏆 Your tournament ends here.';}
+  if(S.tour){const rr=S.tour.round,cp=rr>1?Math.round(tourPrize()*(rr===3?.35:.1)):0;S.opps=S.opps.filter(x=>!x.tour);S.tour=null;extra+='<br>🏆 Your tournament ends here.';if(cp){S.gold+=cp;extra+=` As a ${rr===3?'finalist':'semifinalist'} you still take <b style="color:var(--gold)">${cp}g</b>.`;hist(`Fell in the ${rr===3?'final':'semifinal'} of the Ludi Romani.`);}}
   extra+=maybeInjure(P,true);
   S.log=`You live to fight another day — but with no purse and a bruised name. (${S.hp} HP)`;save();
   C.result=`<h2 style="color:var(--grn)">Spared</h2><div class="log">${C.log.slice(-4).map(l=>`<div>${l}</div>`).join('')}</div><p>You are dragged from the sand alive. No purse is paid to the defeated.${extra}</p><button class="pri" onclick="toLudus()">Return to the Ludus</button>`;
   renderPanel();}
- else{P.dead=true;P.flash=0;sfx.dirge();hist(`Killed in the arena by ${o.name}.`);await sleep(400);screen='dead';C.deathLog=C.log.slice(-4);wipe();renderPanel();}
+ else{P.dead=true;camPunch(P,1.2,1500);P.flash=0;sfx.dirge();hist(`Killed in the arena by ${o.name}.`);await sleep(400);screen='dead';C.deathLog=C.log.slice(-4);wipe();renderPanel();}
 }
 async function endFight(win){
  if(!win)return mercy(false);
  const P=C.p,E=C.e,o=C.opp;
  if(o.special==='breakout'){E.dead=true;C.cheer=150;sfx.fanfare();sfx.cheer(1.4);clog('<b>Sabinus falls!</b> The gate is open!');renderPanel();await sleep(1200);S.hp=Math.max(1,P.hp);S.ending={path:'escape'};hist('Cut down Captain Sabinus and led the breakout.');
   C.result=`<h2>The Gate Is Open</h2><div class="log">${C.log.slice(-3).map(l=>`<div>${l}</div>`).join('')}</div><p>Behind you, twenty men roar and pour out into the night.</p><button class="pri" onclick="C=null;screen='free';wipe();renderPanel()">Into the night ▶</button>`;renderPanel();return;}
- E.pose='hurt';C.cheer=150;sfx.cheer(1.2);sandPuff(fighterX(E),166,12);clog(`<b>${esc(E.short)} drops to one knee</b> and raises a finger — begging for missio.`);renderPanel();await sleep(900);
+ E.pose='kneel';C.cheer=150;sfx.cheer(1.2);sandPuff(fighterX(E),166,12);clog(`<b>${esc(E.short)} drops to one knee</b> and raises a finger — begging for missio.`);renderPanel();await sleep(900);
  if(o.special==='emperor'){const r=rnd(1,20),m=Math.floor(S.rep.fame/10),ok=r===20||(r!==1&&r+m>=16);S.flags.emperorDone=1;S.wins++;S.hp=Math.max(1,P.hp);
   await rollD20(r,{roll:1500,hold:2400,top:'CAESAR DECIDES',res:`${r}+${m} FAME=${r+m} VS 16`,ver:ok?'THE RUDIS!':'NOT YET',verC:ok?'#f2c14e':'#c8b8a0',st:ok?'gold':''});
   if(ok){S.ending={path:'rudis'};hist('Defeated Verus before Caesar and was granted the rudis.');C.result=`<h2>Caesar Rises</h2><p>The emperor stands. The Colosseum falls silent — and then roars as a slave carries the wooden sword down to the sand. <b>For you.</b></p><button class="gold" onclick="C=null;screen='free';wipe();renderPanel()">Take the rudis ▶</button>`;}
@@ -1659,8 +1886,8 @@ async function endFight(win){
 }
 function finishWin(kill){
  if(!C||C.done)return;C.done=1;const P=C.p,E=C.e,o=C.opp,obey=(kill&&C.wish==='kill')||(!kill&&C.wish==='spare');let extra='';
- if(kill){E.dead=true;sfx.hit(true,true);shake(5);sfx.boo();S.kills++;clog(`You drive the blade home. <b>${esc(E.short)} is dead.</b>`);extra+=fx_(rep('honor',C.wish==='kill'?-2:-7),obey?rep('fame',3):rep('fame',-2))+questHook('kill');}
- else{S.mercies++;sfx.cheer(1.1);clog(`You lower your sword. ${esc(E.short)} lives.`);extra+=fx_(rep('honor',C.wish==='kill'?7:4),obey?rep('fame',2):rep('fame',-3),rep('bond',2))+questHook('spare');
+ if(kill){animFinisher(P,E);E.dead=true;camPunch(E,1.22,1700);sfx.hit(true,true);shake(5);sfx.boo();S.kills++;clog(`You drive the blade home. <b>${esc(E.short)} is dead.</b>`);extra+=fx_(rep('honor',C.wish==='kill'?-2:-7),obey?rep('fame',3):rep('fame',-2))+questHook('kill');}
+ else{animVictory(P);S.mercies++;sfx.cheer(1.1);clog(`You lower your sword. ${esc(E.short)} lives.`);extra+=fx_(rep('honor',C.wish==='kill'?7:4),obey?rep('fame',2):rep('fame',-3),rep('bond',2))+questHook('spare');
   if(!o.special&&!o.rival){const disp=Math.random()<.35+S.rep.honor/250?'grateful':'grudge';S.rivals.push({id:'r'+o.id,name:o.name,cls:o.cls,look:o.look,gear:o.gear,stats:o.stats,tier:o.tier,disp,met:S.day,persona:disp==='grudge'?'berserker':o.persona});if(S.rivals.length>6)S.rivals.shift();
    const pr=PRON(o.look.sex);extra+=`<br><span class="mut">${esc(o.name)} ${disp==='grudge'?`spits in the sand as they carry ${pr.o} off. You haven\'t seen the last of ${pr.o}.`:`touches ${pr.p} heart as they carry ${pr.o} off.`}</span>`;}}
  if(o.rival){S.rivals=S.rivals.filter(r=>r.id!==o.id);if(!kill)S.rivals.push({id:o.id,name:o.name,cls:o.cls,look:o.look,gear:o.gear,stats:o.stats,tier:o.tier,disp:'grateful',met:S.day});extra+=' '+rep('fame',6);hist(`Defeated your rival ${o.name} again${kill?' and killed him':' and spared him once more'}.`);}
@@ -1668,26 +1895,31 @@ function finishWin(kill){
  if(S.flags.favor==='blood'&&S.debt&&!o.special){if(kill){S.debt.owed=Math.max(0,S.debt.owed-200);extra+='<br>💰 Vettius is pleased: <b>−200g</b> debt.';hist('Killed a man for Vettius.');}else{S.debt.owed+=150;extra+='<br>💰 Vettius is furious: <b>+150g</b> debt.';hist('Broke a promise to Vettius.');}S.flags.favor=null;}
  else if(S.flags.favor==='throw'&&S.debt&&!o.special){S.debt.owed+=200;S.flags.favor=null;extra+='<br>💰 You won a fight Vettius had bet against. <b>+200g</b> debt.';hist('Broke a promise to Vettius.');}
  ach('first_blood');if(!C.eDmg)ach('untouchable');if(C.favor>=100)ach('darling');if(kill&&o.avenge)ach('avenger');if(S.kills>=10)ach('butcher');if(o.special==='lover'&&kill)ach('heartbreak');
- const mult=(1+C.favor/200+S.stats.show*.015+S.rep.fame/400)*(isFest('Floralia')?1.5:1)*(S.debt&&S.debt.ally?1.1:1)*(S.flags.double?2:1)*(obey?1.05:.92);
- const pay=o.special==='lover'||o.tour?0:Math.round(o.pay*mult);S.flags.double=0;
- S.gold+=pay;S.wins++;if(o.special!=='lover')S.tierWins[o.tier]++;S.hp=Math.max(1,P.hp);S.opps=S.opps.filter(x=>x.id!==o.id);
+ const mult=(1+C.favor/200+S.stats.show*.015+S.rep.fame/400)*(isFest('Floralia')?1.5:1)*(S.debt&&S.debt.ally?1.1:1)*(S.flags.double?2:1)*(obey?1.05:.92)*(hasPerk('tongue')?1.08:1);
+ const pay=o.special==='lover'||o.tour?0:Math.round(o.pay*mult*(C.pm||1));S.flags.double=0;
+ S.gold+=pay;S.wins++;if(o.special!=='lover')S.tierWins[o.tier]++;S.hp=Math.max(1,P.hp);if(hasPerk('healer')){const hh=Math.round(P.maxhp*.15);S.hp=Math.min(P.maxhp,S.hp+hh);extra+=`<br>🩹 Quick Healer: +${hh} HP.`;}
+ if(S.wins%PERK_EVERY===0&&!S.perkPick&&offerPerk())extra+='<br>⭐ <b>You have earned a perk.</b> Choose it back at the ludus.';S.opps=S.opps.filter(x=>x.id!==o.id);
  extra+=' '+fx_(rep('fame',2+(isFest('Floralia')?3:0)),rep('trust',1));
+ if(bgIs(1)&&o.special!=='lover'){const lf=8+o.tier*7+rnd(0,6);S.gold+=lf;extra+=`<br>🗝 Light fingers: a purse goes missing in the stands. <b style="color:var(--gold)">+${lf}g</b>`;}
  extra+=questHook('win',{tier:o.tier,favor:C.favor});
+ if(!o.tour&&o.special!=='lover'&&C.favor>=70&&Math.random()<(C.favor>=100?.6:.35)+(bgIs(1)?.2:0))extra+=`<br>🌹 Something glitters as it lands in the sand — the crowd throws you a gift: ${giveTrinket(rollTrinket(o.tier))}.`;
  const hr=rnd(1,20);
  if(hr>=15){const k=pick(['str','agi','end']);if(S.stats[k]<20){S.stats[k]++;if(k==='end')S.hp+=5;extra+=`<br><span class="dice">🎲 Battle-hardened roll: ${hr}</span> — the fight taught you something: <b>+1 ${k.toUpperCase()}</b>.`;}}
  if(o.tier===S.maxTier&&S.maxTier<4&&S.tierWins[o.tier]>=UNLOCK[o.tier]){S.maxTier++;S.opps.push(enemyDyes(genEnemy(S.maxTier)),enemyDyes(genEnemy(S.maxTier)));if(S.maxTier>=4)ach('colosseum');extra+=`<br>🏛 Word spreads of your victories. <b>${TIERS[S.maxTier].n}</b> unlocked! You are now <b>${rankName()}</b>.`;hist(`Rose to ${rankName()}.`);}
  extra+=maybeInjure(P,C.critTaken);
  let btn=`<button class="pri" onclick="toLudus()">Return to the Ludus</button>`;
- if(S.tour){if(S.tour.round<3){S.tour.round++;btn=`<button class="pri" onclick="tourNextBtn()">🏆 Next bout (${S.tour.round}/3) ▶<small>your wounds carry over</small></button>`;extra+=`<br>🏆 Bout won! ${3-S.tour.round+1} to go.`;}
-  else{const pz=tourPrize();S.gold+=pz;ach('tourney');C.celebrate=1;extra+=`<br>🏆 <b>Champion of the Ludi Romani!</b> <b style="color:var(--gold)">+${pz}g</b> ${rep('fame',15)}`;hist('Won the Ludi Romani tournament.');S.tour=null;}}
+ if(S.tour){if(S.tour.round<3){tourBuild();tourAdvance();S.tour.round++;S.opps=S.opps.filter(x=>!x.tour);const dc=TDOC[S.tour.doc||0];extra+=`<br>🏆 ${TROUND[S.tour.round-1]} won! You advance to the <b>${TROUND[S.tour.round].toLowerCase()}</b>.`;
+   if(dc){const hh=Math.min(maxHP()-S.hp,Math.round(maxHP()*dc.h));S.hp+=hh;extra+=`<br>✚ The ${dc.n.toLowerCase()} stitches and binds you between bouts: <b style="color:var(--grn)">+${hh} HP</b>.`;}
+   btn=`<button class="pri" onclick="tourHub()">🏆 To the bracket ▶<small>${TROUND[S.tour.round]} next · your wounds carry over</small></button>`;}
+  else{const pz=tourPrize();S.gold+=pz;ach('tourney');C.celebrate=1;extra+=`<br>🏆 <b>Champion of the Ludi Romani!</b> <b style="color:var(--gold)">+${pz}g</b> ${rep('fame',15)}`;hist('Won the Ludi Romani tournament.');extra+=`<br>🎁 The editor hangs a prize around your neck: ${giveTrinket(rollTrinket(Math.min(4,S.tour.tier+1)))}.`;S.tour=null;}}
  sfx.fanfare();if(pay)setTimeout(()=>sfx.coins(10),700);
  S.log=`Victory over ${esc(o.name)}!${pay?` The purse: ${pay} gold.`:''}`;save();
  C.result=`<h2>Victory!</h2><div class="log">${C.log.slice(-3).map(l=>`<div>${l}</div>`).join('')}</div>
-  <p>${pay?`Purse: ${o.pay}g × (1 + favor ${C.favor}% ÷ 2 + show + fame)${obey?' × crowd pleased':' × crowd displeased'} = <b style="color:var(--gold)">${pay} gold</b>.`:''} ${extra}</p>
+  <p>${pay?`Purse: ${o.pay}g${C.pm&&Math.abs(C.pm-1)>.02?` × ${C.pm.toFixed(2)} (${C.pm<1?'an easy opponent':'a dangerous opponent'})`:''} × (1 + favor ${C.favor}% ÷ 2 + show + fame)${obey?' × crowd pleased':' × crowd displeased'} = <b style="color:var(--gold)">${pay} gold</b>.`:''} ${extra}</p>
   <p class="mut">Gold toward freedom: ${S.gold} / ${freePrice()}</p>${btn}`;
  renderPanel();
 }
-function tourNextBtn(){C=null;fx=[];floats=[];tourBout();}
+function tourNextBtn(){C=null;fx=[];floats=[];screen='hub';tourBout();}
 async function loverAct(a){
  const P=C.p,E=C.e,L=S.love;
  if(a==='feint'){const r=rnd(1,20),m=Math.floor(S.stats.show/2)+Math.floor(S.rep.fame/20)-(hasInj('brow')?2:0),ok=r===20||(r!==1&&r+m>=12);
@@ -1739,11 +1971,42 @@ const STYLES={
  Dimachaerus:{d:'crits one number lower',beats:['Secutor','Thraex']},
  Provocator:{d:'+6 max HP in the arena',beats:['Dimachaerus','Secutor']}};
 const INJ={ribs:{n:'Cracked ribs',d:'start fights at 60 stamina'},arm:{n:'Torn shoulder',d:'−2 attack'},knee:{n:'Twisted knee',d:'−2 defense DC'},brow:{n:'Split brow',d:'−2 showmanship rolls'}};
-const FEST={7:{n:'Floralia',i:'🌸',d:'Arena purses +50% and +3 fame per win'},14:{n:'Nundinae',i:'🛒',d:'Market day — all arms 25% cheaper'},21:{n:'Ludi Romani',i:'🏆',d:'The great tournament: three bouts back to back for a rich prize'},28:{n:'Saturnalia',i:'🎭',d:'Masters serve slaves. A night when anything can happen'},30:{n:'Nemesia',i:'🕯',d:'Feast of Nemesis, patron of gladiators — her shrine takes offerings'}};
+const FEST={7:{n:'Floralia',i:'🌸',d:'Arena purses +50% and +3 fame per win'},14:{n:'Nundinae',i:'🛒',d:'Market day — all arms 25% cheaper'},21:{n:'Ludi Romani',i:'🏆',d:'The great tournament: an eight-fighter bracket for a rich prize'},28:{n:'Saturnalia',i:'🎭',d:'Masters serve slaves. A night when anything can happen'},30:{n:'Nemesia',i:'🕯',d:'Feast of Nemesis, patron of gladiators — her shrine takes offerings'}};
 const festOf=d=>FEST[((d-1)%30)+1]||null;
 const fest=()=>S?festOf(S.day):null;
 const isFest=n=>{const f=fest();return !!f&&f.n===n;};
-const price=p=>isFest('Nundinae')?Math.round(p*.75):p;
+// the market treats a famous showman better: cheaper arms, better prices for what you sell, and rarer stock
+const mFame=()=>(S.rep?S.rep.fame:0)+(bgIs(5)?20:0);
+function terms(){const f=mFame(),sh=S.stats.show;return {buy:Math.min(.2,f*.001+sh*.005),gear:Math.min(.5,.25+f*.0015+sh*.005),trk:Math.min(1.2,.8+f*.002+sh*.01)};}
+const price=p=>Math.round(p*(isFest('Nundinae')?.75:1)*(1-terms().buy)*(bgIs(0)?.85:1)*(hasPerk('haggler')?.95:1));
+const needFame=it=>it.secret?0:it.p>=2000?45:it.p>=1200?25:0;
+const SLOTS={weapon:()=>WEAPONS,armor:()=>ARMORS,helm:()=>HELMS,shield:()=>SHIELDS};
+function ensureInv(){if(!S||!S.gear)return;S.owned=S.owned||{};for(const sl in SLOTS){const a=S.owned[sl]=S.owned[sl]||[];if(S.gear[sl]>0&&!a.includes(S.gear[sl]))a.push(S.gear[sl]);}S.trk=S.trk||{};if(S.charm&&!S.trk[S.charm])S.charm=null;}
+function sellGearPrice(slot,i){return Math.floor(SLOTS[slot]()[i].p*terms().gear);}
+function sellGear(slot,i){ensureInv();const it=SLOTS[slot]()[i];if(!i||it.secret||S.gear[slot]===i||!owns(slot,i))return;const g=sellGearPrice(slot,i);S.owned[slot]=S.owned[slot].filter(x=>x!==i);S.gold+=g;sfx.coins&&sfx.coins(5);setLog(`The merchant weighs your ${it.n} and counts out <b style="color:var(--gold)">${g}g</b>.`);}
+function equip(slot,i){ensureInv();if(i&&!owns(slot,i))return;if(S.gear[slot]===i)return;S.gear[slot]=i;sfx.guard&&sfx.guard();setLog(i?`You take the ${SLOTS[slot]()[i].n} from your chest.`:`You put your ${slot==='helm'?'helmet':slot} away.`);}
+// ---- trinkets & jewels: thrown by the crowd, given by patrons, won at the games ----
+const TRK={laurel:{n:'Laurel Sprig',i:'🌿',v:15,d:'tossed from the cheap seats'},ribbon:{n:"Lady's Ribbon",i:'🎀',v:25,d:'still scented'},ringb:{n:'Bronze Ring',i:'💍',v:40,d:'a tradesman\'s token'},
+ beads:{n:'Glass Bead Necklace',i:'📿',v:60,d:'blue Egyptian glass'},armband:{n:'Silver Armband',i:'🥈',v:90,d:'a soldier\'s gift'},amber:{n:'Amber Pendant',i:'🟠',v:140,d:'northern amber, warm in the hand'},
+ pearl:{n:'Pearl Earring',i:'🦪',v:200,d:'a noblewoman\'s — only the one'},garnet:{n:'Garnet Ring',i:'🔴',v:280,d:'heavy gold, blood-red stone'},cameo:{n:"Senator's Cameo",i:'🏺',v:400,d:'carved onyx with a patrician profile'},
+ emerald:{n:'Emerald Brooch',i:'💚',v:600,d:'worth a small farm'},ruby:{n:'Ruby of the East',i:'♦️',v:900,d:'a jewel fit for a triumph'},
+ fang:{n:'Wolf-fang Charm',i:'🐺',v:120,d:'a hunter\'s luck',e:'+1 attack'},bulla:{n:'Lucky Bulla',i:'🪙',v:150,d:'a child\'s amulet, pressed on you by a mother',e:'+2 on mercy rolls'},
+ nemesis:{n:'Amulet of Nemesis',i:'🧿',v:220,d:'blessed at her shrine',e:'+1 defense DC'},torc:{n:'Gallic Torc',i:'⭕',v:260,d:'the crowd loves a trophy',e:'+5 starting crowd favor'},knot:{n:'Knot of Hercules',i:'🪢',v:240,d:'tied by a veteran of forty fights',e:'+5 health in the arena'}};
+function rollTrinket(t){const R={0:[0,60],1:[0,150],2:[40,280],3:[90,600],4:[140,900]}[clamp(t,0,4)],pool=Object.keys(TRK).filter(k=>TRK[k].v>=R[0]&&TRK[k].v<=R[1]);return pick(pool);}
+function giveTrinket(k){ensureInv();S.trk[k]=(S.trk[k]||0)+1;return `${TRK[k].i} <b>${TRK[k].n}</b>${TRK[k].e?` <span class="mut">(charm: ${TRK[k].e})</span>`:''}`;}
+function trkPrice(k){return Math.round(TRK[k].v*terms().trk);}
+function sellTrinket(k,all){ensureInv();let n=S.trk[k]||0;if(!n)return;const keep=S.charm===k?1:0;const q=all?n-keep:1;if(q<1||(n-q<keep))return;const g=trkPrice(k)*q;S.trk[k]=n-q;if(!S.trk[k])delete S.trk[k];S.gold+=g;sfx.coins&&sfx.coins(5);setLog(`The jeweller turns the ${TRK[k].n.toLowerCase()} in the light and pays <b style="color:var(--gold)">${g}g</b>.`);}
+function wearCharm(k){ensureInv();if(k&&!(S.trk[k]&&TRK[k].e))return;S.charm=S.charm===k?null:k;setLog(S.charm?`You tie the ${TRK[k].n.toLowerCase()} around your neck. <span class="mut">(${TRK[k].e})</span>`:'You put the charm away.');}
+const charm=k=>!!(S&&S.charm===k&&S.trk&&S.trk[k]);
+function pInv(){ensureInv();const names={weapon:'Weapons',shield:'Shields',armor:'Body armor',helm:'Helmets'};
+ const tile=(sl,i)=>{const it=SLOTS[sl]()[i],cur=S.gear[sl]===i,ic=(i||sl==='weapon')?itemIcon(sl,i):'';return `<div class="itile${cur?' on':''}">${ic?`<img class="icn" src="${ic}" alt="">`:'<span class="none">—</span>'}<b>${it.n}</b>${cur?'<span class="mut">equipped</span>':`<button class="tiny" onclick="equip('${sl}',${i})">Equip</button>`}</div>`;};
+ const tk=Object.keys(S.trk).sort((a,b)=>TRK[b].v-TRK[a].v);
+ return `<div class="msg">${S.log}</div><h3>🎒 Your chest <small>· everything you own stays here until you sell it at the market</small></h3>
+ ${['weapon','shield','armor','helm'].map(sl=>`<h4 class="ih">${names[sl]}</h4><div class="igrid">${[0,...S.owned[sl].slice().sort((a,b)=>SLOTS[sl]()[a].p-SLOTS[sl]()[b].p)].map(i=>tile(sl,i)).join('')}</div>`).join('')}
+ <h4 class="ih">Trinkets &amp; jewels <small class="mut">· you can wear one charm at a time</small></h4>
+ ${tk.length?tk.map(k=>{const T=TRK[k];return `<div class="item"><span><span style="font-size:18px">${T.i}</span> <b>${T.n}</b>${S.trk[k]>1?` ×${S.trk[k]}`:''} <span class="mut">${T.d}</span>${T.e?`<span class="tr">Charm: ${T.e}${S.charm===k?' — worn':''}</span>`:''}</span><span style="color:var(--gold)">~${trkPrice(k)}g</span>${T.e?`<button class="tiny" onclick="wearCharm('${k}')">${S.charm===k?'Take off':'Wear'}</button>`:'<span></span>'}</div>`;}).join(''):'<p class="mut">Nothing yet. Win with the crowd roaring and they throw things; patrons and the games give richer gifts.</p>'}
+ <div style="margin-top:8px"><button onclick="mktTab='sell';go('market')">🛒 Sell at the market</button><button onclick="go('main')">◀ Back</button></div>`;}
+
 
 function ensureStory(){
  if(!S)return;
@@ -1754,7 +2017,7 @@ function ensureStory(){
  if(S.nextOffer===undefined)S.nextOffer=S.day;if(S.discount===undefined)S.discount=0;
 }
 const fameSurcharge=()=>S?Math.round(S.rep.fame*40/50)*50:0; // a famous gladiator is worth more to Quintus
-const freePrice=()=>S?Math.max(500,BASE_FREEDOM+fameSurcharge()-(S.discount||0)+(S.debt&&!S.debt.ally?S.debt.owed:0)):BASE_FREEDOM;
+const freePrice=()=>S?Math.max(500,Math.round(BASE_FREEDOM*(S.hard?1.15:1))+fameSurcharge()-(S.discount||0)+(S.debt&&!S.debt.ally?S.debt.owed:0)):BASE_FREEDOM;
 const upkeep=()=>5+12*S.maxTier+(S.quarters||0)*6;
 function hist(s){S.hist.push({d:S.day,s});if(S.hist.length>60)S.hist.shift();}
 function rep(k,n){if(!n)return '';const R=REPS.find(r=>r.k===k);S.rep[k]=clamp(Math.round(S.rep[k]+n),0,100);return `<span class="rp" style="color:${R.c}">${n>0?'+':''}${n} ${R.n}</span>`;}
@@ -1775,16 +2038,40 @@ function mkPerson(sex,tier){const t=TIERS[Math.min(4,tier)],st=()=>rnd(t.st[0],t
 const EV={};
 let evBusy=false;
 function curEv(){return S&&S.evq&&S.evq.length?S.evq[0]:null;}
+
+// ----- choices only one former life can make -----
+const lifeTag=i=>`${BGS[i].i} <b>${BGS[i].n}:</b> `;
+const BGCH={
+ wine:[[1,{l:'Lift the jug while Felix dozes',r:{st:'agi',dc:10},f:ok=>ok?fx_('Old habits. The jug is under your blanket before he stirs, and the whole barracks drinks free.',rep('bond',8),hpx(4)):`Felix wakes with your hand on the jug and howls for the guard. ${rep('trust',-6)}`}],
+  [5,{l:'Name the vintage and beat him down to 5g',dis:()=>S.gold<5?'not enough gold':'',f:()=>fx_(gold(-5),'"That is not Falernian, friend, and we both know it." He takes five and is glad of it. The barracks drinks.',rep('bond',8),hpx(4))}]],
+ dice:[[1,{l:'Palm the bones (wager 50g)',dis:()=>S.gold<50?'not enough gold':'',f:()=>`You have been switching dice since you could walk. Nobody sees a thing. ${gold(75)}`}],
+  [3,{l:'Juggle the dice for coppers',f:()=>`Five bones in the air, then seven, then one caught on your nose. They pay to see it again. ${gold(25)} ${rep('bond',4)}`}],
+  [4,{l:'Teach them legion dice — and its odds',f:()=>`The game every camp plays, and the house rule every veteran knows. ${gold(30)} ${rep('bond',3)}`}]],
+ thief:[[1,{l:'You know that touch',f:()=>`You catch the wrist without opening your eyes. "Too heavy on the straw. Use two fingers." The Gaul gapes, then grins. By morning he has told everyone. ${rep('bond',6)}`}],
+  [4,{l:'Sleep like a sentry',f:()=>`You never stopped sleeping with one eye open. He is pinned before his hand closes. ${rep('bond',3)} ${rep('honor',2)}`}]],
+ fever:[[2,{l:"Brew your mother's willow-bark tea",f:()=>`Bitter as sin and twice as strong. By dawn the fever has broken — yours and half the barracks'. ${rep('bond',10)}`}]],
+ collectors:[[0,{l:'Pick up the forge hammer',r:{st:'str',dc:13,m:()=>4},f:ok=>{S.debt.refused=0;if(ok){hist("Drove off Vettius' collectors with a hammer.");return `Twenty years of swinging iron. The first cudgel snaps; the men behind it run. ${rep('fame',4)} ${rep('bond',5)}`;}return `There are three of them and one of you. ${hpx(-Math.ceil(maxHP()*.4))}`;}}],
+  [4,{l:'Whistle up your barracks mates',r:{st:'bond',dc:10},f:ok=>{S.debt.refused=0;return ok?`A legionary never fights alone. Four gladiators step out of the bathhouse behind you, and the collectors remember another appointment. ${rep('bond',6)}`:`Nobody comes. ${hpx(-Math.ceil(maxHP()*.4))}`;}}],
+  [5,{l:'Remind them whose blood you are',r:{st:'fame',dc:10},f:ok=>{S.debt.refused=0;return ok?`"Touch me and my cousins will have you crucified along the Appian Way." It is a bluff. They do not know that. ${rep('fame',3)}`:`"Your cousins sold you, pretty." ${hpx(-Math.ceil(maxHP()*.4))}`;}}]],
+ banquet:[[3,{l:'Give them the whole act',f:()=>`Fire-eating, knife-catching, and a filthy song about a senator. Calpurnia weeps with laughter. ${gold(80+S.stats.show*5)} ${rep('fame',8)}`}],
+  [5,{l:'Work the room as one of them',f:()=>`You know which fork, which poet, and which scandal. Half the guests forget you are for sale. ${gold(40)} ${rep('fame',8)} ${rep('trust',3)}`}]],
+ doctore:[[4,{l:'Drill the way the legion taught you',r:{st:'end',dc:12,m:()=>4},f:ok=>{if(ok){const k=pick(['str','agi','end']);if(S.stats[k]<20){S.stats[k]++;if(k==='end')S.hp+=5;}return `Twenty-mile marches were worse than this. The doctore is impressed despite himself. <b>+1 ${k.toUpperCase()}</b>. ${rep('trust',4)}`;}S.energy=Math.max(0,S.energy-40);return `Even a legionary has limits. <span class="rp" style="color:var(--blu)">−40 energy</span>`;}}],
+  [2,{l:'Harvest never let you sleep either',r:{st:'end',dc:12,m:()=>3},f:ok=>{if(ok){const k=pick(['str','end']);if(S.stats[k]<20){S.stats[k]++;if(k==='end')S.hp+=5;}return `You work through the night the way you worked through every August of your life. <b>+1 ${k.toUpperCase()}</b>. ${rep('trust',4)}`;}S.energy=Math.max(0,S.energy-40);return `You fall asleep standing. <span class="rp" style="color:var(--blu)">−40 energy</span>`;}}]],
+ shrine:[[0,{l:"Mend the shrine's broken lamp",f:()=>{S.buff={atk:2,dc:1};return `A cracked bronze lamp, a borrowed file, an hour's work. The priestess paints your brow with ash and asks no coin. ${rep('honor',3)}`;}}]],
+ saturnalia:[[3,{l:'Lead the revels',f:()=>`You were born for this night. By midnight a whole street is singing a song you made up about Quintus. ${rep('fame',8)} ${rep('bond',5)}`}]],
+ recruit:[[2,{l:"Bind his ribs the way you bound lambs' legs",f:()=>{S.flags.recruit=1;mkRecruit(1);hist('Bound the ribs of a beaten recruit.');return `Tight linen, a splint of kindling, and a low voice. He stops shaking. ${rep('honor',8)} ${rep('bond',8)}`;}}]],
+ lanista_offer:[[5,{l:'Negotiate — double, and coin up front',r:{st:'trust',dc:11},f:ok=>{if(ok){S.flags.double=1;return `"You haggle like a senator." He pays thirty on the spot. ${gold(30)} ${rep('trust',3)}`;}return `"You forget what you are now." ${rep('trust',-6)}`;}}]]};
+function evChoices(q){const E=EV[q.id],ch=E.c(q.d).filter(c=>!c.hide);for(const [bg,c] of BGCH[q.id]||[])if(S.bg===bg)ch.push({...c,l:lifeTag(bg)+c.l,life:1});return ch;}
 function pEvent(){
  const q=curEv(),E=EV[q.id];
  if(S.evRes)return `<div class="evt"><h2>${E.i||'📜'} ${typeof E.t==='function'?E.t():E.t}</h2><div class="msg">${S.evRes}</div><button class="pri" onclick="evDone()">Continue ▶</button></div>`;
- const ch=E.c(q.d).filter(c=>!c.hide);
+ const ch=evChoices(q);
  return `<div class="evt"><h2>${E.i||'📜'} ${typeof E.t==='function'?E.t():E.t}</h2><div class="msg evb">${E.b(q.d)}</div><div class="evc">${ch.map((c,i)=>{const dis=c.dis&&c.dis();
   const roll=c.r?`<small>🎲 ${c.r.st.toUpperCase()} check · DC ${c.r.dc} · ${sgn(evMod(c.r))}</small>`:(c.s?`<small>${c.s}</small>`:'');
-  return `<button class="${i===0?'pri':''}" onclick="evChoose(${i})" ${dis||evBusy?'disabled':''}>${c.l}${roll}${dis?`<small>${dis}</small>`:''}</button>`;}).join('')}</div></div>`;}
-function evMod(r){const v=r.st==='fame'||r.st==='trust'||r.st==='bond'||r.st==='honor'?Math.floor(S.rep[r.st]/10):Math.floor((S.stats[r.st]||0)/2);return v+(r.m?r.m():0)-(r.st==='show'&&hasInj('brow')?2:0);}
+  return `<button class="${i===0?'pri':c.life?'gold':''}" onclick="evChoose(${i})" ${dis||evBusy?'disabled':''}>${c.l}${roll}${dis?`<small>${dis}</small>`:''}</button>`;}).join('')}</div></div>`;}
+function evMod(r){const v=r.st==='fame'||r.st==='trust'||r.st==='bond'||r.st==='honor'?Math.floor(S.rep[r.st]/10)+(bgIs(5)&&r.st!=='bond'?2:0):Math.floor((S.stats[r.st]||0)/2);return v+(r.m?r.m():0)-(r.st==='show'&&hasInj('brow')?2:0);}
 async function evChoose(i){
- if(evBusy)return;const q=curEv(),E=EV[q.id],c=E.c(q.d).filter(c=>!c.hide)[i];if(!c||(c.dis&&c.dis()))return;
+ if(evBusy)return;const q=curEv(),E=EV[q.id],c=evChoices(q)[i];if(!c||(c.dis&&c.dis()))return;
  evBusy=true;renderPanel();let ok=true,pre='';
  if(c.r){const r=rnd(1,20),m=evMod(c.r),tot=r+m;ok=r===20||(r!==1&&tot>=c.r.dc);TRAY=HUB_TRAY;
   await rollD20(r,{roll:800,hold:1300,top:c.r.st.toUpperCase()+' CHECK',res:`${r}${sgn(m)}=${tot} VS ${c.r.dc}`,ver:ok?'SUCCESS':'FAILURE',verC:ok?'#7ccf6a':'#e0553f',st:r===20?'gold':r===1?'red':''});
@@ -1843,7 +2130,7 @@ EV.banquet={t:'An Invitation',i:'🏛',b:()=>`Lady Calpurnia, a wealthy widow, h
 EV.fever={t:'Fever in the Barracks',i:'🤒',b:()=>`Half the barracks is sweating with fever. You wake with chills.`,
  c:()=>[{l:'Fight it off',r:{st:'end',dc:12},f:ok=>ok?'You sweat it out by morning.':fx_(`It lingers. `,hpx(-Math.ceil(maxHP()*.25)),`<span class="rp" style="color:var(--blu)">−30 energy</span>`,(S.energy=Math.max(0,S.energy-30),''))},
   {l:'Pay the medicus (25g)',dis:()=>S.gold<25?'not enough gold':'',f:()=>`Bitter herbs and a cold cloth. ${gold(-25)}`}]};
-EV.letterHome={t:'News from Home',i:'✉',b:()=>{const b=['your old master at the forge','the guild of thieves','your mother on the farm','the troupe you once performed with'][S.bg];return `A traveler brings word from ${b}: hard times, empty bellies. They ask if you can spare anything.`;},
+EV.letterHome={t:'News from Home',i:'✉',b:()=>{const b=['your old master at the forge','the guild of thieves','your mother on the farm','the troupe you once performed with','a comrade from your old cohort','what is left of your family'][S.bg];return `A traveler brings word from ${b}: hard times, empty bellies. They ask if you can spare anything.`;},
  c:()=>[{l:'Send 40g',dis:()=>S.gold<40?'not enough gold':'',f:()=>{hist('Sent gold home.');return `You give what you can. ${gold(-40)} ${rep('honor',6)}`;}},
   {l:'Send a message instead',f:()=>`"Tell them I'm alive." It will have to be enough.`}]};
 EV.thief={t:'A Hand in the Dark',i:'🌑',b:()=>`You wake to a hand fumbling under your straw — someone is after your purse.`,
@@ -1973,7 +2260,7 @@ function questHook(ev,d){let out='';for(const q of S.quests){if(q.done)continue;
   if(ev==='spare'&&q.ty==='spare')q.p++;
   if(ev==='kill'&&q.ty==='kill')q.p++;
   if(q.ty==='train')q.p=S.stats[q.k]>=q.n?q.n:0;
-  if(q.p>=q.n){q.done=1;const r=q.rw;out+=`<br>📜 <b>Contract complete:</b> ${q.t} — ${fx_(gold(r.g),r.fame&&rep('fame',r.fame),r.honor&&rep('honor',r.honor),r.trust&&rep('trust',r.trust))}`;hist(`Completed a contract: ${q.t}.`);}}
+  if(q.p>=q.n){q.done=1;const r=q.rw;out+=`<br>📜 <b>Contract complete:</b> ${q.t} — ${fx_(gold(r.g),r.fame&&rep('fame',r.fame),r.honor&&rep('honor',r.honor),r.trust&&rep('trust',r.trust))}`;hist(`Completed a contract: ${q.t}.`);if(Math.random()<.3)out+=` Your patron adds a token of thanks: ${giveTrinket(rollTrinket(S.maxTier))}.`;}}
  S.quests=S.quests.filter(q=>!q.done);return out;}
 
 // ---------- injuries & buffs ----------
@@ -1981,7 +2268,7 @@ const hasInj=k=>S&&S.inj&&S.inj.some(j=>j.k===k);
 function maybeInjure(P,critTaken){
  if(!(critTaken||P.hp<=P.maxhp*.2))return '';
  const r=rnd(1,20),m=Math.floor(S.stats.end/2);if(r!==1&&r+m>=13)return '';
- const k=pick(Object.keys(INJ).filter(k=>!hasInj(k)));if(!k)return '';const days=rnd(3,5);S.inj.push({k,days});qev('injury',{k,days});hist(`Suffered ${INJ[k].n.toLowerCase()}.`);
+ const k=pick(Object.keys(INJ).filter(k=>!hasInj(k)));if(!k)return '';const days=rnd(3,5)-(bgIs(2)?1:0);S.inj.push({k,days});qev('injury',{k,days});hist(`Suffered ${INJ[k].n.toLowerCase()}.`);
  return `<br>🩸 <span class="dice">Injury roll: d20 ${r}+${m} vs 13</span> — <b>${INJ[k].n}</b> (${INJ[k].d}).`;}
 
 // ---------- style ----------
@@ -2036,8 +2323,39 @@ function pLedger(){
 // ---------- tournament ----------
 function tourAvailable(){return S.tourDay===S.day&&!S.tour&&S.flags.tourDone!==S.day;}
 function tourPrize(){return Math.round(TIERS[S.maxTier].pay[1]*2+100*(S.maxTier+1));}
-function startTour(){if(!tourAvailable()||S.energy<40)return;S.tour={round:1,tier:S.maxTier};S.flags.tourDone=S.day;tourBout();}
-function tourBout(){const o=enemyDyes(genEnemy(S.tour.tier));o.id='tour'+S.tour.round;o.name=o.name;for(const k in o.stats)o.stats[k]=Math.min(20,o.stats[k]+S.tour.round-1);o.pay=0;o.tour=S.tour.round;S.opps.push(o);S.energy=Math.max(S.energy,40);startFight(o.id);}
+const TDOC=[null,{n:'Camp medicus',d:'heals 15% of your health between bouts',h:.15,c:t=>30+25*t},{n:'Greek physician',d:'heals 30% of your health between bouts',h:.3,c:t=>80+60*t}];
+const TROUND=['','Quarterfinal','Semifinal','Final'];
+function tourBuild(){const T=S.tour;if(T.field)return;T.field=[];for(let i=0;i<7;i++){const o=enemyDyes(genEnemy(T.tier));o.pay=0;T.field.push(o);}T.w=[];T.fin=null;T.doc=T.doc||0;}
+function tourPow(i){return power(mkFighter(S.tour.field[i],false));}
+function tourSim(a,b){const pa=Math.pow(tourPow(a),3),pb=Math.pow(tourPow(b),3);return Math.random()<pa/(pa+pb)?a:b;}
+// field slots 0-6 are the other seven fighters: you meet 0, then the winner of 1v2, then the winner of the far half (3v4, 5v6)
+function tourAdvance(){const T=S.tour;if(T.round===1)T.w=[tourSim(1,2),tourSim(3,4),tourSim(5,6)];else if(T.round===2)T.fin=tourSim(T.w[1],T.w[2]);}
+function tourOppIdx(){const T=S.tour;return T.round===1?0:T.round===2?T.w[0]:T.fin;}
+function tourEnsureOpp(){const T=S.tour;tourBuild();const id='tour'+T.round;let o=S.opps.find(x=>x.id===id);if(!o){o=JSON.parse(JSON.stringify(T.field[tourOppIdx()]));o.id=id;o.pay=0;o.tour=T.round;S.opps=S.opps.filter(x=>!x.tour);S.opps.push(o);}return o;}
+function enterTour(){if(!tourAvailable()||S.energy<40)return;S.tour={round:1,tier:S.maxTier};S.flags.tourDone=S.day;tourBuild();view='main';save();renderPanel();if(innerWidth<=660)scrollTo(0,0);}
+function startTour(){if(!tourAvailable()||S.energy<40)return;S.tour={round:1,tier:S.maxTier};S.flags.tourDone=S.day;tourBuild();tourBout();}
+function tourDocCost(k){const T=S.tour;return TDOC[k].c(T.tier)-(T.doc?TDOC[T.doc].c(T.tier):0);}
+function tourHire(k){const T=S.tour,d=TDOC[k];if(!T||T.doc>=k||S.gold<tourDocCost(k))return;S.gold-=tourDocCost(k);T.doc=k;sfx.coins&&sfx.coins(4);setLog(`The ${d.n.toLowerCase()} takes your coin and lays out his instruments by the gate.`);}
+function tourHub(){C=null;fx=[];floats=[];screen='hub';view='main';renderPanel();if(innerWidth<=660)scrollTo(0,0);}
+function tourWithdraw(){if(!S.tour)return;if(!UIO.tw){UIO.tw=1;renderPanel();return;}UIO.tw=0;S.opps=S.opps.filter(x=>!x.tour);S.tour=null;hist('Withdrew from the Ludi Romani.');setLog('You withdraw from the tournament. The crowd whistles as you leave the sand. '+rep('fame',-4));}
+function pTour(){const T=S.tour;tourBuild();const o=tourEnsureOpp(),F=T.field,sh=i=>esc(F[i].name.split(' ')[0]),me=esc(S.name),r=T.round;
+ const m=(a,b,w,live)=>`<div class="bm${live?' live':''}"><span class="${w==='a'?'w':w==='b'?'l':''}">${a}</span><span class="${w==='b'?'w':w==='a'?'l':''}">${b}</span></div>`;
+ const tbd='<i class="mut">—</i>',W=T.w||[];
+ const qf=[m(`<b>${me}</b>`,sh(0),r>1?'a':'',r===1),m(sh(1),sh(2),r>1?(W[0]===1?'a':'b'):''),m(sh(3),sh(4),r>1?(W[1]===3?'a':'b'):''),m(sh(5),sh(6),r>1?(W[2]===5?'a':'b'):'')].join('');
+ const sf=[m(r>1?`<b>${me}</b>`:tbd,r>1?sh(W[0]):tbd,r>2?'a':'',r===2),m(r>1?sh(W[1]):tbd,r>1?sh(W[2]):tbd,r>2?(T.fin===W[1]?'a':'b'):'')].join('');
+ const fn=m(r>2?`<b>${me}</b>`:tbd,r>2?sh(T.fin):tbd,'',r===3);
+ const f=mkFighter(o,false),[tn,tc]=threat(o),Wp=WEAPONS[o.gear.weapon],mu=matchup(S.style,o.cls),doc=TDOC[T.doc];
+ return `<div class="msg">${S.log}</div><h3>🏆 Ludi Romani <small>· ${TIERS[T.tier].n} · eight enter, one is crowned · prize <b style="color:var(--gold)">${tourPrize()}g</b></small></h3>
+ <div class="brk"><div><h4>Quarterfinals</h4>${qf}</div><div><h4>Semifinals</h4>${sf}</div><div><h4>Final</h4>${fn}</div></div>
+ <div class="opp"><canvas width="112" height="140" data-id="${o.id}"></canvas><div><span class="mut">${TROUND[r]} · your opponent</span><br><b>${esc(o.name)}</b> <span class="mut">· ${o.cls}</span><span class="tag" style="color:${tc};border-color:${tc}">${tn}</span>${PERSONAS[o.persona]?`<span class="tag" style="color:${PERSONAS[o.persona].c};border-color:${PERSONAS[o.persona].c}">${PERSONAS[o.persona].n}</span>`:''}${mu?`<span class="tag" style="color:${mu>0?'#7ccf6a':'#e0553f'};border-color:${mu>0?'#7ccf6a':'#e0553f'}">${mu>0?'Your style counters':'Counters your style'}</span>`:''}<br>
+  <span class="mut">♥ ${f.maxhp} HP · ${Wp.n}${PERSONAS[o.persona]?` · ${PERSONAS[o.persona].d.toLowerCase()}`:''}</span>${edgeText(o).map(x=>`<div class="mut" style="font-size:12px">${x}</div>`).join('')}</div>
+  <button class="pri" onclick="tourBout()">⚔ Fight the ${TROUND[r].toLowerCase()}<small>you have ${S.hp}/${maxHP()} HP · wounds carry over</small></button></div>
+ <div class="card" style="margin-top:8px"><h3>✚ A doctor at the gate <small>· ${doc?`${doc.n} hired — ${doc.d}`:'no one is tending you between bouts'}</small></h3>
+  ${T.doc<2&&r<3?`<div class="acts" style="grid-template-columns:1fr 1fr">${[1,2].filter(k=>k>T.doc).map(k=>`<button onclick="tourHire(${k})" ${S.gold<tourDocCost(k)?'disabled':''}>${T.doc?'Upgrade to the ':''}${TDOC[k].n} · ${tourDocCost(k)}g<small>${TDOC[k].d}</small></button>`).join('')}</div>`:r===3&&!doc?'<span class="mut">Too late to hire one now — only the final remains.</span>':''}
+  ${S.potions?`<div class="mut" style="margin-top:6px">🧪 You carry ${S.potions} tonic${S.potions>1?'s':''} for use in the bouts.</div>`:''}</div>
+ <p class="rules" style="margin-top:8px">Lose a bout and, if the crowd spares you, you still take a purse for reaching the semifinal (10% of the prize) or the final (35%).</p>
+ <div class="foot"><button class="tiny" onclick="tourWithdraw()">${UIO.tw?'Click again to forfeit the tournament':'Withdraw'}</button></div>`;}
+function tourBout(){if(!S.tour)return;const o=tourEnsureOpp();UIO.tw=0;S.energy=Math.max(S.energy,40);startFight(o.id);}
 
 // ---------- endings ----------
 function buyFreedomStory(two){const p=freePrice()+(two?2500:0);if(S.gold<p)return;S.gold-=p;if(S.debt&&!S.debt.ally)S.debt.paidAtEnd=S.debt.owed;S.ending={path:two?'bought2':'bought'};hist(two?`Bought freedom for yourself and ${S.love.name}.`:'Bought your freedom.');screen='free';wipe();renderPanel();}
@@ -2110,7 +2428,7 @@ EV.noble_tryst={t:'Beyond the Curtain',i:'🏛',b:()=>{const N=NB();return `The 
  c:()=>[{l:'"Then don\'t think of me as property."',f:()=>{const N=NB();S.noble.stage='lovers';S.noble.since=S.day;S.noble.aff+=10;hist(`Became the secret lover of ${N.n}.`);return `The lamps gutter out. <b>You are ${N.sh}'s secret lover now</b> — and Rome does not forgive nobles who love their entertainments. ${nhearts(10)}`;}},
   {l:'Step back',s:'keep it a friendship',f:()=>{S.noble.aff=Math.max(30,S.noble.aff-10);return `${NB().sh} nods, cheeks burning. "Of course. Forgive me." ${nhearts(-10)}`;}}]};
 EV.noble_gift={t:'A Gift from the Villa',i:'🎁',b:()=>`A slave of ${NB().n} arrives at the ludus gate with a sealed basket and a coin pouch for Quintus — <i>"so the ${S.look.sex?'gladiatrix':'gladiator'} is well kept."</i>`,
- c:()=>[{l:'Open it',f:()=>{const r=rnd(1,3),N=NB();if(r===1&&(S.quarters||0)<1){S.quarters=1;hist(`${N.n} bought you a private cell.`);return `Quintus, grinning at the coin, moves you into a <b>private cell</b>. ${rep('trust',4)}`;}
+ c:()=>[{l:'Open it',f:()=>{const r=rnd(1,4),N=NB();if(r===4)return `Wrapped in silk at the bottom of the basket: ${giveTrinket(pick(['pearl','garnet','cameo','emerald']))}. "So you think of me in the arena."`;if(r===1&&(S.quarters||0)<1){S.quarters=1;hist(`${N.n} bought you a private cell.`);return `Quintus, grinning at the coin, moves you into a <b>private cell</b>. ${rep('trust',4)}`;}
    if(r===2){S.potions=Math.min(3,S.potions+2);return `Two flasks of the finest tonic in Capua. <span class="rp">+2 tonics</span>`;}return `${gold(120+S.maxTier*40)} — "for your freedom," the note says.`;}}]};
 EV.noble_jealous={t:'Jealousy',i:'💔',b:()=>`${esc(S.love.name)} is waiting in your cell, holding the ivory pin you dropped. <i>"Whose is this? Don't lie to me. I've seen the litter at the gate."</i>`,
  c:()=>[{l:`End it with ${NB().sh}`,f:()=>{const N=NB();S.noble.stage='ended';S.love.aff=Math.min(100,S.love.aff+10);hist(`Ended the affair with ${N.n} for ${S.love.name}.`);return `You send back every gift. ${esc(S.love.name)} holds you all night. ${hearts(10)}`;}},
@@ -2204,7 +2522,7 @@ function ach(id){const L=legacy();if(L.ach[id])return;L.ach[id]=Date.now();saveL
  const n=document.querySelectorAll('.achpop').length;el.style.top=(12+n*64)+'px';($('stage')||document.body).appendChild(el);setTimeout(()=>el.classList.add('on'),30);setTimeout(()=>{el.classList.remove('on');setTimeout(()=>el.remove(),600);},3800);}
 const END_T={bought:'Bought freedom',bought2:'Freed with a lover',rudis:'Freed by Caesar',escape:'Led the breakout',lovers:'Escaped with a lover',noble:'Freed by a noble'};
 function recordRun(){if(!S||S.recorded)return;S.recorded=1;const dead=screen==='dead',path=dead?'dead':(S.ending||{path:'bought'}).path,L=legacy();
- L.runs.unshift({name:S.name,look:JSON.parse(JSON.stringify(S.look)),gear:{...S.gear},path,day:S.day,wins:S.wins,kills:S.kills||0,mercies:S.mercies||0,bg:S.bg,cls:S.style||pick(CLASSES),stats:{...S.stats},fame:S.rep?S.rep.fame:0,
+ L.runs.unshift({hard:S.hard?1:0,name:S.name,look:JSON.parse(JSON.stringify(S.look)),gear:{...S.gear},path,day:S.day,wins:S.wins,kills:S.kills||0,mercies:S.mercies||0,bg:S.bg,cls:S.style||pick(CLASSES),stats:{...S.stats},fame:S.rep?S.rep.fame:0,
   killer:dead&&C&&C.opp?C.opp.name:null,lover:S.love&&!['dead','gone'].includes(S.love.stage)?S.love.name:null,at:Date.now()});
  L.runs=L.runs.slice(0,40);saveLegacy(L);
  if(dead)ach('fallen');else{({bought:'freedman',bought2:'two_swords',rudis:'rudis',escape:'spartacus',lovers:'into_night',noble:'gilded'})[path]&&ach(({bought:'freedman',bought2:'two_swords',rudis:'rudis',escape:'spartacus',lovers:'into_night',noble:'gilded'})[path]);if(!S.kills)ach('merciful');}}
@@ -2212,7 +2530,7 @@ let hofOpen=false;
 function pHof(){const L=legacy(),got=ACH.filter(a=>L.ach[a[0]]).length;
  return `<h2>🏛 Hall of Fame</h2>
  <div class="card"><h4>Achievements <small class="mut">${got} / ${ACH.length}</small></h4><div class="achg">${ACH.map(a=>{const u=L.ach[a[0]];return `<div class="ach ${u?'got':''}" title="${a[3]}"><span>${u?a[1]:'🔒'}</span><div><b>${a[2]}</b><small>${a[3]}</small></div></div>`;}).join('')}</div></div>
- <div class="card" style="margin-top:8px"><h4>Gladiators of the past</h4>${L.runs.length?L.runs.map((r,i)=>`<div class="opp hof"><canvas width="112" height="140" data-hof="${i}"></canvas><div><b>${esc(r.name)}</b> <span class="mut">· ${BGS[r.bg]?BGS[r.bg].n:''}</span><span class="tag" style="color:${r.path==='dead'?'#e0553f':'#f2c14e'};border-color:${r.path==='dead'?'#e0553f':'#f2c14e'}">${r.path==='dead'?'⚱ Fell on day '+r.day:'🕊 '+(END_T[r.path]||'Free')+' · day '+r.day}</span><br>
+ <div class="card" style="margin-top:8px"><h4>Gladiators of the past</h4>${L.runs.length?L.runs.map((r,i)=>`<div class="opp hof"><canvas width="112" height="140" data-hof="${i}"></canvas><div><b>${esc(r.name)}</b> <span class="mut">· ${BGS[r.bg]?BGS[r.bg].n:''}</span>${r.hard?'<span class="tag" style="color:#e0553f;border-color:#e0553f">🔥 Iron Road</span>':''}<span class="tag" style="color:${r.path==='dead'?'#e0553f':'#f2c14e'};border-color:${r.path==='dead'?'#e0553f':'#f2c14e'}">${r.path==='dead'?'⚱ Fell on day '+r.day:'🕊 '+(END_T[r.path]||'Free')+' · day '+r.day}</span><br>
   <span class="mut">${r.wins} victories · ${r.kills} killed · ${r.mercies} spared${r.killer?` · slain by ${esc(r.killer)}`:''}${r.lover?` · loved ${esc(r.lover)}`:''}</span></div></div>`).join(''):'<p class="mut">No gladiator has finished their road yet. Be the first.</p>'}</div>
  <button onclick="${screen==='create'?'hofOpen=false;renderPanel()':'hofOpen=false;renderPanel()'}">◀ Back</button>`;}
 function drawHofPortraits(){const L=legacy();document.querySelectorAll('canvas[data-hof]').forEach(c=>{const r=L.runs[+c.dataset.hof];if(!r)return;const g=c.getContext('2d');g.clearRect(0,0,112,140);withCtx(g,()=>{if(r.path==='dead')g.filter='grayscale(1) brightness(.7)';drawGlad(8,14,2,r.look,r.gear);g.filter='none';});});}
@@ -2234,7 +2552,7 @@ EV.flamma2={t:'The Veterans\' Tomb',i:'🗝',b:()=>`Senex gave you the way: a cr
   {l:'Slip past him in the dark',r:{st:'agi',dc:14,m:()=>-(S.flamma.tries||0)},f:ok=>{if(ok)return flammaFound(`You move between the pines like a shadow.`);S.flamma.tries=(S.flamma.tries||0)+1;S.flamma.stage=2;S.flamma.retry=S.day+4;
    return `The lantern swings your way — "Grave robber!" You run, and the ludus guards catch you coming back over the wall. ${hpx(-Math.ceil(maxHP()*.3))} ${rep('trust',-8)} <span class="mut">(You can try again in a few days.)</span>`;}},
   {l:'Not tonight',f:()=>{S.flamma.stage=2;S.flamma.retry=S.day+3;return 'The tomb has waited this long.';}}]};
-function flammaFound(pre){const old=WEAPONS[S.gear.weapon],back=old.secret?0:Math.floor(old.p*.25);S.gold+=back;S.flamma.stage=3;S.owned=S.owned||{};S.owned.weapon=[...(S.owned.weapon||[]),9];S.gear.weapon=9;
+function flammaFound(pre){const old=WEAPONS[S.gear.weapon],back=0;S.flamma.stage=3;S.owned=S.owned||{};S.owned.weapon=[...(S.owned.weapon||[]),9];S.gear.weapon=9;
  hist('Found the Sword of Flamma.');ach('flamma');
  return `${pre} Inside, under a rotted shroud: a dark steel gladius with a blood-red pommel stone, as sharp as the day it was hidden. <b>The Sword of Flamma is yours.</b>${back?` <span class="mut">(You sell your ${old.n} for ${back}g.)</span>`:''}<br><span class="mut">${WT.legend.d}.</span>`;}
 function scheduleFlamma(){const F=S.flamma;
