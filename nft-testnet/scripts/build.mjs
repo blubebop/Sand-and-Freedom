@@ -1,0 +1,13 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import solc from 'solc';
+const root = path.resolve(import.meta.dirname, '..');
+const input = {language:'Solidity', sources:{'GladiatorCurtis.sol':{content:fs.readFileSync(path.join(root,'contracts/GladiatorCurtis.sol'),'utf8')}},settings:{optimizer:{enabled:true,runs:200},evmVersion:'paris',outputSelection:{'*':{'*':['abi','evm.bytecode.object','evm.deployedBytecode.object']}}}};
+const output = JSON.parse(solc.compile(JSON.stringify(input), {import:p=>{try{return {contents:fs.readFileSync(path.join(root,'node_modules',p),'utf8')}}catch{return {error:'Missing import '+p}}}}));
+for(const e of output.errors||[]) console.error(e.formattedMessage);
+if(output.errors?.some(e=>e.severity==='error')) process.exit(1);
+const c = output.contracts['GladiatorCurtis.sol'].GladiatorCurtis;
+fs.mkdirSync(path.join(root,'site'),{recursive:true});
+fs.writeFileSync(path.join(root,'site/artifact.json'), JSON.stringify({contractName:'GladiatorCurtis',compiler:solc.version(),chainId:33111,abi:c.abi,bytecode:'0x'+c.evm.bytecode.object},null,2));
+fs.copyFileSync(path.join(root,'node_modules/ethers/dist/ethers.min.js'),path.join(root,'site/ethers.min.js'));
+console.log('Compiled Curtis-only contract; runtime bytes:', c.evm.deployedBytecode.object.length/2);
